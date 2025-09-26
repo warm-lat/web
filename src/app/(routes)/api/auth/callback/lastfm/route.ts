@@ -39,7 +39,7 @@ export const GET = async (request: Request) => {
             return new Response("No Discord session found", { status: 400 })
         }
 
-        const apiResponse = await fetch("https://api.evict.bot/lastfm/auth", {
+        const apiResponse = await fetch("https://api.warm.lat/lastfm/auth", {
             method: "POST",
             headers: {
                 "Authorization": process.env.NOTHIDDEN_API_KEY ?? "",
