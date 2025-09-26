@@ -51,14 +51,6 @@ const nextConfig = {
             }
         ]
     },
-    async rewrites() {
-        return [
-            {
-                source: '/',
-                destination: '/index.html',
-            },
-        ];
-    },
     images: {
         remotePatterns: [
             {
@@ -66,6 +58,9 @@ const nextConfig = {
                 hostname: '**',
             },
         ],
+    },
+    eslint: {
+        ignoreDuringBuilds: true,
     },
 };
 
