@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'evict': {
+        'warm': {
           '100': '#141114',
           '200': '#111212',
           '300': '#161717',

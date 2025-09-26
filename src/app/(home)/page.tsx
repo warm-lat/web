@@ -108,8 +108,8 @@ const HomePage = () => {
                                     animate={{ scale: 1, opacity: 1 }}
                                     transition={{ duration: 1, ease: "easeOut" }}>
                                     <Image
-                                        src="https://r2.evict.bot/evict-new.png"
-                                        alt="Evict"
+                                        src="https://r2.warm.lat/pfp.png"
+                                        alt="Warm"
                                         width={200}
                                         height={200}
                                         className="mx-auto mb-8 drop-shadow-2xl"
@@ -159,7 +159,7 @@ const HomePage = () => {
                             <div className="text-center mb-16">
                                 <h2 className="text-4xl font-bold mb-4 relative">
                                     <span className="bg-gradient-to-r from-white via-white/90 to-white/80 text-transparent bg-clip-text">
-                                        Why Choose Evict?
+                                        Why Choose Warm?
                                     </span>
                                     <div className="absolute -inset-x-4 -inset-y-2 bg-white/5 blur-2xl -z-10 rounded-lg" />
                                 </h2>
@@ -789,7 +789,7 @@ const HomePage = () => {
                                                     </div>
 
                                                     <div className="flex items-center justify-between text-sm text-white/40">
-                                                        <span>Hosted by @evict</span>
+                                                        <span>Hosted by @warm</span>
                                                         <span>89 entries</span>
                                                     </div>
                                                 </div>
@@ -870,7 +870,7 @@ const HomePage = () => {
                                                         <div className="flex items-start gap-3">
                                                             <div className="w-8 h-8 rounded-full overflow-hidden">
                                                                 <Image
-                                                                    src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                                                    src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
                                                                     alt="x14c's avatar"
                                                                     width={32}
                                                                     height={32}
@@ -950,7 +950,7 @@ const HomePage = () => {
                                                             />
                                                         </div>
                                                         <div className="text-white/40 text-xs mt-2">
-                                                            discord.gg/evict
+                                                            discord.gg/warm
                                                         </div>
                                                     </div>
 
@@ -969,7 +969,7 @@ const HomePage = () => {
                                                                 />
                                                             </div>
                                                             <div className="text-white/40 text-xs mt-2">
-                                                                discord.gg/evict
+                                                                discord.gg/warm
                                                             </div>
                                                         </div>
                                                         <div className="bg-black/40 rounded-lg p-3">
@@ -986,7 +986,7 @@ const HomePage = () => {
                                                                 />
                                                             </div>
                                                             <div className="text-white/40 text-xs mt-2">
-                                                                discord.gg/evict
+                                                                discord.gg/warm
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1037,7 +1037,7 @@ const HomePage = () => {
                                                 <div className="flex items-center gap-2 mb-3">
                                                     <div className="w-8 h-8 rounded-full overflow-hidden">
                                                         <Image
-                                                            src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                                            src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
                                                             alt="x14c's avatar"
                                                             width={32}
                                                             height={32}
@@ -1110,7 +1110,7 @@ const HomePage = () => {
                                     <div className="absolute -inset-x-4 -inset-y-2 bg-white/5 blur-2xl -z-10 rounded-lg" />
                                 </h2>
                                 <p className="text-white/60 text-lg">
-                                    Connect your favorite services with Evict
+                                    Connect your favorite services with Warm
                                 </p>
                             </div>
 
@@ -1125,14 +1125,14 @@ const HomePage = () => {
                                         <div className="flex items-center gap-2 mb-3">
                                             <div className="w-6 h-6 rounded-full overflow-hidden">
                                                 <Image
-                                                    src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                                    src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
                                                     alt="x14c's avatar"
                                                     width={24}
                                                     height={24}
                                                     className="object-cover"
                                                 />
                                             </div>
-                                            <span className="text-white text-sm">evict</span>
+                                            <span className="text-white text-sm">warm</span>
                                             <span className="text-xs px-1 bg-blurple text-white rounded">
                                                 APP
                                             </span>
@@ -1204,7 +1204,7 @@ const HomePage = () => {
                                                 <div className="flex items-center gap-2">
                                                     <span className="text-white/60">💻</span>
                                                     <span className="text-white text-sm">
-                                                        DESKTOP-QN6B6RP (Computer)
+                                                        Nxyy's PC (Computer)
                                                     </span>
                                                 </div>
                                                 <ChevronDown className="w-4 h-4 text-white/60" />
@@ -1338,7 +1338,7 @@ const HomePage = () => {
                                                     <div className="flex items-center gap-3 mb-3">
                                                         <div className="w-8 h-8 rounded-full overflow-hidden">
                                                             <Image
-                                                                src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                                                src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
                                                                 alt="User avatar"
                                                                 width={32}
                                                                 height={32}
@@ -1380,10 +1380,10 @@ const HomePage = () => {
                                                             </div>
                                                             <div className="flex-1">
                                                                 <div className="text-white text-sm">
-                                                                    x14c
+                                                                    _mism.
                                                                 </div>
                                                                 <div className="text-white/40 text-xs">
-                                                                    Level 100 • 50,000 XP
+                                                                    Level 75 • 43,000 XP
                                                                 </div>
                                                             </div>
                                                             <div className="text-yellow-400">
@@ -1396,10 +1396,10 @@ const HomePage = () => {
                                                             </div>
                                                             <div className="flex-1">
                                                                 <div className="text-white text-sm">
-                                                                    evict
+                                                                    warm
                                                                 </div>
                                                                 <div className="text-white/40 text-xs">
-                                                                    Level 95 • 48,000 XP
+                                                                    Level 50 • 35,000 XP
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -1643,7 +1643,7 @@ const HomePage = () => {
                                         Ready to enhance your Discord server?
                                     </h2>
                                     <p className="text-white/60 text-xl mb-10">
-                                        Join thousands of servers already using Evict
+                                        Join hundreds of servers already using Warm
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <motion.a
@@ -1662,7 +1662,7 @@ const HomePage = () => {
                                             </motion.span>
                                         </motion.a>
                                         <motion.a
-                                            href="https://discord.gg/evict"
+                                            href="https://discord.gg/warm"
                                             target="_blank"
                                             className="group px-8 py-3 bg-[#5865F2] text-white rounded-lg font-medium 
                                                      hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"

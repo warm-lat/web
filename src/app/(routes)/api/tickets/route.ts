@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     }
 
     try {
-        const response = await fetch(`https://api.evict.bot/tickets?id=${id}`, {
+        const response = await fetch(`https://api.warm.lat/tickets?id=${id}`, {
             headers: {
                 Authorization: `${API_TOKEN}`,
                 "User-ID": session.user.id 

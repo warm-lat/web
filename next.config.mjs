@@ -26,22 +26,22 @@ const nextConfig = {
             },
             {
                 source: '/invite',
-                destination: 'https://discordapp.com/oauth2/authorize?client_id=1203514684326805524&scope=bot+applications.commands&permissions=8',
+                destination: 'https://discord.com/oauth2/authorize?client_id=1420609343283531776&scope=bot+applications.commands&permissions=8',
                 permanent: true,
             },
             {
                 source: '/embeds',
-                destination: 'https://embeds.evict.bot',
+                destination: '/embed',
                 permanent: true,
             },
             {
                 source: '/docs',
-                destination: 'https://docs.evict.bot',
+                destination: 'https://docs.warm.lat',
                 permanent: true,
             },
             {
                 source: '/variables',
-                destination: 'https://docs.evict.bot/embeds/variables',
+                destination: 'https://docs.warm.lat/embeds/variables',
                 permanent: true,
             },
             {

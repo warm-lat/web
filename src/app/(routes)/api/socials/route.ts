@@ -7,7 +7,7 @@ export async function GET(request: NextRequest) {
     }
 
     try {
-        const response = await fetch(`https://api.evict.bot/socials?t=${Date.now()}`, {
+        const response = await fetch(`https://api.warm.lat/socials?t=${Date.now()}`, {
             method: "GET",
             headers: {
                 "X-USER-ID": userId,

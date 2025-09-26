@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
     try {
         // Additional Note from the Pro Developer Adam
         // The reason why we are using the _=Date.now() is to prevent the API from caching the response
-        const response = await fetch(`https://api.evict.bot/levels?_=${Date.now()}`, {
+        const response = await fetch(`https://api.warm.lat/levels?_=${Date.now()}`, {
             headers: {
                 Authorization: `${API_TOKEN}`,
                 "X-GUILD-ID": guildId,
@@ -23,7 +23,7 @@ export async function GET(request: NextRequest) {
         });
 
         if (!response.ok) {
-            throw new Error(`API responded with status: ${response.status}. If you are a user, please contact the @66adam`);
+            throw new Error(`API responded with status: ${response.status}. If you are a user, please contact @_mism. on Discord.`);
         }
 
         const textData = await response.text();

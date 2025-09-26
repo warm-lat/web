@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export async function generateMetadata({ params }: { params: { username: string } }): Promise<Metadata> {
     try {
         const cleanUsername = decodeURIComponent(params.username).replace('@', '')
-        const response = await fetch(`https://api.evict.bot/socials`, {
+        const response = await fetch(`https://api.warm.lat/socials`, {
             headers: {
                 "X-USER-ID": cleanUsername,
                 "Authorization": ""
@@ -13,10 +13,10 @@ export async function generateMetadata({ params }: { params: { username: string 
 
         return {
             title: `@${profile.user.name}`,
-            description: profile.bio ? profile.bio.slice(0, 160) : `View @${profile.user.name}'s profile on Evict`,
+            description: profile.bio ? profile.bio.slice(0, 160) : `View @${profile.user.name}'s profile on Warm`,
             openGraph: {
-                title: `${profile.user.name} — Evict Profile`,
-                description: profile.bio ? profile.bio.slice(0, 160) : `View @${profile.user.name}'s profile on Evict`,
+                title: `${profile.user.name} — Warm Profile`,
+                description: profile.bio ? profile.bio.slice(0, 160) : `View @${profile.user.name}'s profile on Warm`,
                 images: [
                     {
                         url: profile.profile_image || profile.user.avatar,
@@ -29,14 +29,14 @@ export async function generateMetadata({ params }: { params: { username: string 
             twitter: {
                 card: 'summary_large_image',
                 title: `${profile.user.name}`,
-                description: profile.bio ? profile.bio.slice(0, 160) : `View @${profile.user.name}'s profile on Evict`,
+                description: profile.bio ? profile.bio.slice(0, 160) : `View @${profile.user.name}'s profile on Warm`,
                 images: [profile.profile_image || profile.user.avatar],
             }
         }
     } catch (error) {
         return {
-            title: 'Profile — Evict',
-            description: 'View profile on Evict'
+            title: 'Profile — Warm',
+            description: 'View profile on Warm'
         }
     }
 } 

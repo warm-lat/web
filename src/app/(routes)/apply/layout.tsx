@@ -3,27 +3,27 @@ import Navbar from '@/components/(global)/navbar/Navbar'
 import { Footer } from '@/components/(global)/Footer'
 
 export const metadata: Metadata = {
-    title: 'Join Our Team - Evict',
-    description: 'Join Evict\'s team of innovators and help shape the future of Discord moderation. Apply for roles in beta testing, community support, and more.',
+    title: 'Join Our Team - Warm',
+    description: 'Join Warm\'s team of innovators and help shape the future of Discord moderation. Apply for roles in beta testing, community support, and more.',
     openGraph: {
-        title: 'Join the Evict Team',
+        title: 'Join the Warm Team',
         description: 'Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.',
         images: [
             {
-                url: 'https://r2.evict.bot/og.png',
+                url: 'https://r2.warm.lat/og.png',
                 width: 1200,
                 height: 630,
-                alt: 'Join Evict Team'
+                alt: 'Join Warm Team'
             }
         ],
         type: 'website',
-        url: 'https://evict.bot/apply'
+        url: 'https://warm.lat/apply'
     },
     twitter: {
         card: 'summary_large_image',
-        title: 'Join the Evict Team',
+        title: 'Join the Warm Team',
         description: 'Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.',
-        images: ['https://r2.evict.bot/og.png'], 
+        images: ['https://r2.warm.lat/og.png'], 
     }
 }
 
