@@ -6,12 +6,12 @@ const nextConfig = {
         return [
             {
                 source: '/discord',
-                destination: 'https://discord.gg/evict',
+                destination: 'https://discord.gg/warm',
                 permanent: true,
             },
             {
                 source: '/support',
-                destination: 'https://discord.gg/evict',
+                destination: 'https://discord.gg/warm',
                 permanent: true,
             },
             {
