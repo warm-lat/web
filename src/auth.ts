@@ -3,6 +3,8 @@ import Discord from "next-auth/providers/discord"
 import Spotify from "next-auth/providers/spotify"
 import crypto from 'crypto'
 
+const sauth = process.env.SPECIAL_AUTH_SECRET || "";
+
 declare module "next-auth" {
     interface User {
         id?: string
@@ -85,7 +87,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
-                            "X-Special-Auth": "fzx62lRok3h57XHccs4KWCRubruFKSXu",
+                            "X-Special-Auth": sauth,
                             Origin: "https://warm.lat"
                         },
                         body: JSON.stringify({

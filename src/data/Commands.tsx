@@ -7,8 +7,6 @@ import { IoIosGift } from "react-icons/io";
 import { CiStar } from "react-icons/ci";
 import fallbackCommands from "./commands.json";
 
-const apiKey = ""
-
 const CACHE_DURATION = 5 * 60 * 1000; // 5 minutes
 let cachedCommands: Command[] | null = null;
 let lastFetchTime: number | null = null;
@@ -20,11 +18,7 @@ async function getCommands(): Promise<Command[]> {
       return cachedCommands;
     }
 
-    const response = await fetch('https://api.warm.lat/commands', {
-      headers: {
-        'Authorization': apiKey
-      }
-    });
+    const response = await fetch('https://api.warm.lat/commands');
     if (!response.ok) throw new Error(`API returned ${response.status}`);
     
     const data = await response.json();
