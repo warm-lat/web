@@ -11,7 +11,7 @@ export async function GET(request: NextRequest) {
             method: "GET",
             headers: {
                 "X-USER-ID": userId,
-                Authorization: ""
+                Authorization: "ShHdce3nXXaYmQ5PzBNKKsbtRoamqYc"
             },
             credentials: "omit",
             mode: "cors"
