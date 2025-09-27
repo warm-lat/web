@@ -31,12 +31,7 @@ async function getCommands(): Promise<Command[]> {
 			return cachedCommands;
 		}
 
-		// Configure fetch with timeout and better error handling
-		const controller = new AbortController();
-		const timeoutId = setTimeout(() => controller.abort(), 10000); // 10 second timeout
-
 		const response = await fetch("https://api.warm.lat/commands", {
-			signal: controller.signal,
 			headers: {
 				"User-Agent": "warm-web/1.0.0",
 				Accept: "application/json",

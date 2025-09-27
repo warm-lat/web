@@ -26,9 +26,6 @@ declare module "next-auth" {
 		userToken?: string;
 	}
 }
-const agent = new https.Agent({
-	rejectUnauthorized: process.env.NODE_ENV === "production" ? false : true,
-});
 export const { handlers, signIn, signOut, auth } = NextAuth({
 	providers: [
 		Discord({
@@ -98,8 +95,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							user_id: profile?.id ?? "",
 							access_token: account.access_token,
 						}),
-                        // @ts-ignore
-						agent: agent,
 					});
 
 					const data = await response.json();
@@ -150,8 +145,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							expires_in: account.expires_in,
 							spotify_id: user.id,
 						}),
-                        // @ts-ignore
-						agent: agent,
 					});
 
 					if (!response.ok) {
