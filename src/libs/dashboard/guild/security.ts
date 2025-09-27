@@ -89,7 +89,7 @@ export async function fetchGuildSecurity(guildId: string): Promise<SecuritySetti
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`https://api.warm.lat/security`, {
+    const response = await fetch(`${process.env.API_URL}/security`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'X-GUILD-ID': guildId

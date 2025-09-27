@@ -168,7 +168,7 @@ export async function updateGuildConfig(
             Authorization: `Bearer ${token}`,
             "X-GUILD-ID": guildId,
             "Content-Type": "application/json",
-            Origin: "https://evict.bot"
+            Origin: "https://warm.lat"
         },
         body: JSON.stringify(settings)
     })

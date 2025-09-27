@@ -144,13 +144,13 @@ const BurgerMenu = ({ onClose }: { onClose: () => void }) => {
             },
             {
                 label: "Embeds",
-                destination: "https://embeds.evict.bot",
-                isActive: pathname == "https://embeds.evict.bot"
+                destination: "/embeds",
+                isActive: pathname == "/embeds"
             },
             {
                 label: "Docs",
-                destination: "https://docs.evict.bot",
-                isActive: pathname == "https://docs.evict.bot"
+                destination: "https://docs.warm.lat",
+                isActive: pathname == "https://docs.warm.lat"
             },
             {
                 label: "Invite",

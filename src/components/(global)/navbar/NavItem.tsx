@@ -157,14 +157,14 @@ const NavItem: React.FC<NavItemProps> = ({ label, destination, isActive }) => {
                                 </Link>
 
                                 <a
-                                    href="https://docs.evict.bot"
+                                    href="https://docs.warm.lat"
                                     target="_blank"
                                     rel="noopener noreferrer"
                                     className="flex items-center gap-3 p-4 rounded-lg hover:bg-white/[0.02] transition-colors">
                                     <FileText className="w-5 h-5 text-purple-400" />
                                     <div>
                                         <div className="font-medium text-white">Documentation</div>
-                                        <p className="text-sm text-zinc-400">Learn how to use Evict</p>
+                                        <p className="text-sm text-zinc-400">Learn how to use Warm</p>
                                     </div>
                                 </a>
                             </div>

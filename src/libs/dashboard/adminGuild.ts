@@ -49,7 +49,7 @@ export async function fetchUserGuilds(): Promise<DashboardResponse> {
         throw new Error("Beta access required")
     }
 
-    const response = await fetch("https://api.evict.bot/dashboard/guilds", {
+    const response = await fetch(`${process.env.API_URL}/dashboard/guilds`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json"

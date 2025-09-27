@@ -27,8 +27,8 @@ export const Footer = () => {
                             width={150}
                             className="rounded-2xl"
                         />
-                        <p className="text-evict-pink text-sm mt-4">
-                            Copyright © 2024 evict.bot. All rights reserved.
+                        <p className="text-warm-pink text-sm mt-4">
+                            Copyright © 2025 warm.lat. All rights reserved.
                         </p>
                     </div>
                     <div className="flex flex-col gap-6 sm:flex-row">
@@ -36,17 +36,17 @@ export const Footer = () => {
                             <span className="font-extrabold text-2xl text-white">Bot</span>
                             <Link
                                 href="/invite"
-                                className="font-semibold text-evict-pink text-sm mt-2">
+                                className="font-semibold text-warm-pink text-sm mt-2">
                                 Invite
                             </Link>
                             <Link
-                                href="https://docs.evict.bot/"
-                                className="font-semibold text-evict-pink text-sm mt-2">
+                                href="https://docs.warm.lat/"
+                                className="font-semibold text-warm-pink text-sm mt-2">
                                 Documentation
                             </Link>
                             <Link
-                                href="https://discord.gg/evict"
-                                className="font-semibold text-evict-pink text-sm mt-2">
+                                href="https://discord.gg/warm"
+                                className="font-semibold text-warm-pink text-sm mt-2">
                                 Support Server
                             </Link>
                         </div>
@@ -54,12 +54,12 @@ export const Footer = () => {
                             <span className="font-extrabold text-2xl text-white">Legal</span>
                             <Link
                                 href="/terms"
-                                className="font-semibold text-evict-pink text-sm mt-2">
+                                className="font-semibold text-warm-pink text-sm mt-2">
                                 Terms
                             </Link>
                             <Link
                                 href="/privacy"
-                                className="font-semibold text-evict-pink text-sm mt-2">
+                                className="font-semibold text-warm-pink text-sm mt-2">
                                 Privacy
                             </Link>
                         </div>

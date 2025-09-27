@@ -347,7 +347,7 @@ export async function fetchGuildLogging(guildId: string): Promise<LoggingRespons
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch("https://api.evict.bot/logging", {
+    const response = await fetch(`${process.env.API_URL}/logging`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'X-GUILD-ID': guildId

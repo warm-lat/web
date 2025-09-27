@@ -82,7 +82,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         async signIn({ account, user, profile }) {
             if (account?.provider === "discord") {
                 try {                    
-                    const response = await fetch("https://api.warm.lat/login", {
+                    const response = await fetch(`${process.env.API_URL}/login`, {
                         method: "POST",
                         headers: {
                             "Content-Type": "application/json",
@@ -120,7 +120,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                         rejectUnauthorized: process.env.NODE_ENV === 'production'
                     })
 
-                    const response = await fetch("https://api.warm.lat/spotify/auth", {
+                    const response = await fetch(`${process.env.API_URL}/spotify/auth`, {
                         method: "POST",
                         headers: {
                             Authorization: process.env.NOTHIDDEN_API_KEY ?? "",

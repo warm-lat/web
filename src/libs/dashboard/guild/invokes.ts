@@ -25,7 +25,7 @@ export async function fetchGuildInvokes(guildId: string): Promise<InvokesRespons
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`https://api.evict.bot/invokes`, {
+    const response = await fetch(`${process.env.API_URL}/invokes`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

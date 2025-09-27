@@ -152,17 +152,17 @@ const replaceVariables = (text: string) => {
 
     const replacements = {
         "{guild.name}": "My Discord Server",
-        "{guild.icon}": "https://r2.evict.bot/evict-new.png",
+        "{guild.icon}": "https://r2.warm.lat/evict-new.png",
         "{guild.created_at}": "2023-08-01",
         "{guild.count}": "1,604",
         "{guild.boost_count}": "34",
         "{guild.booster_count}": "10",
-        "{guild.vanity}": "evict",
+        "{guild.vanity}": "warm",
         "{guild.boost_tier}": "Level 2",
         "{guild.count.format}": "1,500th",
         "{guild.boost_count.format}": "25th",
         "{guild.booster_count.format}": "10th",
-        "{user}": "x14c#0",
+        "{user}": "_mism.#0",
         "{user.name}": "x14c",
         "{user.discriminator}": "#0",
         "{user.id}": "123456789012345678",
@@ -255,8 +255,8 @@ export default function EmbedPage() {
     const discordOptions = {
         ...DiscordDefaultOptions,
         profiles: {
-            evict: {
-                avatar: "https://r2.evict.bot/evict-new.png"
+            warm: {
+                avatar: "https://r2.warm.lat/evict-new.png"
             }
         }
     }
@@ -409,7 +409,7 @@ export default function EmbedPage() {
                         <p>
                             Variables can be used in any text field. Check out our{" "}
                             <a
-                                href="https://docs.evict.bot/overview/variables"
+                                href="https://docs.warm.lat/overview/variables"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="underline hover:text-blue-100">
@@ -422,7 +422,7 @@ export default function EmbedPage() {
                     <div className="w-full bg-[#313338] rounded-xl p-4">
                         <DiscordOptionsContext.Provider value={discordOptions}>
                             <DiscordMessages>
-                                <DiscordMessage author="evict" bot={true} profile="evict">
+                                <DiscordMessage author="warm" bot={true} profile="warm">
                                     {embed.content && (
                                         <DiscordMarkdown>
                                             {replaceVariables(embed.content)}

@@ -67,14 +67,14 @@ export default function Navbar({ children }: NavbarProps) {
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex space-x-3">
                         <Image
-                            src={"https://r2.evict.bot/evict-new.png"}
-                            alt="evict"
+                            src={"https://r2.warm.lat/evict-new.png"}
+                            alt="warm"
                             width={35}
                             height={35}
                             className="rounded-lg"
                         />
                         <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#caca90] via-white to-[#caca90]">
-                            evict
+                            warm
                         </h1>
                     </Link>
                     <nav className="hidden lg:flex items-center space-x-8">

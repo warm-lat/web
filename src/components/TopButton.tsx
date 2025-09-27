@@ -39,7 +39,7 @@ export default function BackToTopButton() {
                     className="fixed bottom-6 sm:bottom-12 inset-x-12 flex items-center justify-center sm:justify-end z-[10000]">
                     <button
                         onClick={jumpToTop}
-                        className="bg-evict-200 border border-evict-300 text-white rounded-full p-6 hover:bg-transparent transition">
+                        className="bg-warm-200 border border-warm-300 text-white rounded-full p-6 hover:bg-transparent transition">
                         <FaArrowUp className="text-2xl" />
                     </button>
                 </motion.div>

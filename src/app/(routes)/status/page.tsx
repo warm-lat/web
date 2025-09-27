@@ -15,7 +15,7 @@ import { TbCloudDataConnection } from "react-icons/tb"
 const apiKey = ""
 
 const fetchShard = async (shardId: number) => {
-    const response = await fetch(`https://api.evict.bot/status`, {
+    const response = await fetch(`${process.env.API_URL}/status`, {
         headers: {
           'Authorization': apiKey
         }
@@ -40,7 +40,7 @@ const fetchShard = async (shardId: number) => {
 
 export default function Status() {
     const [{ data, loading, error }, refetch] = useAxios({
-        baseURL: "https://api.evict.bot",
+        baseURL: `${process.env.API_URL}`,
         url: "/status",
         headers: {
             'Authorization': apiKey
@@ -78,35 +78,35 @@ export default function Status() {
     }
 
     const OverviewCard = () => (
-        <div className="w-full rounded-3xl bg-evict-200 border border-evict-card-border p-6 mb-8 mt-4">
+        <div className="w-full rounded-3xl bg-warm-200 border border-warm-card-border p-6 mb-8 mt-4">
             <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
                 <h2 className="text-xl font-semibold text-white">All Systems Operational</h2>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
                 <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2 text-evict-700">
+                    <div className="flex items-center gap-2 text-warm-700">
                         <ImConnection />
                         <span>Avg. Latency</span>
                     </div>
                     <p className="text-2xl font-semibold text-white">{overview.avgLatency}ms</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2 text-evict-700">
+                    <div className="flex items-center gap-2 text-warm-700">
                         <HiServerStack />
                         <span>Total Servers</span>
                     </div>
                     <p className="text-2xl font-semibold text-white">{overview.totalServers.toLocaleString()}</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2 text-evict-700">
+                    <div className="flex items-center gap-2 text-warm-700">
                         <FaUsers />
                         <span>Total Users</span>
                     </div>
                     <p className="text-2xl font-semibold text-white">{overview.totalUsers.toLocaleString()}</p>
                 </div>
                 <div className="flex flex-col gap-2">
-                    <div className="flex items-center gap-2 text-evict-700">
+                    <div className="flex items-center gap-2 text-warm-700">
                         <MdOutlineTimeline />
                         <span>Uptime</span>
                     </div>

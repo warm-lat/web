@@ -155,7 +155,7 @@ const roles: RolePreview[] = [
     {
         id: "translator",
         title: "Translator",
-        description: "Help make Evict accessible to users worldwide",
+        description: "Help make Warm accessible to users worldwide",
         icon: Globe2,
         status: "available",
         category: "Community",
@@ -312,7 +312,7 @@ export default function ApplicationHub() {
                             into impact.
                         </h1>
                         <p className="text-xl text-gray-400 leading-relaxed">
-                            Join Evict&apos;s team of innovators and help create the next generation
+                            Join Warm&apos;s team of innovators and help create the next generation
                             of Discord moderation tools. Whether you&apos;re a community expert or a
                             tech enthusiast, there&apos;s a place for you here.
                         </p>
@@ -336,7 +336,7 @@ export default function ApplicationHub() {
                             </h2>
                             <p className="text-lg text-gray-300 mb-6">
                                 Get early access to new features, provide valuable feedback, and
-                                help shape the future of Evict. We&apos;re looking for enthusiastic
+                                help shape the future of Warm. We&apos;re looking for enthusiastic
                                 community members to join our beta testing program.
                             </p>
                             <ul className="space-y-3 mb-8">
@@ -376,7 +376,7 @@ export default function ApplicationHub() {
                         <p className="text-lg text-gray-300 mb-6">
                             Join a passionate group of community builders, developers, and
                             innovators who are shaping the future of Discord moderation. Get to know
-                            the faces behind Evict and see where you might fit in.
+                            the faces behind Warm and see where you might fit in.
                         </p>
                         <button
                             onClick={() => router.push("/team")}

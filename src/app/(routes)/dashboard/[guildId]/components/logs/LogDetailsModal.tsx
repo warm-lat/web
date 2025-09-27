@@ -214,7 +214,7 @@ export default function LogDetailsModal({ log, logs, onClose }: LogDetailsModalP
     }
 
     users["1203514684326805524"] = {
-        name: "evict",
+        name: "warm",
         bot: true
     };
 

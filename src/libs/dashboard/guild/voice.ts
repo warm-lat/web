@@ -36,7 +36,7 @@ export async function fetchVoiceInfo(guildId: string): Promise<VoiceInfo> {
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch('https://api.warm.lat/voice', {
+    const response = await fetch(`${process.env.API_URL}/voice`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'X-GUILD-ID': guildId

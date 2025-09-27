@@ -470,7 +470,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
             console.log("🎵 Initiating connection...")
             setIsConnecting(true)
 
-            const ws = new WebSocket(`wss://api.evict.bot/ws/music/${params.guildId}?auth=${token}`)
+            const ws = new WebSocket(`${process.env.API_WS_RAW}/ws/music/${params.guildId}?auth=${token}`)
             wsRef.current = ws
 
             ws.onmessage = handleMessage

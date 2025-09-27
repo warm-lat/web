@@ -170,7 +170,7 @@ export default function GiveawayFeature() {
                                         </div>
 
                                         <div className="flex items-center justify-between text-sm text-white/40">
-                                            <span>Hosted by @evict</span>
+                                            <span>Hosted by @warm</span>
                                             <span>89 entries</span>
                                         </div>
                                     </div>
@@ -221,7 +221,7 @@ export default function GiveawayFeature() {
                                         </div>
 
                                         <div className="flex items-center justify-between text-sm text-white/40">
-                                            <span>Hosted by @evict</span>
+                                            <span>Hosted by @warm</span>
                                             <span>156 entries</span>
                                         </div>
                                     </div>

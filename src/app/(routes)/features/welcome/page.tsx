@@ -152,7 +152,7 @@ export default function WelcomeFeature() {
                                             {
                                                 variable: "{server.name}",
                                                 desc: "Server name",
-                                                example: "Evict Community"
+                                                example: "Warm Community"
                                             },
                                             {
                                                 variable: "{server.id}",
@@ -289,7 +289,7 @@ export default function WelcomeFeature() {
                                 <div className="bg-[#18191c] rounded-lg p-4">
                                     <div className="text-center">
                                         <img
-                                            src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                            src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
                                             alt="User Avatar"
                                             className="w-20 h-20 rounded-full mx-auto mb-4 ring-4 ring-blue-500/20"
                                         />

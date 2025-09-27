@@ -6,7 +6,7 @@ const Error = () => {
             <div className="text-7xl font-semibold text-zinc-400">Error</div>
             <p>
                 An error occurred during the authorization process. Either contact support at
-                evict.bot/support or try again.
+                warm.bot/support or try again.
             </p>
         </div>
     )

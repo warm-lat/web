@@ -16,24 +16,24 @@ export const viewport: Viewport = {
 }
 
 export const metadata: Metadata = {
-    title: "evict",
+    title: "warm",
     description: "The only aesthetic multi-functional Discord bot you need.",
     twitter: {
-        site: "https://evict.bot/",
+        site: "https://warm.lat/",
         card: "player"
     },
     openGraph: {
-        url: "https://evict.bot/",
+        url: "https://warm.lat/",
         type: "website",
-        title: "evict",
-        siteName: "evict.bot",
+        title: "warm",
+        siteName: "warm.lat",
         description: "The only aesthetic multi-functional Discord bot you need.",
         images: [
             {
-                url: "https://r2.evict.bot/evict-new.png",
+                url: "https://r2.warm.lat/evict-new.png",
                 width: 500,
                 height: 500,
-                alt: "evict"
+                alt: "warm"
             }
         ]
     }

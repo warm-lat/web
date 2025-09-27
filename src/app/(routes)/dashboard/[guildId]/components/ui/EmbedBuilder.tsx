@@ -133,8 +133,8 @@ export function EmbedBuilder() {
                         <div className="mb-6 bg-[#313338] rounded-xl p-4">
                             <DiscordMessages>
                                 <DiscordMessage
-                                    author="evict"
-                                    avatar="https://r2.evict.bot/evict-new.png"
+                                    author="warm"
+                                    avatar="https://r2.warm.lat/evict-new.png"
                                     bot={true}>
                                     <DiscordEmbed
                                         embedTitle={embed.title}

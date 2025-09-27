@@ -238,7 +238,7 @@ export default function VoiceFeature() {
                                         <div className="relative">
                                             <div className="w-12 h-12 rounded-full bg-[#18191c] overflow-hidden">
                                                 <img
-                                                    src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                                    src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
                                                     alt="Profile"
                                                     className="w-full h-full object-cover"
                                                 />
@@ -259,7 +259,7 @@ export default function VoiceFeature() {
                                                 <div className="flex items-center gap-1.5">
                                                     <RiSpotifyFill className="w-3.5 h-3.5 text-green-400" />
                                                     <span className="text-xs text-white/60">
-                                                        Listening to Evict Music
+                                                        Listening to Warm Music
                                                     </span>
                                                 </div>
                                                 <div className="flex items-center gap-3 mt-2">

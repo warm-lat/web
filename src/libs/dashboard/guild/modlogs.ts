@@ -68,7 +68,7 @@ export async function fetchGuildModLogs(guildId: string): Promise<ModLogsRespons
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`https://api.warm.lat/modlogs`, {
+    const response = await fetch(`${process.env.API_URL}/modlogs`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'X-GUILD-ID': guildId,

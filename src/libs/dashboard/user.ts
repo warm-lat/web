@@ -47,7 +47,7 @@ export async function fetchDashboardUser(): Promise<DashboardUserResponse> {
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch("https://api.warm.lat/dashboard/user", {
+    const response = await fetch(`${process.env.API_URL}/dashboard/user`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json"
