@@ -127,9 +127,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 					}
 
 					const numericId = discordSession.user.id;
-					const agent = new https.Agent({
-						rejectUnauthorized: process.env.NODE_ENV === "production",
-					});
 
 					const response = await fetch(`${process.env.API_URL}/spotify/auth`, {
 						method: "POST",
@@ -219,7 +216,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 					? "__Secure-next-auth.session-token"
 					: "next-auth.session-token",
 			options: {
-				httpOnly: true,
+				httpOnly: false,
 				sameSite: "lax",
 				path: "/",
 				secure: process.env.NODE_ENV === "production",
