@@ -19,6 +19,7 @@ export default function Login() {
         if (provider === "discord") {
             const callbackUrl = redirect || (forBeta ? "/beta" : 
                 (/*forSpotify ||*/ forLastfm ? "/login?" + searchParams.toString() : "/"))
+            console.log("Callback URL:", callbackUrl)
             await signIn(provider, { callbackUrl })
         } else {
             await signIn(provider, { callbackUrl: redirectTo })
