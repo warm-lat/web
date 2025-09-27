@@ -2,6 +2,7 @@ import NextAuth, { type Session } from "next-auth"
 import Discord from "next-auth/providers/discord"
 import Spotify from "next-auth/providers/spotify"
 import crypto from 'crypto'
+import https from 'https'
 
 declare module "next-auth" {
     interface User {
@@ -115,6 +116,9 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
                     }
 
                     const numericId = discordSession.user.id
+                    const agent = new https.Agent({
+                        rejectUnauthorized: process.env.NODE_ENV === 'production'
+                    })
 
                     const response = await fetch("https://api.warm.lat/spotify/auth", {
                         method: "POST",
