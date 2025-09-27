@@ -3,7 +3,7 @@
     "version": "0.1.0",
     "private": true,
     "scripts": {
-        "preinstall": "apt-get update && sudo apt-get install -y ca-certificates",
+        "preinstall": "apt-get update && apt-get install -y ca-certificates",
         "dev": "bun next dev",
         "build": "bun next build",
         "start": "bun next start",
