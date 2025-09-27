@@ -39,8 +39,6 @@ async function getCommands(): Promise<Command[]> {
 			},
 		});
 
-		clearTimeout(timeoutId);
-
 		if (!response.ok)
 			throw new Error(
 				`API returned ${response.status}: ${response.statusText}`
