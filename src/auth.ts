@@ -98,6 +98,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							user_id: profile?.id ?? "",
 							access_token: account.access_token,
 						}),
+                        // @ts-ignore
 						agent: agent,
 					});
 
@@ -149,6 +150,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							expires_in: account.expires_in,
 							spotify_id: user.id,
 						}),
+                        // @ts-ignore
 						agent: agent,
 					});
 
