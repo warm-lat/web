@@ -8,7 +8,7 @@ export async function fetchGuildMusic(guildId: string) {
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.API_URL}/audio`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/audio`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'X-GUILD-ID': guildId,

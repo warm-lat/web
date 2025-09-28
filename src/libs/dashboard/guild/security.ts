@@ -89,7 +89,7 @@ export async function fetchGuildSecurity(guildId: string): Promise<SecuritySetti
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.API_URL}/security`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/security`, {
         headers: {
             'Authorization': `Bearer ${token}`,
             'X-GUILD-ID': guildId
@@ -117,7 +117,7 @@ export async function updateGuildSecurity(guildId: string, settings: SecurityUpd
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`https://api.warm.lat/update/security`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/update/security`, {
         method: 'POST',
         headers: {
             'Authorization': `Bearer ${token}`,

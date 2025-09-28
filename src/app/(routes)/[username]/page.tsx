@@ -584,7 +584,7 @@ export default function ProfilePage({ params }: { params: { username: string } }
             const maxRetries = 3
 
             while (retries < maxRetries) {
-                response = await fetch("https://api.warm.lat/report", {
+                response = await fetch(`${process.env.NEXT_PUBLIC_URL}/report`, {
                     method: "POST",
                     headers: {
                         "Content-Type": "application/json",
@@ -1231,7 +1231,7 @@ export default function ProfilePage({ params }: { params: { username: string } }
                                         const maxRetries = 3
 
                                         while (retries < maxRetries) {
-                                            response = await fetch("https://api.warm.lat/report", {
+                                            response = await fetch(`${process.env.NEXT_PUBLIC_URL}/report`, {
                                                 method: "POST",
                                                 headers: {
                                                     "Content-Type": "application/json",

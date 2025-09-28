@@ -272,7 +272,7 @@ export default function TeamPage() {
 
 	useEffect(() => {
 		const headers: HeadersInit = { Authorization: apiKey };
-		fetch(`${process.env.API_URL}/users/presence`, { headers })
+		fetch(`${process.env.NEXT_PUBLIC_URL}/users/presence`, { headers })
 			.then((res) => res.json())
 			.then((data: ApiResponse) => {
 				const uniqueUsers = data.data.filter(

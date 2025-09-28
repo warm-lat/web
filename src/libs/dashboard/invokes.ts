@@ -44,7 +44,7 @@ export async function fetchInvokeHistory(): Promise<InvokeHistoryResponse> {
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.API_URL}/invoke-history`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/invoke-history`, {
         headers: {
             Authorization: `Bearer ${session.user.userToken}`,
             "Content-Type": "application/json"

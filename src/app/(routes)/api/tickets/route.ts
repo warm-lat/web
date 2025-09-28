@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     }
 
     try {
-        const response = await fetch(`${process.env.API_URL}/tickets?id=${id}`, {
+        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/tickets?id=${id}`, {
             headers: {
                 Authorization: `${API_TOKEN}`,
                 "User-ID": session.user.id 

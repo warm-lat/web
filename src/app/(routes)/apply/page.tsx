@@ -230,7 +230,7 @@ export default function ApplicationHub() {
         setIsSubmitting(true)
 
         try {
-            const response = await fetch(`https://api.warm.lat/beta/submit`, {
+            const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/beta/submit`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",

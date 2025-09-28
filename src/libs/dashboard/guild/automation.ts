@@ -95,7 +95,7 @@ export async function fetchGuildAutomation(guildId: string): Promise<AutomationR
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.API_URL}/automation`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/automation`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

@@ -50,7 +50,7 @@ const HomePage = () => {
                     return
                 }
 
-                const response = await fetch(`https://api.warm.lat/status`, {
+                const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/status`, {
                     headers: {
                         'Authorization': apiKey
                     }

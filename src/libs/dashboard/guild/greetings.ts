@@ -27,7 +27,7 @@ export async function fetchGuildGreetings(guildId: string): Promise<GreetingsRes
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.API_URL}/greetings`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/greetings`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

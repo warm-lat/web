@@ -25,7 +25,7 @@ export async function fetchGuildInvokes(guildId: string): Promise<InvokesRespons
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.API_URL}/invokes`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/invokes`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

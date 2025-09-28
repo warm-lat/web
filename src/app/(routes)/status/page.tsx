@@ -15,7 +15,7 @@ import { TbCloudDataConnection } from "react-icons/tb"
 const apiKey = ""
 
 const fetchShard = async (shardId: number) => {
-    const response = await fetch(`${process.env.API_URL}/status`, {
+    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/status`, {
         headers: {
           'Authorization': apiKey
         }
@@ -40,7 +40,7 @@ const fetchShard = async (shardId: number) => {
 
 export default function Status() {
     const [{ data, loading, error }, refetch] = useAxios({
-        baseURL: `${process.env.API_URL}`,
+        baseURL: `${process.env.NEXT_PUBLIC_URL}`,
         url: "/status",
         headers: {
             'Authorization': apiKey
