@@ -9663,7 +9663,7 @@
 		},
 		{
 			"name": "fakepermissions grant",
-			"description": "Add one or more fake permissions to a role.\n> Can use multiple permissions at once if seperated by a comma (,).\n> https://docs.evict.bot/configuration/fakepermissions",
+			"description": "Add one or more fake permissions to a role.\n> Can use multiple permissions at once if seperated by a comma (,).\n> https://docs.warm.lat/configuration/fakepermissions",
 			"aliases": ["add"],
 			"parameters": [
 				{
@@ -9696,7 +9696,7 @@
 		},
 		{
 			"name": "fakepermissions revoke",
-			"description": "Remove one or more fake permissions from a role's fake permissions.\n> Can use multiple permissions at once if seperated by a comma (,).\n> https://docs.evict.bot/configuration/fakepermissions",
+			"description": "Remove one or more fake permissions from a role's fake permissions.\n> Can use multiple permissions at once if seperated by a comma (,).\n> https://docs.warm.lat/configuration/fakepermissions",
 			"aliases": ["remove"],
 			"parameters": [
 				{
@@ -19785,3 +19785,4 @@
 		}
 	]
 }
+

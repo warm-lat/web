@@ -177,7 +177,7 @@ export async function updateGuildAutomation(
 		throw new Error("Unauthorized");
 	}
 
-	const response = await fetch(`https://api.evict.bot/update/automation`, {
+	const response = await fetch(`https://api.warm.lat/update/automation`, {
 		method: "POST",
 		headers: {
 			Authorization: `Bearer ${token}`,
@@ -199,3 +199,4 @@ export async function updateGuildAutomation(
 		throw new Error("Failed to update automation");
 	}
 }
+

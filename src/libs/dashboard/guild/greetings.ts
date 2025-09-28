@@ -83,7 +83,7 @@ export async function updateGuildGreetings(
 		throw new Error("Unauthorized");
 	}
 
-	const response = await fetch(`https://api.evict.bot/update/greetings`, {
+	const response = await fetch(`https://api.warm.lat/update/greetings`, {
 		method: "POST",
 		headers: {
 			Authorization: `Bearer ${token}`,
