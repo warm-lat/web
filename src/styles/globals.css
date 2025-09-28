@@ -197,9 +197,9 @@ body {
     right: 0;
     top: 0;
 
-    --gradient-color-1: #000000;
-    --gradient-color-2: #ffffff;
-    --gradient-color-3: #000000;
+    --gradient-color-1: #cec330;
+    --gradient-color-2: #cbdd2a;
+    --gradient-color-3: #cbdf1a;
     --gradient-color-4: #000000;
 }
 
