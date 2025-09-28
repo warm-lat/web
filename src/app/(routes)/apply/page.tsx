@@ -233,7 +233,8 @@ export default function ApplicationHub() {
             const response = await fetch(`https://api.warm.lat/beta/submit`, {
                 method: "POST",
                 headers: {
-                    "Content-Type": "application/json"
+                    "Content-Type": "application/json",
+                    Authorization: `Bearer ${session?.user?.userToken}`
                 },
                 body: JSON.stringify({
                     role_id: selectedRole,
