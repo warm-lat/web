@@ -268,13 +268,13 @@ export default function WelcomeFeature() {
                                 <div className="bg-[#18191c] rounded-lg p-4 border-l-4 border-blue-500">
                                     <div className="flex items-start gap-4">
                                         <img
-                                            src="https://r2.evict.bot/ba4326aff26bae608592599e14db1239.png"
+                                            src="https://r2.warm.lat/4ceb92e8a8cef28db35b240dae90a4e7.png"
                                             alt="User Avatar"
                                             className="w-16 h-16 rounded-full"
                                         />
                                         <div>
                                             <div className="font-medium text-white mb-2">
-                                                Welcome x14c!
+                                                Welcome 4009584392184!
                                             </div>
                                             <p className="text-white/80">
                                                 You are member #1234. Enjoy your stay!
@@ -289,7 +289,7 @@ export default function WelcomeFeature() {
                                 <div className="bg-[#18191c] rounded-lg p-4">
                                     <div className="text-center">
                                         <img
-                                            src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
+                                            src="https://r2.warm.lat/4ceb92e8a8cef28db35b240dae90a4e7.png"
                                             alt="User Avatar"
                                             className="w-20 h-20 rounded-full mx-auto mb-4 ring-4 ring-blue-500/20"
                                         />
@@ -297,7 +297,7 @@ export default function WelcomeFeature() {
                                             Welcome to the server!
                                         </h3>
                                         <p className="text-white/80 mb-4">
-                                            Hey <span className="text-blue-400">@x14c</span>!
+                                            Hey <span className="text-blue-400">@4009584392184</span>!
                                             Thanks for joining. You&apos;re our 1,234th member!
                                         </p>
                                         <div className="flex justify-center gap-2 text-sm">

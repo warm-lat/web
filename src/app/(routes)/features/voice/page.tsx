@@ -238,7 +238,7 @@ export default function VoiceFeature() {
                                         <div className="relative">
                                             <div className="w-12 h-12 rounded-full bg-[#18191c] overflow-hidden">
                                                 <img
-                                                    src="https://r2.warm.lat/ba4326aff26bae608592599e14db1239.png"
+                                                    src="https://r2.warm.lat/4ceb92e8a8cef28db35b240dae90a4e7.png"
                                                     alt="Profile"
                                                     className="w-full h-full object-cover"
                                                 />

@@ -256,7 +256,7 @@ export default function EmbedPage() {
         ...DiscordDefaultOptions,
         profiles: {
             warm: {
-                avatar: "https://r2.warm.lat/evict-new.png"
+                avatar: "https://r2.warm.lat/pfp.jpg"
             }
         }
     }
