@@ -57,7 +57,7 @@ export const GET = async (request: Request) => {
             return new Response("Failed to save credentials", { status: 500 })
         }
 
-        return Response.redirect(new URL("/connected", request.url))
+        return Response.redirect(new URL("https://warm.lat/connected", request.url))
     } catch (error) {
         console.error("Auth error:", error)
         return new Response("Authentication failed", { status: 500 })

@@ -155,7 +155,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 						return false;
 					}
 
-					return "/connected";
+					return "https://warm.lat/connected";
 				} catch (error) {
 					console.error("Failed to send Spotify credentials:", {
 						error,
