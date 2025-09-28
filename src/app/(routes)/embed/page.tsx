@@ -152,7 +152,7 @@ const replaceVariables = (text: string) => {
 
     const replacements = {
         "{guild.name}": "My Discord Server",
-        "{guild.icon}": "https://r2.warm.lat/evict-new.png",
+        "{guild.icon}": "https://r2.warm.lat/pfp.jpg",
         "{guild.created_at}": "2023-08-01",
         "{guild.count}": "1,604",
         "{guild.boost_count}": "34",

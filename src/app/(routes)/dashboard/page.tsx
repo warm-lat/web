@@ -168,7 +168,7 @@ export default function DashboardPage() {
                                 ) : (
                                     guild.permissions.manage_guild || guild.permissions.admin ? (
                                         <a 
-                                            href={`https://discord.com/api/oauth2/authorize?client_id=1203514684326805524&permissions=8&scope=bot&guild_id=${guild.id}`}
+                                            href={`https://discord.com/api/oauth2/authorize?client_id=1420609343283531776&permissions=8&scope=bot&guild_id=${guild.id}`}
                                             className="flex-1 bg-indigo-500/20 hover:bg-indigo-500/30 text-indigo-200 h-10 px-4 rounded-lg 
                                              transition-colors duration-200 flex items-center justify-center gap-2 cursor-pointer"
                                             target="_blank"

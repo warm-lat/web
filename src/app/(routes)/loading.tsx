@@ -16,7 +16,7 @@ export default function Loading() {
                 }}
                 className="rounded-2xl">
                 <Image
-                    src={"https://r2.warm.lat/evict-new.png"}
+                    src={"https://r2.warm.lat/pfp.jpg"}
                     alt="warm"
                     width={300}
                     height={300}

@@ -21,8 +21,8 @@ export const Footer = () => {
                 <div className="flex flex-col w-full mt-10 px-4 sm:px-6 lg:px-8 sm:flex-row sm:justify-between">
                     <div className="flex flex-col items-start mb-8 sm:mb-0">
                         <Image
-                            src="https://r2.evict.bot/evict-new.png"
-                            alt="evict"
+                            src="https://r2.warm.lat/pfp.jpg"
+                            alt="warm"
                             height={150}
                             width={150}
                             className="rounded-2xl"

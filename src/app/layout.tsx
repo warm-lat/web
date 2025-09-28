@@ -24,7 +24,7 @@ export const metadata: Metadata = {
         description: "The only aesthetic multi-functional Discord bot you need.",
         images: [
             {
-                url: "https://r2.warm.lat/evict-new.png",
+                url: "https://r2.warm.lat/pfp.jpg",
                 width: 500,
                 height: 500,
                 alt: "warm"

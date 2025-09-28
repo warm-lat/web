@@ -108,7 +108,7 @@ const HomePage = () => {
                                     animate={{ scale: 1, opacity: 1 }}
                                     transition={{ duration: 1, ease: "easeOut" }}>
                                     <Image
-                                        src="https://r2.warm.lat/pfp.png"
+                                        src="https://r2.warm.lat/pfp.jpg"
                                         alt="Warm"
                                         width={200}
                                         height={200}

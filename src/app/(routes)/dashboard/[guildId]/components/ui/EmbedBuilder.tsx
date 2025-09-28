@@ -134,7 +134,7 @@ export function EmbedBuilder() {
                             <DiscordMessages>
                                 <DiscordMessage
                                     author="warm"
-                                    avatar="https://r2.warm.lat/evict-new.png"
+                                    avatar="https://r2.warm.lat/pfp.jpg"
                                     bot={true}>
                                     <DiscordEmbed
                                         embedTitle={embed.title}

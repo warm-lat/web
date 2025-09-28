@@ -67,7 +67,7 @@ export default function Navbar({ children }: NavbarProps) {
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex space-x-3">
                         <Image
-                            src={"https://r2.warm.lat/evict-new.png"}
+                            src={"https://r2.warm.lat/pfp.jpg"}
                             alt="warm"
                             width={35}
                             height={35}
