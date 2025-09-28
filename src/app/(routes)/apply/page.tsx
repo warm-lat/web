@@ -230,7 +230,7 @@ export default function ApplicationHub() {
         setIsSubmitting(true)
 
         try {
-            const response = await fetch("/api/beta", {
+            const response = await fetch(`${process.env.API_URL}/beta/submit`, {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json"
