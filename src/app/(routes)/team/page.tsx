@@ -272,7 +272,7 @@ export default function TeamPage() {
 
 	useEffect(() => {
 		const headers: HeadersInit = { Authorization: apiKey };
-		fetch(`${process.env.NEXT_PUBLIC_URL}/users/presence`, { headers })
+		fetch(`https://api.warm.lat/users/presence`, { headers })
 			.then((res) => res.json())
 			.then((data: ApiResponse) => {
 				const uniqueUsers = data.data.filter(

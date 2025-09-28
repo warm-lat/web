@@ -27,7 +27,7 @@ export async function fetchGuildStatistics(guildId: string, days: number = 7): P
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/statistics`, {
+    const response = await fetch(`https://api.warm.lat/statistics`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",

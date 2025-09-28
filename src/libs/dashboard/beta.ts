@@ -12,7 +12,7 @@ export async function checkBetaAccess(): Promise<BetaResponse> {
         throw new Error("Unauthorized")
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/beta`, {
+    const response = await fetch(`https://api.warm.lat/beta`, {
         headers: {
             'Authorization': `Bearer ${token}`
         }

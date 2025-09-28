@@ -49,7 +49,7 @@ export async function fetchUserGuilds(): Promise<DashboardResponse> {
         throw new Error("Beta access required")
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/dashboard/guilds`, {
+    const response = await fetch(`https://api.warm.lat/dashboard/guilds`, {
         headers: {
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json"

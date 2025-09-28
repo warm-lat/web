@@ -7,7 +7,7 @@ export async function GET(
   { params }: { params: { userId: string } }
 ) {
   try {
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/avatars/${params.userId}?t=${Date.now()}`, {
+    const response = await fetch(`https://api.warm.lat/avatars/${params.userId}?t=${Date.now()}`, {
       headers: {
         'Authorization': API_KEY
       }

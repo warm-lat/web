@@ -31,7 +31,7 @@ async function getCommands(): Promise<Command[]> {
 			return cachedCommands;
 		}
 
-		const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/commands`, {
+		const response = await fetch(`https://api.warm.lat/commands`, {
 			headers: {
 				"User-Agent": "warm-web/1.0.0",
 				Accept: "application/json",

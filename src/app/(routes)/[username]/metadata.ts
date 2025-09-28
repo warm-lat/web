@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 export async function generateMetadata({ params }: { params: { username: string } }): Promise<Metadata> {
     try {
         const cleanUsername = decodeURIComponent(params.username).replace('@', '')
-        const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/socials`, {
+        const response = await fetch(`https://api.warm.lat/socials`, {
             headers: {
                 "X-USER-ID": cleanUsername,
                 "Authorization": ""

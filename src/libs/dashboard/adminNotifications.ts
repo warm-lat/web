@@ -47,7 +47,7 @@ export async function manageNotifications(payload: NotificationPayload): Promise
         throw new Error("403")
     }
 
-    const response = await fetch(`${process.env.NEXT_PUBLIC_URL}/notifications/manage`, {
+    const response = await fetch(`https://api.warm.lat/notifications/manage`, {
         method: "POST",
         headers: {
             Authorization: `Bearer ${session.user.userToken}`,
