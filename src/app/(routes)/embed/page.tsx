@@ -163,10 +163,10 @@ const replaceVariables = (text: string) => {
         "{guild.boost_count.format}": "25th",
         "{guild.booster_count.format}": "10th",
         "{user}": "_mism.#0",
-        "{user.name}": "x14c",
+        "{user.name}": "_mism.",
         "{user.discriminator}": "#0",
         "{user.id}": "123456789012345678",
-        "{user.mention}": "@x14c",
+        "{user.mention}": "@_mism.",
         "{user.avatar}": "https://example.com/avatar.png",
         "{user.created_at}": "2020-05-01",
         "{user.joined_at}": "2021-06-15"

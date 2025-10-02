@@ -44,7 +44,7 @@ export async function fetchInvokeHistory(): Promise<InvokeHistoryResponse> {
 		throw new Error("Unauthorized");
 	}
 
-	const response = await fetch(`https://api.warm.lat/invoke-history`, {
+	const response = await fetch(`https://api.warm.lat/invokes`, {
 		headers: {
 			Authorization: `Bearer ${session.user.userToken}`,
 			"Content-Type": "application/json",

@@ -950,7 +950,7 @@ const HomePage = () => {
                                                             />
                                                         </div>
                                                         <div className="text-white/40 text-xs mt-2">
-                                                            discord.gg/warm
+                                                            discord.gg/apply
                                                         </div>
                                                     </div>
 
@@ -969,7 +969,7 @@ const HomePage = () => {
                                                                 />
                                                             </div>
                                                             <div className="text-white/40 text-xs mt-2">
-                                                                discord.gg/warm
+                                                                discord.gg/apply
                                                             </div>
                                                         </div>
                                                         <div className="bg-black/40 rounded-lg p-3">
@@ -986,7 +986,7 @@ const HomePage = () => {
                                                                 />
                                                             </div>
                                                             <div className="text-white/40 text-xs mt-2">
-                                                                discord.gg/warm
+                                                                discord.gg/apply
                                                             </div>
                                                         </div>
                                                     </div>
@@ -1662,7 +1662,7 @@ const HomePage = () => {
                                             </motion.span>
                                         </motion.a>
                                         <motion.a
-                                            href="https://discord.gg/warm"
+                                            href="https://discord.gg/apply"
                                             target="_blank"
                                             className="group px-8 py-3 bg-[#5865F2] text-white rounded-lg font-medium 
                                                      hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"

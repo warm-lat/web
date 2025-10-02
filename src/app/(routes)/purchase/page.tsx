@@ -473,7 +473,7 @@ export default function PurchasePage() {
 						</span>
 					</a>
 					<a
-						href="https://discord.gg/warm"
+						href="https://discord.gg/apply"
 						target="_blank"
 						className="group px-8 py-3 bg-[#5865F2] text-white rounded-full font-medium 
                  hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"

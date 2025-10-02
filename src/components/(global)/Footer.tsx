@@ -45,7 +45,7 @@ export const Footer = () => {
                                 Documentation
                             </Link>
                             <Link
-                                href="https://discord.gg/warm"
+                                href="https://discord.gg/apply"
                                 className="font-semibold text-warm-pink text-sm mt-2">
                                 Support Server
                             </Link>
