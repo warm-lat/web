@@ -946,9 +946,9 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                     Anyone can join your room at any time.
                                 </span>
                             </button>
-                            <button className="w-full flex flex-col gap-2 p-4 rounded-lg bg-evict-pink/20 border border-evict-pink">
+                            <button className="w-full flex flex-col gap-2 p-4 rounded-lg bg-warm-pink/20 border border-warm-pink">
                                 <div className="flex items-center gap-2">
-                                    <Users className="w-4 h-4 text-evict-pink" />
+                                    <Users className="w-4 h-4 text-warm-pink" />
                                     <span className="text-white font-medium">Friends</span>
                                 </div>
                                 <span className="text-sm text-white/60">
@@ -961,9 +961,9 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                     <div className="space-y-2">
                         <label className="text-white font-medium">Room Control</label>
                         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                            <button className="flex flex-col gap-2 p-3 rounded-lg bg-evict-pink/20 border border-evict-pink">
+                            <button className="flex flex-col gap-2 p-3 rounded-lg bg-warm-pink/20 border border-warm-pink">
                                 <div className="flex items-center gap-2">
-                                    <Shield className="w-4 h-4 text-evict-pink" />
+                                    <Shield className="w-4 h-4 text-warm-pink" />
                                     <span className="text-white font-medium">Hosts</span>
                                 </div>
                                 <span className="text-sm text-white/60">

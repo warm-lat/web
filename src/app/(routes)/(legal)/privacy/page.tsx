@@ -2,7 +2,7 @@ const Privacy = () => {
 	return (
 		<div className="flex flex-col mx-[10vw] mt-5 sm:mx-[25vw]">
 			<span className="font-bold text-5xl text-white">Privacy Policy</span>
-			<span className="text-evict-pink italic text-sm mt-5">
+			<span className="text-warm-pink italic text-sm mt-5">
 				Last updated And Effective Since: 2025-02-24
 			</span>
 			<span className="text-neutral-400 text-sm mt-5 pb-5">
@@ -11,32 +11,32 @@ const Privacy = () => {
 				<span className="text-white font-semibold">support@warm.lat</span>
 			</span>
 			<div className="flex flex-col gap-4 text-[17px] pl-5">
-				<li className="text-neutral-400 marker:text-evict-pink">Guild IDs</li>
-				<li className="text-neutral-400 marker:text-evict-pink">Guild Names</li>
-				<li className="text-neutral-400 marker:text-evict-pink">Channel IDs</li>
-				<li className="text-neutral-400 marker:text-evict-pink">Role IDs</li>
-				<li className="text-neutral-400 marker:text-evict-pink">User IDs</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">Guild IDs</li>
+				<li className="text-neutral-400 marker:text-warm-pink">Guild Names</li>
+				<li className="text-neutral-400 marker:text-warm-pink">Channel IDs</li>
+				<li className="text-neutral-400 marker:text-warm-pink">Role IDs</li>
+				<li className="text-neutral-400 marker:text-warm-pink">User IDs</li>
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Message Timestamps
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">Message IDs</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">Message IDs</li>
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Past Avatars
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Nicknames and Usernames
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Message content when a command is ran (stored for a max of 14 days) or
 					when arguments are passed for commands
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Last deleted message content (stored for a max of 2 hours or less)
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Last message edit history (stored for a max of 2 hours or less)
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Last Emoji Reaction History (stored for a max of 2 hours or less)
 				</li>
 			</div>

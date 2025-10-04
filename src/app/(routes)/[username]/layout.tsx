@@ -1,13 +1,9 @@
-export { generateMetadata } from './metadata'
+export { generateMetadata } from "./metadata";
 
 export default function ProfileLayout({
-    children,
+	children,
 }: {
-    children: React.ReactNode
+	children: React.ReactNode;
 }) {
-    return (
-        <div>
-            {children}
-        </div>
-    )
-} 
+	return <div>{children}</div>;
+}

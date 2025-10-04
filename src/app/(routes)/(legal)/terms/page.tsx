@@ -2,16 +2,16 @@ const Terms = () => {
 	return (
 		<div className="flex flex-col mx-[10vw] mt-5 sm:mx-[25vw]">
 			<span className="font-bold text-5xl text-white">Terms of Service</span>
-			<span className="text-evict-pink italic text-sm mt-5">
-				Last updated And Effective Since: 2025-02-24
+			<span className="text-warm-pink italic text-sm mt-5">
+				Last updated And Effective Since: October 3rd, 2025
 			</span>
 			<span className="text-neutral-400 text-sm mt-5 pb-5">
-				By visiting (&apos;Evict&apos;) or inviting (&apos;Evict Bot&apos;) to
+				By visiting (&apos;warm.lat&apos;) or inviting (&apos;Warm Bot&apos;) to
 				your Discord or logging into our website (&apos;warm.lat&apos;), you
 				agree and consent to the terms displayed on this page including our
-				policies (Privacy Policy). When we state &apos;Evict&apos;,
+				policies (Privacy Policy). When we state &apos;Warm&apos;,
 				&apos;we&apos;, &apos;us&apos;, and &apos;our&apos; in these terms, we
-				mean Evict. &apos;Services&apos; mean Evict&apos;s services that we
+				mean Warm. &apos;Services&apos; mean Warm&apos;s services that we
 				offer to users.
 			</span>
 			<span className="text-neutral-400 text-sm mt-5">
@@ -21,7 +21,7 @@ const Terms = () => {
 
 			<span className="font-bold text-2xl text-white pt-10">Disclaimer</span>
 			<span className="text-neutral-400 text-sm mt-5">
-				You may not use Evict to violate any applicable laws or regulations as
+				You may not use Warm to violate any applicable laws or regulations as
 				well as Discord&apos;s Terms of Service and Community Guidelines. If you
 				encounter individuals or communities doing so, please send an email to{" "}
 				<span className="text-white font-semibold">support@warm.lat</span>. If
@@ -29,7 +29,7 @@ const Terms = () => {
 				subject to blacklist and a ban from all of our services.
 			</span>
 			<span className="font-bold text-2xl text-white pt-10">
-				Evict Website Usage
+				Warm Website Usage
 			</span>
 			<span className="text-neutral-400 text-sm mt-5">
 				You are required to be compliant with the terms shown on this page. You
@@ -49,7 +49,7 @@ const Terms = () => {
 					Framing a portion or all of the website.
 				</li>
 				<li className="text-neutral-400 marker:text-evict-pink">
-					Copy Evict&apos;s website and claiming it as your own work.
+					Copy Warm&apos;s website and claiming it as your own work.
 				</li>
 				<li className="text-neutral-400 marker:text-evict-pink">
 					Commands labeled as 18+ shall only be used by users 18+, anybody under
@@ -57,7 +57,7 @@ const Terms = () => {
 				</li>
 			</div>
 			<span className="font-bold text-2xl text-white pt-10">
-				Evict Bot Usage
+				Warm Bot Usage
 			</span>
 			<span className="text-neutral-400 text-sm mt-5">
 				You are not to do any of the following:
@@ -67,13 +67,13 @@ const Terms = () => {
 					Violate the Discord Terms of Service.
 				</li>
 				<li className="text-neutral-400 marker:text-evict-pink">
-					Copy Evict&apos;s services or features.
+					Copy Warm&apos;s services or features.
 				</li>
 				<li className="text-neutral-400 marker:text-evict-pink">
-					Assist anyone in copying evict&apos;s services or features.
+					Assist anyone in copying Warm&apos;s services or features.
 				</li>
 				<li className="text-neutral-400 marker:text-evict-pink">
-					Abuse or exploit Evict or any of our services.
+					Abuse or exploit Warm or any of our services.
 				</li>
 				<li className="text-neutral-400 marker:text-evict-pink">
 					Run a Discord Server that has been terminated repeatedly.

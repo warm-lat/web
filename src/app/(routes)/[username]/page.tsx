@@ -15,7 +15,7 @@ import {
 } from "lucide-react";
 import { useSession } from "next-auth/react";
 import Image from "next/image";
-import { useEffect, useRef, useState, useRouter } from "react";
+import { useEffect, useRef, useState } from "react";
 import {
 	FaDiscord,
 	FaGithub,
@@ -30,6 +30,7 @@ import {
 	FaYoutube,
 } from "react-icons/fa";
 import { toast } from "sonner";
+import { useRouter } from "next/navigation";
 
 interface EmojiData {
 	name: string;
@@ -122,26 +123,26 @@ const statusColors = {
 } as const;
 
 const badgeIcons = {
-    owner: "/badges/slug/owner.png",
-    developer: "/badges/slug/developer.png",
-    staff: "/badges/slug/staff.png",
+	owner: "/badges/slug/owner.png",
+	developer: "/badges/slug/developer.png",
+	staff: "/badges/slug/staff.png",
 	support: "/badges/slug/support.png",
 	trial: "/badges/slug/trial.png",
 	mod: "/badges/slug/mod.png",
-    donor4: "/badges/slug/donor4.png",
+	donor4: "/badges/slug/donor4.png",
 	donor1: "/badges/slug/donor1.png",
 } as const;
 
 type BadgeType = keyof typeof badgeIcons;
 
 const badgeNames: Record<BadgeType, string> = {
-    owner: "Owner",
-    developer: "Developer",
-    staff: "Staff Member",
+	owner: "Owner",
+	developer: "Developer",
+	staff: "Staff Member",
 	support: "Support Team",
 	trial: "Trial Moderator",
 	mod: "Moderator",
-    donor4: "Instance Owner",
+	donor4: "Instance Owner",
 	donor1: "Donator",
 };
 

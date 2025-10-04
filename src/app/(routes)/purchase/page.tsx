@@ -458,7 +458,7 @@ export default function PurchasePage() {
 					Ready to enhance your Discord server?
 				</h2>
 				<p className="text-white/60 text-xl mb-10">
-					Join hundreds of servers already using Warm
+					Join thousands of users already using Warm
 				</p>
 				<div className="flex flex-col sm:flex-row gap-4 justify-center">
 					<a

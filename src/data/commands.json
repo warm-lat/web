@@ -2184,7 +2184,7 @@
 		},
 		{
 			"name": "reskin",
-			"description": "Customize the outputs for Evict's command outputs.",
+			"description": "Customize the outputs for Warm's command outputs.",
 			"aliases": [],
 			"parameters": [],
 			"category": "Premium",
@@ -2202,7 +2202,7 @@
 		},
 		{
 			"name": "reskin enable",
-			"description": "Enable the customization of outputs for Evict's command outputs.",
+			"description": "Enable the customization of outputs for Warm's command outputs.",
 			"aliases": [],
 			"parameters": [],
 			"category": "Premium",
@@ -2211,7 +2211,7 @@
 		},
 		{
 			"name": "reskin avatar",
-			"description": "Change the avatar that appears on Evict's command outputs.",
+			"description": "Change the avatar that appears on Warm's command outputs.",
 			"aliases": ["icon", "pfp", "av"],
 			"parameters": [
 				{
@@ -2228,7 +2228,7 @@
 		},
 		{
 			"name": "reskin name",
-			"description": "Edit the name that appears on Evict's command outputs.",
+			"description": "Edit the name that appears on Warm's command outputs.",
 			"aliases": [],
 			"parameters": [
 				{
@@ -2245,7 +2245,7 @@
 		},
 		{
 			"name": "reskin disable",
-			"description": "Disable the customization of outputs for Evict's command outputs.",
+			"description": "Disable the customization of outputs for Warm's command outputs.",
 			"aliases": [],
 			"parameters": [],
 			"category": "Premium",
@@ -9654,7 +9654,7 @@
 		},
 		{
 			"name": "fakepermissions",
-			"description": "Restrict moderators to only use Evict for moderation.",
+			"description": "Restrict moderators to only use Warm for moderation.",
 			"aliases": ["fp"],
 			"parameters": [],
 			"category": "Moderation",
@@ -18310,7 +18310,7 @@
 		},
 		{
 			"name": "premium",
-			"description": "View Evict's premium subscription tiers.",
+			"description": "View Warm's premium subscription tiers.",
 			"aliases": ["tiers", "pricing"],
 			"parameters": [],
 			"category": "Utility",

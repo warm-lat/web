@@ -26,7 +26,7 @@ const Switch = ({
         <button
             onClick={() => onChange(!checked)}
             className={`relative inline-flex h-5 w-9 items-center rounded-full transition-colors ${
-                checked ? "bg-evict-pink" : "bg-white/10"
+                checked ? "bg-warm-pink" : "bg-white/10"
             }`}>
             <span
                 className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${
@@ -143,7 +143,7 @@ export default function ModerationFeature() {
     const demoScenarios = {
         spam: {
             title: "Spam Detection & Prevention",
-            description: "See how Evict automatically detects and prevents spam messages",
+            description: "See how Warm automatically detects and prevents spam messages",
             action: () => {
                 const spamMessages = [
                     "CLICK HERE FOR FEMBOY THIGHS",
@@ -218,7 +218,7 @@ export default function ModerationFeature() {
         },
         antinuke: {
             title: "Anti-Nuke Protection",
-            description: "See how Evict protects against server nuking attempts",
+            description: "See how Warm protects against server nuking attempts",
             action: () => {
                 setMessages([
                     {
@@ -429,35 +429,35 @@ export default function ModerationFeature() {
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12 md:mb-20">
                     {[
                         {
-                            icon: <Shield className="w-6 h-6 text-evict-pink" />,
+                            icon: <Shield className="w-6 h-6 text-warm-pink" />,
                             title: "Auto-Moderation",
                             description:
                                 "Automatically detect and handle spam, inappropriate content, and raids"
                         },
                         {
-                            icon: <MessageSquare className="w-6 h-6 text-evict-pink" />,
+                            icon: <MessageSquare className="w-6 h-6 text-warm-pink" />,
                             title: "Message Filtering",
                             description:
                                 "Filter unwanted content, links, and attachments with customizable rules"
                         },
                         {
-                            icon: <UserX className="w-6 h-6 text-evict-pink" />,
+                            icon: <UserX className="w-6 h-6 text-warm-pink" />,
                             title: "User Management",
                             description: "Comprehensive tools for warnings, mutes, kicks, and bans"
                         },
                         {
-                            icon: <History className="w-6 h-6 text-evict-pink" />,
+                            icon: <History className="w-6 h-6 text-warm-pink" />,
                             title: "Detailed Logging",
                             description:
                                 "Track all moderation actions with comprehensive audit logs"
                         },
                         {
-                            icon: <AlertTriangle className="w-6 h-6 text-evict-pink" />,
+                            icon: <AlertTriangle className="w-6 h-6 text-warm-pink" />,
                             title: "Raid Protection",
                             description: "Advanced algorithms to detect and prevent raid attempts"
                         },
                         {
-                            icon: <Ban className="w-6 h-6 text-evict-pink" />,
+                            icon: <Ban className="w-6 h-6 text-warm-pink" />,
                             title: "Auto-Punishments",
                             description: "Automated escalating punishments for repeat offenders"
                         }
@@ -479,7 +479,7 @@ export default function ModerationFeature() {
                                 <p className="text-white/60">{feature.description}</p>
                             </div>
                             <div
-                                className="absolute inset-0 bg-gradient-to-br from-evict-pink/5 to-transparent 
+                                className="absolute inset-0 bg-gradient-to-br from-warm-pink/5 to-transparent 
                                           opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                             />
                         </motion.div>
@@ -518,7 +518,7 @@ export default function ModerationFeature() {
                                                 className={`flex items-center gap-2 px-4 py-3 text-sm font-medium transition-colors
                                                     ${
                                                         activeTab === tab.key
-                                                            ? "text-white border-b-2 border-evict-pink"
+                                                            ? "text-white border-b-2 border-warm-pink"
                                                             : "text-white/40 hover:text-white/60"
                                                     }`}>
                                                 <div className="p-2 bg-white/5 rounded-xl w-fit">
@@ -561,7 +561,7 @@ export default function ModerationFeature() {
                                                         }}
                                                         className={`px-3 py-1.5 rounded-lg text-sm font-medium transition-colors ${
                                                             selectedPreset === preset
-                                                                ? "bg-evict-pink text-white"
+                                                                ? "bg-warm-pink text-white"
                                                                 : "bg-white/5 text-white/60 hover:bg-white/10"
                                                         }`}>
                                                         {preset.charAt(0).toUpperCase() +
@@ -611,7 +611,7 @@ export default function ModerationFeature() {
                                                         <span className="text-white/60 text-sm">
                                                             Effectiveness
                                                         </span>
-                                                        <span className="text-sm font-medium text-evict-pink">
+                                                        <span className="text-sm font-medium text-warm-pink">
                                                             {selectedPreset === "strict"
                                                                 ? "98%"
                                                                 : selectedPreset === "medium"
@@ -621,7 +621,7 @@ export default function ModerationFeature() {
                                                     </div>
                                                     <div className="h-1 bg-white/5 rounded-full">
                                                         <div
-                                                            className="h-full rounded-full bg-evict-pink transition-all duration-300"
+                                                            className="h-full rounded-full bg-warm-pink transition-all duration-300"
                                                             style={{
                                                                 width:
                                                                     selectedPreset === "strict"
@@ -689,7 +689,7 @@ export default function ModerationFeature() {
                                                         parseInt(e.target.value)
                                                     )
                                                 }
-                                                className="w-full accent-evict-pink appearance-none bg-white/5 h-1 rounded-lg focus:outline-none"
+                                                className="w-full accent-warm-pink appearance-none bg-white/5 h-1 rounded-lg focus:outline-none"
                                                 style={{
                                                     WebkitAppearance: "none",
                                                     background: "rgba(255, 255, 255, 0.05)"
@@ -710,7 +710,7 @@ export default function ModerationFeature() {
                                                         }
                                                         className={`flex-1 py-2 rounded-lg text-sm font-medium transition-colors ${
                                                             configs[activeTab].punishment === p
-                                                                ? "bg-evict-pink text-white"
+                                                                ? "bg-warm-pink text-white"
                                                                 : "bg-white/5 text-white/60 hover:bg-white/10"
                                                         }`}>
                                                         {p}
@@ -747,7 +747,7 @@ export default function ModerationFeature() {
                                                 transition={{ duration: 0.2 }}
                                                 className={`p-3 rounded-lg transition-all duration-200 hover:bg-white/[0.03] group ${
                                                     msg.type === "system"
-                                                        ? "bg-evict-pink/10 text-evict-pink border border-evict-pink/10"
+                                                        ? "bg-warm-pink/10 text-warm-pink border border-warm-pink/10"
                                                         : msg.type === "warning"
                                                           ? "bg-yellow-500/10 text-yellow-400 border border-yellow-500/10"
                                                           : "bg-white/[0.02] text-white/60 border border-white/5"
@@ -768,7 +768,7 @@ export default function ModerationFeature() {
                                                             <AlertTriangle className="w-4 h-4 text-yellow-400" />
                                                         )}
                                                         {msg.type === "system" && (
-                                                            <Shield className="w-4 h-4 text-evict-pink" />
+                                                            <Shield className="w-4 h-4 text-warm-pink" />
                                                         )}
                                                     </motion.div>
                                                     <span>{msg.content}</span>
@@ -941,14 +941,14 @@ export default function ModerationFeature() {
                                             }}
                                             className={`w-full text-left px-4 py-3 rounded-lg transition-all ${
                                                 activeTab === key
-                                                    ? "bg-evict-pink/20 text-white"
+                                                    ? "bg-warm-pink/20 text-white"
                                                     : "text-white/60 hover:bg-white/5"
                                             }`}>
                                             <div className="flex items-center gap-3">
                                                 <div
                                                     className={`w-1.5 h-1.5 rounded-full ${
                                                         activeTab === key
-                                                            ? "bg-evict-pink"
+                                                            ? "bg-warm-pink"
                                                             : "bg-white/20"
                                                     }`}
                                                 />
@@ -990,19 +990,19 @@ export default function ModerationFeature() {
                                                 ${message.filtered ? "opacity-50" : ""}
                                                 ${
                                                     message.author === "System"
-                                                        ? "bg-gradient-to-r from-evict-pink/10 to-transparent"
+                                                        ? "bg-gradient-to-r from-warm-pink/10 to-transparent"
                                                         : "hover:bg-white/5"
                                                 }`}>
                                             <div
                                                 className={`shrink-0 w-8 h-8 rounded-lg bg-gradient-to-br 
                                                 ${
                                                     message.author === "System"
-                                                        ? "from-evict-pink/20 to-evict-pink/5"
+                                                        ? "from-warm-pink/20 to-warm-pink/5"
                                                         : "from-white/10 to-white/5"
                                                 } 
                                                 flex items-center justify-center`}>
                                                 {message.author === "System" ? (
-                                                    <Shield className="w-4 h-4 text-evict-pink" />
+                                                    <Shield className="w-4 h-4 text-warm-pink" />
                                                 ) : (
                                                     <MessageSquare className="w-4 h-4 text-white/40" />
                                                 )}
@@ -1012,7 +1012,7 @@ export default function ModerationFeature() {
                                                     <span
                                                         className={`text-sm font-medium ${
                                                             message.author === "System"
-                                                                ? "text-evict-pink"
+                                                                ? "text-warm-pink"
                                                                 : "text-white"
                                                         }`}>
                                                         {message.author}
@@ -1065,20 +1065,20 @@ export default function ModerationFeature() {
                             {
                                 step: "1",
                                 title: "Enable Ban Detection",
-                                command: ";antinuke ban (status) (flags)",
+                                command: ",antinuke ban (status) (flags)",
                                 description: "Enable detection for mass ban attempts"
                             },
                             {
                                 step: "2",
                                 title: "Set up moderation",
-                                command: ";setme",
+                                command: ",setme",
                                 description: "Set up moderation channels such as mod logs"
                             },
                             {
                                 step: "3",
                                 title: "Block Links",
                                 command:
-                                    ";antiraid filter links ('invites', 'external' or 'all') (status) (flags)",
+                                    ",antiraid filter links ('invites', 'external' or 'all') (status) (flags)",
                                 description: "Block invites, external links, or all links"
                             }
                         ].map((step, index) => (
@@ -1088,7 +1088,7 @@ export default function ModerationFeature() {
                                 whileInView={{ opacity: 1, y: 0 }}
                                 transition={{ delay: index * 0.1 }}
                                 className="bg-white/[0.02] border border-white/5 rounded-xl p-6">
-                                <div className="text-evict-pink font-bold mb-2">
+                                <div className="text-warm-pink font-bold mb-2">
                                     Step {step.step}
                                 </div>
                                 <h3 className="text-xl font-semibold text-white mb-2">
@@ -1111,7 +1111,7 @@ export default function ModerationFeature() {
                         Ready to enhance your Discord server?
                     </h2>
                     <p className="text-white/60 text-xl mb-10">
-                        Join thousands of servers already using Evict
+                        Join thousands of servers already using Warm
                     </p>
                     <div className="flex flex-col sm:flex-row gap-4 justify-center">
                         <a
@@ -1125,7 +1125,7 @@ export default function ModerationFeature() {
                             </span>
                         </a>
                         <a
-                            href="https://discord.gg/evict"
+                            href="https://discord.gg/apply"
                             target="_blank"
                             className="group px-8 py-3 bg-[#5865F2] text-white rounded-full font-medium 
                  hover:bg-opacity-90 transition-all flex items-center justify-center gap-2">

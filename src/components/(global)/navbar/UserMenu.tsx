@@ -61,10 +61,10 @@ const UserMenu = () => {
                         <motion.div
                             initial={{ opacity: 0, scale: 0.9 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="bg-evict-200 border border-evict-card-border p-6 rounded-xl shadow-lg max-w-md mx-4">
+                            className="bg-warm-200 border border-warm-card-border p-6 rounded-xl shadow-lg max-w-md mx-4">
                             <div className="flex justify-between items-start mb-4">
                                 <div className="bg-white/10 p-2 rounded-lg">
-                                    <Sparkles className="w-6 h-6 text-evict-pink" />
+                                    <Sparkles className="w-6 h-6 text-warm-pink" />
                                 </div>
                                 <button
                                     onClick={dismissPopup}
@@ -85,7 +85,7 @@ const UserMenu = () => {
                                         dismissPopup()
                                         router.push("/beta")
                                     }}
-                                    className="flex-1 bg-evict-pink text-white px-4 py-2 rounded-lg font-medium hover:bg-evict-pink/90 transition-colors">
+                                    className="flex-1 bg-warm-pink text-white px-4 py-2 rounded-lg font-medium hover:bg-warm-pink/90 transition-colors">
                                     Join Beta
                                 </button>
                                 <button
@@ -112,13 +112,13 @@ const UserMenu = () => {
                 <div className="block lg:hidden">
                     <MdMenu
                         size={32}
-                        className="hover:cursor-pointer hover:text-evict-pink"
+                        className="hover:cursor-pointer hover:text-warm-pink"
                         onClick={() => setIsBurgerMenuOpen(!isBurgerMenuOpen)}
                     />
                 </div>
                 {/* <Link
                     href="/purchase"
-                    className="text-zinc-500 hover:text-evict-pink transition-colors">
+                    className="text-zinc-500 hover:text-warm-pink transition-colors">
                     <Crown className="w-5 h-5" />
                 </Link> */}
                 <button
@@ -176,12 +176,12 @@ const BurgerMenu = ({ onClose }: { onClose: () => void }) => {
                         ease: "linear",
                         duration: 0.2
                     }}
-                    className="bg-evict-200 border -mt-40 border-evict-card-border w-[90%] px-2 rounded-xl shadow-lg">
+                    className="bg-warm-200 border -mt-40 border-warm-card-border w-[90%] px-2 rounded-xl shadow-lg">
                     <div className="flex flex-row justify-between items-center gap-6 pt-10 px-4">
                         <h1 className="font-bold text-white text-4xl">Menu</h1>
                         <CgClose
                             size={24}
-                            className="ml-auto hover:cursor-pointer hover:text-evict-pink"
+                            className="ml-auto hover:cursor-pointer hover:text-warm-pink"
                             onClick={onClose}
                         />
                     </div>
@@ -192,10 +192,10 @@ const BurgerMenu = ({ onClose }: { onClose: () => void }) => {
                                     href={route.destination}
                                     key={route.label}
                                     onClick={onClose}
-                                    className={`flex items-center h-14 bg-evict-300 rounded-md ${
+                                    className={`flex items-center h-14 bg-warm-300 rounded-md ${
                                         route.isActive
-                                            ? "text-evict-pink bg-evict-200"
-                                            : "text-evict-700 hover:bg-evict-dim hover:text-white"
+                                            ? "text-warm-pink bg-warm-200"
+                                            : "text-warm-700 hover:bg-warm-dim hover:text-white"
                                     }`}>
                                     <span className="text-base font-medium pl-5">
                                         {route.label}

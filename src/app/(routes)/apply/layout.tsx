@@ -1,42 +1,45 @@
-import type { Metadata } from 'next'
-import Navbar from '@/components/(global)/navbar/Navbar'
-import { Footer } from '@/components/(global)/Footer'
+import type { Metadata } from "next";
+import Navbar from "@/components/(global)/navbar/Navbar";
+import { Footer } from "@/components/(global)/Footer";
 
 export const metadata: Metadata = {
-    title: 'Join Our Team - Warm',
-    description: 'Join Warm\'s team of innovators and help shape the future of Discord moderation. Apply for roles in beta testing, community support, and more.',
-    openGraph: {
-        title: 'Join the Warm Team',
-        description: 'Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.',
-        images: [
-            {
-                url: 'https://r2.warm.lat/og.png',
-                width: 1200,
-                height: 630,
-                alt: 'Join Warm Team'
-            }
-        ],
-        type: 'website',
-        url: 'https://warm.lat/apply'
-    },
-    twitter: {
-        card: 'summary_large_image',
-        title: 'Join the Warm Team',
-        description: 'Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.',
-        images: ['https://r2.warm.lat/og.png'], 
-    }
-}
+	title: "Join Our Team - Warm",
+	description:
+		"Join Warm's team of innovators and help shape the future of Discord moderation. Apply for roles in beta testing, community support, and more.",
+	openGraph: {
+		title: "Join the Warm Team",
+		description:
+			"Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.",
+		images: [
+			{
+				url: "https://r2.warm.lat/og.png",
+				width: 1200,
+				height: 630,
+				alt: "Join Warm Team",
+			},
+		],
+		type: "website",
+		url: "https://warm.lat/apply",
+	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Join the Warm Team",
+		description:
+			"Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.",
+		images: ["https://r2.warm.lat/og.png"],
+	},
+};
 
 export default function BetaLayout({
-    children,
+	children,
 }: {
-    children: React.ReactNode
+	children: React.ReactNode;
 }) {
-    return (
-        <>
-            <Navbar />
-            {children}
-            <Footer />
-        </>
-    )
-} 
+	return (
+		<>
+			<Navbar />
+			{children}
+			<Footer />
+		</>
+	);
+}

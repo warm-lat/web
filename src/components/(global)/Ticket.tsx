@@ -252,7 +252,7 @@ const TicketTranscriptPage: React.FC<PageProps> = ({ session, params }) => {
     return (
         <div className="2xl:container 2xl:mx-auto px-5 pb-10 md:px-[8vw] 2xl:px-52 2xl:py-4">
             <h1 className="font-bold text-4xl">#{data?.channel.name}</h1>
-            <h1 className="font-medium text-md text-evict-secondary">
+            <h1 className="font-medium text-md text-warm-secondary">
                 Closure Reason: {data?.ticket.reason ?? "No Reason Provided"}
             </h1>
             <DiscordOptionsContext.Provider

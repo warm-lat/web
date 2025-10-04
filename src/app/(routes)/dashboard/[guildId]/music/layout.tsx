@@ -1022,7 +1022,7 @@ function DashboardLayoutContent({
                                 {hasRichSync() && (
                                     <button
                                         onClick={() => setIsKaraokeMode(!isKaraokeMode)}
-                                        className={`text-white/60 hover:text-white transition-colors ${isKaraokeMode ? "text-evict-pink" : ""}`}>
+                                        className={`text-white/60 hover:text-white transition-colors ${isKaraokeMode ? "text-warm-pink" : ""}`}>
                                         <Mic2 className="w-5 h-5" />
                                     </button>
                                 )}
@@ -1307,17 +1307,17 @@ function DashboardLayoutContent({
                                 <div className="flex items-center gap-4 flex-1 justify-end">
                                     <button
                                         onClick={handleLyricsClick}
-                                        className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showLyrics ? "text-evict-pink" : "text-white/60"}`}>
+                                        className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showLyrics ? "text-warm-pink" : "text-white/60"}`}>
                                         <Mic2 className="w-5 h-5" />
                                     </button>
                                     <button
                                         onClick={handleQueueClick}
-                                        className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showQueue ? "text-evict-pink" : "text-white/60"}`}>
+                                        className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showQueue ? "text-warm-pink" : "text-white/60"}`}>
                                         <ListMusic className="w-5 h-5" />
                                     </button>
                                     <button
                                         onClick={() => setShowFilters(!showFilters)}
-                                        className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showFilters ? "text-evict-pink" : "text-white/60"}`}>
+                                        className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showFilters ? "text-warm-pink" : "text-white/60"}`}>
                                         <AudioWaveformIcon className="w-5 h-5" />
                                     </button>
                                     <Volume2 className="w-5 h-5 text-white/60" />
