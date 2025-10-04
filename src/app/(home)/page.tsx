@@ -871,7 +871,7 @@ const HomePage = () => {
                                                             <div className="w-8 h-8 rounded-full overflow-hidden">
                                                                 <Image
                                                                     src="https://r2.warm.lat/4ceb92e8a8cef28db35b240dae90a4e7.png"
-                                                                    alt="4009584392184's avatar"
+                                                                    alt="lucvmf's avatar"
                                                                     width={32}
                                                                     height={32}
                                                                     className="object-cover w-full h-full"
@@ -880,7 +880,7 @@ const HomePage = () => {
                                                             <div className="flex-1">
                                                                 <div className="flex items-center gap-2">
                                                                     <span className="text-white">
-                                                                        4009584392184
+                                                                        lucvmf
                                                                     </span>
                                                                     <span className="text-white/40 text-xs">
                                                                         Today at 17:26
@@ -1038,7 +1038,7 @@ const HomePage = () => {
                                                     <div className="w-8 h-8 rounded-full overflow-hidden">
                                                         <Image
                                                             src="https://r2.warm.lat/4ceb92e8a8cef28db35b240dae90a4e7.png"
-                                                            alt="4009584392184's avatar"
+                                                            alt="lucvmf's avatar"
                                                             width={32}
                                                             height={32}
                                                             className="object-cover w-full h-full"
@@ -1047,7 +1047,7 @@ const HomePage = () => {
                                                     <div>
                                                         <div className="flex items-center gap-2">
                                                             <span className="text-white text-sm">
-                                                                x14c
+                                                                lucvmf
                                                             </span>
                                                             <span className="text-white/40 text-xs">
                                                                 used
@@ -1126,7 +1126,7 @@ const HomePage = () => {
                                             <div className="w-6 h-6 rounded-full overflow-hidden">
                                                 <Image
                                                     src="https://r2.warm.lat/4ceb92e8a8cef28db35b240dae90a4e7.png"
-                                                    alt="4009584392184's avatar"
+                                                    alt="lucvmf's avatar"
                                                     width={24}
                                                     height={24}
                                                     className="object-cover"
@@ -1350,7 +1350,7 @@ const HomePage = () => {
                                                                 Ticket #1234
                                                             </div>
                                                             <div className="text-white/40 text-xs">
-                                                                Closed by 4009584392184
+                                                                Closed by lucvmf
                                                             </div>
                                                         </div>
                                                     </div>

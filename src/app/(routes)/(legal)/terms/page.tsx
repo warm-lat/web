@@ -36,22 +36,22 @@ const Terms = () => {
 				are not to do any of the following:
 			</span>
 			<div className="flex flex-col gap-4 text-[17px] pl-5 pt-5">
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Malicious attempts of exploiting the website.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Malicious use of the website.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Scraping content on this website for malicious use.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Framing a portion or all of the website.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Copy Warm&apos;s website and claiming it as your own work.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Commands labeled as 18+ shall only be used by users 18+, anybody under
 					18 using these commands are subject to blacklist.
 				</li>
@@ -63,19 +63,19 @@ const Terms = () => {
 				You are not to do any of the following:
 			</span>
 			<div className="flex flex-col gap-4 text-[17px] pl-5 pt-5">
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Violate the Discord Terms of Service.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Copy Warm&apos;s services or features.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Assist anyone in copying Warm&apos;s services or features.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Abuse or exploit Warm or any of our services.
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Run a Discord Server that has been terminated repeatedly.
 				</li>
 			</div>
@@ -111,25 +111,25 @@ const Terms = () => {
 				Our services shall not be used for any of the following:
 			</span>
 			<div className="flex flex-col gap-4 text-[17px] pl-5 pt-5">
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Doxxing or sharing personal/private information
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Threatening or harassing content
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					NSFW advertisements (including, but not limited to OnlyFans, Fansly)
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Scams or fraudulent content
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Gore or graphic content
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Any other illicit or illegal material
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Trading or selling Discord accounts for usernames
 				</li>
 			</div>
@@ -138,13 +138,13 @@ const Terms = () => {
 				any time without prior notice. If you encounter violations, you may:
 			</span>
 			<div className="flex flex-col gap-4 text-[17px] pl-5 pt-5">
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Open a ticket in our Discord server
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					File a report on the user&apos;s profile
 				</li>
-				<li className="text-neutral-400 marker:text-evict-pink">
+				<li className="text-neutral-400 marker:text-warm-pink">
 					Email us at{" "}
 					<span className="text-white font-semibold">contact@warm.lat</span>
 				</li>

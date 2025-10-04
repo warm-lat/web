@@ -53,7 +53,7 @@ export const CategorySelector = ({
             </button>
             <div
                 ref={scrollContainerRef}
-                className="mt-10 flex items-center overflow-x-auto no-scrollbar h-14 bg-evict-200 rounded-2xl w-full border border-evict-300"
+                className="mt-10 flex items-center overflow-x-auto no-scrollbar h-14 bg-warm-200 rounded-2xl w-full border border-warm-300"
                 onMouseDown={event => {
                     let startX = event.pageX
                     let scrollLeft = scrollContainerRef.current?.scrollLeft || 0
@@ -150,12 +150,12 @@ const SelectorItem = ({
 }) => {
     return (
         <button
-            className={`flex flex-row gap-2 items-center h-full px-4 ${active == name ? "text-white bg-evict-300" : "text-evict-700 hover:bg-evict-dim hover:text-white"}`}
+            className={`flex flex-row gap-2 items-center h-full px-4 ${active == name ? "text-white bg-warm-300" : "text-warm-700 hover:bg-warm-dim hover:text-white"}`}
             onClick={() => !scrolling && setCategory(name)}>
-            <div className="text-evict-secondary">{icon}</div>
+            <div className="text-warm-secondary">{icon}</div>
             <span className="text-base font-medium">{name}</span>
-            <div className="flex bg-evict-500 px-2 py-1 rounded-xl">
-                <span className="text-sm font-semibold text-evict-secondary">{amount}</span>
+            <div className="flex bg-warm-500 px-2 py-1 rounded-xl">
+                <span className="text-sm font-semibold text-warm-secondary">{amount}</span>
             </div>
         </button>
     )

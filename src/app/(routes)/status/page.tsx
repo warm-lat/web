@@ -127,20 +127,20 @@ export default function Status() {
 	);
 
 	const ShardSkeleton = () => (
-		<div className="flex flex-col py-6 rounded-3xl bg-evict-200 border border-evict-card-border animate-pulse">
+		<div className="flex flex-col py-6 rounded-3xl bg-warm-200 border border-warm-card-border animate-pulse">
 			<div className="px-6 space-y-4">
 				<div className="flex justify-between">
-					<div className="h-6 w-24 bg-evict-300 rounded"></div>
-					<div className="h-6 w-32 bg-evict-300 rounded"></div>
+					<div className="h-6 w-24 bg-warm-300 rounded"></div>
+					<div className="h-6 w-32 bg-warm-300 rounded"></div>
 				</div>
-				<div className="h-4 w-20 bg-evict-300 rounded"></div>
+				<div className="h-4 w-20 bg-warm-300 rounded"></div>
 			</div>
-			<hr className="border-t border-evict-300 w-full my-4" />
+			<hr className="border-t border-warm-300 w-full my-4" />
 			<div className="grid grid-cols-2 gap-4 px-6">
 				{[...Array(4)].map((_, i) => (
 					<div key={i} className="flex flex-col gap-2">
-						<div className="h-4 w-16 bg-evict-300 rounded"></div>
-						<div className="h-5 w-24 bg-evict-300 rounded"></div>
+						<div className="h-4 w-16 bg-warm-300 rounded"></div>
+						<div className="h-5 w-24 bg-warm-300 rounded"></div>
 					</div>
 				))}
 			</div>
@@ -165,7 +165,7 @@ export default function Status() {
 				<main className="pt-20 mx-10">
 					<section className="max-w-5xl mx-auto w-full pb-20 -mt-[4rem]">
 						<div className="animate-pulse mb-8">
-							<div className="h-32 bg-evict-200 rounded-3xl"></div>
+							<div className="h-32 bg-warm-200 rounded-3xl"></div>
 						</div>
 						<div className="grid grid-cols-1 gap-4 mt-10 sm:grid-cols-2 md:grid-cols-3">
 							{[...Array(3)].map((_, i) => (
@@ -238,7 +238,7 @@ const Shard = ({
 
 	return (
 		<div
-			className={`flex flex-col py-6 rounded-3xl bg-evict-200 border transition-shadow duration-200 ease-linear border-evict-card-border text-white`}
+			className={`flex flex-col py-6 rounded-3xl bg-warm-200 border transition-shadow duration-200 ease-linear border-warm-card-border text-white`}
 		>
 			<div className="h-full flex flex-col justify-between">
 				<div className="px-6">
@@ -249,7 +249,7 @@ const Shard = ({
 							</p>
 						</div>
 						<div
-							className={`flex justify-center items-center bg-evict-400 border border-evict-card-border rounded-xl px-2 py-1 gap-2`}
+							className={`flex justify-center items-center bg-warm-400 border border-warm-card-border rounded-xl px-2 py-1 gap-2`}
 						>
 							<div
 								className={`w-4 h-4 bg-green-500 rounded-full animate-pulse`}
@@ -261,21 +261,21 @@ const Shard = ({
 					</div>
 					<div className="flex flex-row gap-2 items-center">
 						<RefreshCwIcon
-							className="text-evict-pink hover:text-white hover:cursor-pointer"
+							className="text-warm-pink hover:text-white hover:cursor-pointer"
 							size={20}
 							onClick={() => handleRefreshClick()}
 						/>
-						<p className="text-sm text-evict-pink">
+						<p className="text-sm text-warm-pink">
 							{counter == 0 ? "Just Now" : counter + "s ago"}
 						</p>
 					</div>
 				</div>
-				<hr className="border-t border-evict-300 w-full my-4" />
+				<hr className="border-t border-warm-300 w-full my-4" />
 				<div className="grid grid-cols-2 gap-4 px-6">
 					<div className="flex flex-col gap-2">
-						<p className="text-md text-evict-700">Uptime</p>
+						<p className="text-md text-warm-700">Uptime</p>
 						<div className="flex flex-row gap-2 items-center">
-							<MdOutlineTimeline className="text-evict-700" />
+							<MdOutlineTimeline className="text-warm-700" />
 							<p className="text-md font-semibold">
 								{shard.uptime == 0
 									? "N/A"
@@ -284,23 +284,23 @@ const Shard = ({
 						</div>
 					</div>
 					<div className="flex flex-col gap-2">
-						<p className="text-md text-evict-700">Latency</p>
+						<p className="text-md text-warm-700">Latency</p>
 						<div className="flex flex-row gap-2 items-center">
-							<ImConnection className="text-evict-700" />
+							<ImConnection className="text-warm-700" />
 							<p className="text-md font-semibold">{shard.ping}ms</p>
 						</div>
 					</div>
 					<div className="flex flex-col gap-2">
-						<p className="text-md text-evict-700">Servers</p>
+						<p className="text-md text-warm-700">Servers</p>
 						<div className="flex flex-row gap-2 items-center">
-							<HiServerStack className="text-evict-700" />
+							<HiServerStack className="text-warm-700" />
 							<p className="text-md font-semibold">
 								{shard.guilds.toLocaleString()}
 							</p>
 						</div>
 					</div>
 					<div className="flex flex-col gap-2">
-						<p className="text-md text-evict-700">Users</p>
+						<p className="text-md text-warm-700">Users</p>
 						<div className="flex flex-row gap-2 items-center">
 							<FaUsers className="text-warm-700" />
 							<p className="text-md font-semibold">

@@ -994,9 +994,9 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                     Queue will repeat when finished.
                                 </span>
                             </button>
-                            <button className="flex flex-col gap-2 p-3 rounded-lg bg-evict-pink/20 border border-evict-pink">
+                            <button className="flex flex-col gap-2 p-3 rounded-lg bg-warm-pink/20 border border-warm-pink">
                                 <div className="flex items-center gap-2">
-                                    <ListMusic className="w-4 h-4 text-evict-pink" />
+                                    <ListMusic className="w-4 h-4 text-warm-pink" />
                                     <span className="text-white font-medium">Standard</span>
                                 </div>
                                 <span className="text-sm text-white/60">
@@ -1231,7 +1231,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                         <p className="text-white/80">{track.artist}</p>
                                         <button 
                                             onClick={() => {}}
-                                            className="mt-4 bg-evict-pink text-white px-6 py-2 rounded-full font-medium hover:bg-evict-pink/90 transition-colors">
+                                            className="mt-4 bg-warm-pink text-white px-6 py-2 rounded-full font-medium hover:bg-warm-pink/90 transition-colors">
                                             Play Now
                                         </button>
                                     </div>
@@ -1387,7 +1387,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                 Recently Played
                             </button>
 
-                            {/* <button
+                            <button
                                 onClick={() =>
                                     setActiveTab(activeTab === "discover" ? "all" : "discover")
                                 }
@@ -1400,12 +1400,12 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                     }
                                 `}>
                                 Discover
-                            </button> */}
+                            </button>
                         </div>
 
                         <div className="px-6 space-y-4">
                             <div className="flex flex-wrap items-center gap-3">
-                                <button className="bg-evict-pink hover:bg-evict-pink/90 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2 text-sm">
+                                <button className="bg-warm-pink hover:bg-warm-pink/90 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2 text-sm">
                                     <Play className="w-4 h-4" fill="currentColor" />
                                     Play
                                 </button>
@@ -1559,7 +1559,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                             ) : (
                                                 <div className="w-full h-full animate-pulse bg-white/10" />
                                             )}
-                                            <div className="absolute bottom-2 right-2 w-8 h-8 bg-evict-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
+                                            <div className="absolute bottom-2 right-2 w-8 h-8 bg-warm-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
                                                 <Play className="w-4 h-4 text-white" />
                                             </div>
                                         </div>
@@ -1717,7 +1717,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                                 ) : (
                                                     <div className="w-full h-full animate-pulse bg-white/10" />
                                                 )}
-                                                <div className="absolute bottom-2 right-2 w-8 h-8 bg-evict-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
+                                                <div className="absolute bottom-2 right-2 w-8 h-8 bg-warm-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
                                                     <Play className="w-4 h-4 text-white" />
                                                 </div>
                                             </div>
@@ -1761,7 +1761,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                                             className="w-full h-full object-cover"
                                                         />
                                                     ))}
-                                                    <div className="absolute bottom-2 right-2 w-8 h-8 bg-evict-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
+                                                    <div className="absolute bottom-2 right-2 w-8 h-8 bg-warm-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
                                                         <Play className="w-4 h-4 text-white" />
                                                     </div>
                                                 </div>
@@ -2203,7 +2203,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                                                     ) : (
                                                                         <div className="w-full h-full animate-pulse bg-white/10" />
                                                                     )}
-                                                                    <div className="absolute bottom-2 right-2 w-8 h-8 bg-evict-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
+                                                                    <div className="absolute bottom-2 right-2 w-8 h-8 bg-warm-pink rounded-full items-center justify-center hidden group-hover:flex shadow-lg translate-y-2 group-hover:translate-y-0 transition-all">
                                                                         <Play className="w-4 h-4 text-white" />
                                                                     </div>
                                                                 </div>
@@ -2490,7 +2490,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
 
                         <div className="px-6 space-y-4">
                             <div className="flex items-center gap-3">
-                                <button className="bg-evict-pink hover:bg-evict-pink/90 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2 text-sm">
+                                <button className="bg-warm-pink hover:bg-warm-pink/90 text-white px-6 py-2.5 rounded-full font-medium transition-all hover:scale-105 flex items-center gap-2 text-sm">
                                     <Play className="w-4 h-4" fill="currentColor" />
                                     Play
                                 </button>
@@ -2670,7 +2670,7 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                                     className="absolute inset-0 w-full h-full opacity-0 cursor-pointer"
                                 />
                                 <div
-                                    className="h-full bg-evict-pink rounded-full transition-all"
+                                    className="h-full bg-warm-pink rounded-full transition-all"
                                     style={{ width: `${filter.value}%` }}
                                 />
                                 <div
@@ -2785,17 +2785,17 @@ export default function MusicPage({ params }: { params: { guildId: string } }) {
                             <div className="flex items-center gap-4 flex-1 justify-end">
                                 <button
                                     onClick={() => setShowLyrics(!showLyrics)}
-                                    className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showLyrics ? "text-evict-pink" : "text-white/60"}`}>
+                                    className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showLyrics ? "text-warm-pink" : "text-white/60"}`}>
                                     <Mic2 className="w-5 h-5" />
                                 </button>
                                 <button
                                     onClick={() => setShowQueue(!showQueue)}
-                                    className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showQueue ? "text-evict-pink" : "text-white/60"}`}>
+                                    className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showQueue ? "text-warm-pink" : "text-white/60"}`}>
                                     <ListMusic className="w-5 h-5" />
                                 </button>
                                 <button
                                     onClick={() => setShowFilters(!showFilters)}
-                                    className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showFilters ? "text-evict-pink" : "text-white/60"}`}>
+                                    className={`p-2 hover:bg-white/5 rounded-lg transition-colors ${showFilters ? "text-warm-pink" : "text-white/60"}`}>
                                     <AudioWaveformIcon className="w-5 h-5" />
                                 </button>
                                 <div className="w-24 h-1 bg-white/10 rounded-full">
