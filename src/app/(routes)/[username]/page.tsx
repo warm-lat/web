@@ -1313,6 +1313,7 @@ export default function ProfilePage({
 												headers: {
 													"Content-Type": "application/json",
 													Authorization: `Bearer ${session?.user?.userToken}`,
+													"User-Agent": "warm-web/1.0.0",
 												},
 												body: JSON.stringify({
 													username_reported: params.username,

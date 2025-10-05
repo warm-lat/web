@@ -115,8 +115,7 @@ const TEAM_MEMBERS: TeamMember[] = [
 	{ id: "930383131863842816", role: "Developer", name: "_mism." },
 ];
 
-const DONATORS: Donator[] = [
-];
+const DONATORS: Donator[] = [];
 
 const BADGE_MAPPING: Record<string, string> = {
 	Active_Developer: "Active_Developer",
@@ -125,9 +124,9 @@ const BADGE_MAPPING: Record<string, string> = {
 	House_Bravery: "HypeSquad_Bravery",
 	House_Brilliance: "HypeSquad_Brilliance",
 	Nitro_Boost1m: "Evolving_badge_Nitro_1_months",
-    Nitro_Boost3m: "Evolving_badge_Nitro_3_months",
-    Nitro_Boost6m: "Evolving_badge_Nitro_6_months",
-    Nitro_Boost12m: "Evolving_badge_Nitro_12_months",
+	Nitro_Boost3m: "Evolving_badge_Nitro_3_months",
+	Nitro_Boost6m: "Evolving_badge_Nitro_6_months",
+	Nitro_Boost12m: "Evolving_badge_Nitro_12_months",
 	Quest: "Questbadge",
 };
 
@@ -271,7 +270,7 @@ export default function TeamPage() {
 	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
-		const headers: HeadersInit = { Authorization: apiKey };
+		const headers: HeadersInit = { Authorization: apiKey, "User-Agent": "warm-web/1.0.0", };
 		fetch(`https://api.warm.lat/users/presence`, { headers })
 			.then((res) => res.json())
 			.then((data: ApiResponse) => {

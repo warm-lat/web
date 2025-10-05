@@ -256,6 +256,7 @@ export default function ApplicationHub() {
 				headers: {
 					"Content-Type": "application/json",
 					Authorization: `Bearer ${session?.user?.userToken}`,
+					"User-Agent": "warm-web/1.0.0",
 				},
 				body: JSON.stringify({
 					role_id: selectedRole,

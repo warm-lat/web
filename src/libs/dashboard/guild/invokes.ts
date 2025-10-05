@@ -32,6 +32,7 @@ export async function fetchGuildInvokes(
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
 			"X-GUILD-ID": guildId,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 

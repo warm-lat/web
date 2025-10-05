@@ -34,6 +34,7 @@ export async function fetchGuildGreetings(
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
 			"X-GUILD-ID": guildId,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 
@@ -89,6 +90,7 @@ export async function updateGuildGreetings(
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
 			"X-GUILD-ID": guildId,
+			"User-Agent": "warm-web/1.0.0",
 		},
 		body: JSON.stringify(data),
 	});

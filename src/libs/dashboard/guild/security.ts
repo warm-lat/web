@@ -95,6 +95,7 @@ export async function fetchGuildSecurity(
 		headers: {
 			Authorization: `Bearer ${token}`,
 			"X-GUILD-ID": guildId,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 
@@ -130,6 +131,7 @@ export async function updateGuildSecurity(
 			Authorization: `Bearer ${token}`,
 			"X-GUILD-ID": guildId,
 			"Content-Type": "application/json",
+			"User-Agent": "warm-web/1.0.0",
 		},
 		body: JSON.stringify(settings),
 	});

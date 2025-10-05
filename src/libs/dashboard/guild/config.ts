@@ -137,6 +137,7 @@ export async function fetchGuildConfig(
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
 			"X-GUILD-ID": guildId,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 
@@ -171,6 +172,7 @@ export async function updateGuildConfig(
 			"X-GUILD-ID": guildId,
 			"Content-Type": "application/json",
 			Origin: "https://warm.lat",
+			"User-Agent": "warm-web/1.0.0",
 		},
 		body: JSON.stringify(settings),
 	});

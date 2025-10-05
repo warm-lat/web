@@ -12,6 +12,7 @@ export async function fetchGuildMusic(guildId: string) {
 		headers: {
 			Authorization: `Bearer ${token}`,
 			"X-GUILD-ID": guildId,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 

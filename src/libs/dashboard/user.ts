@@ -51,6 +51,7 @@ export async function fetchDashboardUser(): Promise<DashboardUserResponse> {
 		headers: {
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 

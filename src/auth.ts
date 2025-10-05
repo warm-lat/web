@@ -90,6 +90,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							"Content-Type": "application/json",
 							"X-Special-Auth": "tgRJjgKjai6Eke4QdGc3xtjgXkbicX9",
 							Origin: "https://warm.lat",
+							"User-Agent": "warm-web/1.0.0",
 						},
 						body: JSON.stringify({
 							user_id: profile?.id ?? "",
@@ -134,6 +135,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							Authorization: process.env.NOTHIDDEN_API_KEY ?? "",
 							"Content-Type": "application/json",
 							Origin: "https://warm.lat",
+							"User-Agent": "warm-web/1.0.0",
 						},
 						body: JSON.stringify({
 							user_id: discordSession.user.id,

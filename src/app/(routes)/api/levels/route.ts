@@ -21,6 +21,7 @@ export async function GET(request: NextRequest) {
 					Pragma: "no-cache",
 					Expires: "0",
 					"Surrogate-Control": "no-store",
+					"User-Agent": "warm-web/1.0.0",
 				},
 			}
 		);

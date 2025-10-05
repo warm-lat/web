@@ -14,7 +14,8 @@ export async function checkBetaAccess(): Promise<BetaResponse> {
 
     const response = await fetch(`https://api.warm.lat/beta`, {
         headers: {
-            'Authorization': `Bearer ${token}`
+            'Authorization': `Bearer ${token}`,
+            "User-Agent": "warm-web/1.0.0",
         }
     })
 

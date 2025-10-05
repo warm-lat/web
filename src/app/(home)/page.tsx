@@ -52,7 +52,8 @@ const HomePage = () => {
 
                 const response = await fetch(`https://api.warm.lat/status`, {
                     headers: {
-                        'Authorization': apiKey
+                        'Authorization': apiKey,
+                        "User-Agent": "warm-web/1.0.0",
                     }
                 });
                 if (!response.ok) throw new Error(`API returned ${response.status}`);

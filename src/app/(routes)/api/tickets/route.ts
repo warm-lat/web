@@ -24,6 +24,7 @@ export async function GET(request: NextRequest) {
 			headers: {
 				Authorization: `${API_TOKEN}`,
 				"User-ID": session.user.id,
+				"User-Agent": "warm-web/1.0.0",
 			},
 		});
 

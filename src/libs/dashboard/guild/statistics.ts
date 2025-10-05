@@ -32,7 +32,8 @@ export async function fetchGuildStatistics(guildId: string, days: number = 7): P
             Authorization: `Bearer ${token}`,
             "Content-Type": "application/json",
             "X-GUILD-ID": guildId,
-            "X-DAYS": days.toString()
+            "X-DAYS": days.toString(),
+            "User-Agent": "warm-web/1.0.0",
         }
     })
 

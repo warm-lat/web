@@ -12,6 +12,7 @@ export async function GET(
 			{
 				headers: {
 					Authorization: API_KEY,
+					"User-Agent": "warm-web/1.0.0",
 				},
 			}
 		);

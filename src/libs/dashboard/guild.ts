@@ -66,6 +66,7 @@ export async function fetchUserGuilds(): Promise<DashboardResponse> {
 		headers: {
 			Authorization: `Bearer ${token}`,
 			"Content-Type": "application/json",
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 
@@ -108,7 +109,7 @@ export interface ChannelsResponse {
 		type: string;
 		category_id: string | null;
 		nsfw: boolean;
-		topic?: string;
+		topic?: string | null;
 		slowmode_delay?: number;
 		news?: boolean;
 		bitrate?: number;
@@ -154,6 +155,7 @@ export async function fetchGuildRoles(guildId: string): Promise<RolesResponse> {
 				Authorization: `Bearer ${token}`,
 				"Content-Type": "application/json",
 				"X-GUILD-ID": guildId,
+				"User-Agent": "warm-web/1.0.0",
 			},
 		});
 
@@ -192,6 +194,7 @@ export async function fetchGuildChannels(
 				Authorization: `Bearer ${token}`,
 				"Content-Type": "application/json",
 				"X-GUILD-ID": guildId,
+				"User-Agent": "warm-web/1.0.0",
 			},
 		});
 
@@ -298,6 +301,7 @@ export async function fetchGuildSettings(
 			headers: {
 				Authorization: `Bearer ${token}`,
 				"Content-Type": "application/json",
+				"User-Agent": "warm-web/1.0.0",
 			},
 		}
 	);

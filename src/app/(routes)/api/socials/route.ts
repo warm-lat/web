@@ -14,6 +14,7 @@ export async function GET(request: NextRequest) {
 				headers: {
 					"X-USER-ID": userId,
 					Authorization: "ShHdce3nXXaYmQ5PzBNKKsbtRoamqYc",
+					"User-Agent": "warm-web/1.0.0",
 				},
 				credentials: "omit",
 				mode: "cors",

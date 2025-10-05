@@ -39,7 +39,8 @@ export async function fetchVoiceInfo(guildId: string): Promise<VoiceInfo> {
     const response = await fetch(`https://api.warm.lat/voice`, {
         headers: {
             'Authorization': `Bearer ${token}`,
-            'X-GUILD-ID': guildId
+            'X-GUILD-ID': guildId,
+            "User-Agent": "warm-web/1.0.0",
         }
     })
 

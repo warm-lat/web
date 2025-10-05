@@ -51,7 +51,8 @@ export async function manageNotifications(payload: NotificationPayload): Promise
         method: "POST",
         headers: {
             Authorization: `Bearer ${session.user.userToken}`,
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
+            "User-Agent": "warm-web/1.0.0",
         },
         body: JSON.stringify(payload)
     })

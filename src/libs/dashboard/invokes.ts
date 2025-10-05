@@ -48,6 +48,7 @@ export async function fetchInvokeHistory(): Promise<InvokeHistoryResponse> {
 		headers: {
 			Authorization: `Bearer ${session.user.userToken}`,
 			"Content-Type": "application/json",
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 

@@ -46,6 +46,7 @@ export const GET = async (request: Request) => {
 			headers: {
 				Authorization: process.env.NOTHIDDEN_API_KEY ?? "",
 				"Content-Type": "application/json",
+				"User-Agent": "warm-web/1.0.0",
 			},
 			body: JSON.stringify({
 				user_id: discordSession.user.id,

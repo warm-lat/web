@@ -18,6 +18,7 @@ const fetchShard = async (shardId: number) => {
 	const response = await fetch(`https://api.warm.lat/status`, {
 		headers: {
 			Authorization: apiKey,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 	if (!response.ok) {
@@ -44,6 +45,7 @@ export default function Status() {
 		url: "/status",
 		headers: {
 			Authorization: apiKey,
+			"User-Agent": "warm-web/1.0.0",
 		},
 	});
 

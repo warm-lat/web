@@ -10,7 +10,8 @@ export async function generateMetadata({
 		const response = await fetch(`https://api.warm.lat/socials`, {
 			headers: {
 				"X-USER-ID": cleanUsername,
-				Authorization: "",
+				Authorization: "ShHdce3nXXaYmQ5PzBNKKsbtRoamqYc",
+				"User-Agent": "warm-web/1.0.0",
 			},
 		});
 		const profile = await response.json();
