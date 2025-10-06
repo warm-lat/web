@@ -418,7 +418,11 @@ export default function ProfilePage({
 	const [isBioLoading, setIsBioLoading] = useState(true);
 
 	useEffect(() => {
-		if (!params.username.startsWith("@")) {
+		if (params.username.startsWith("@") && params.username.indexOf("@") !== 0) {
+			router.replace(
+				`/@${params.username.substring(params.username.indexOf("@") + 1)}`
+			);
+		} else if (!params.username.startsWith("@")) {
 			router.replace(`/@${params.username}`);
 		}
 	}, [params.username, router]);

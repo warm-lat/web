@@ -37,8 +37,6 @@ let cachedStats: any = null
 let lastFetchTime: number | null = null
 const CACHE_DURATION = 5 * 60 * 1000
 
-const apiKey = ""
-
 const HomePage = () => {
     const [stats, setStats] = useState({ users: 0, guilds: 0 })
 
@@ -52,7 +50,6 @@ const HomePage = () => {
 
                 const response = await fetch(`https://api.warm.lat/status`, {
                     headers: {
-                        'Authorization': apiKey,
                         "User-Agent": "warm-web/1.0.0",
                     }
                 });
