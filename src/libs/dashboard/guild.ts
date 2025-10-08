@@ -315,3 +315,4 @@ export async function fetchGuildSettings(
 
 	return response.json();
 }
+

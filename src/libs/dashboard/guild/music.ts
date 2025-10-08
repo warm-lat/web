@@ -10,7 +10,7 @@ export async function fetchGuildMusic(guildId: string) {
 
 	const response = await fetch(`https://api.warm.lat/audio`, {
 		headers: {
-			Authorization: `Bearer ${token}`,
+			'Authorization': `Bearer ${token}`,
 			"X-GUILD-ID": guildId,
 			"User-Agent": "warm-web/1.0.0",
 		},

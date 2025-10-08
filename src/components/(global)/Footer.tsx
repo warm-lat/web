@@ -46,7 +46,7 @@ export const Footer = () => {
                                     Documentation
                                 </Link>
                                 <Link href="https://discord.gg/apply" className="font-semibold text-warm-pink hover:text-warm-blue transition-colors">
-                                    Support Server <FaDiscord className="inline-block ml-1" />
+                                    Support Server
                                 </Link>
                             </nav>
                         </div>
@@ -67,8 +67,8 @@ export const Footer = () => {
                     <div className="flex flex-col items-center md:items-end">
                         <h6 className="font-extrabold text-2xl text-white mb-4">Follow Us</h6>
                         <div className="flex space-x-4">
-                            <Link href="https://discord.gg/apply" target="_blank" rel="noopener noreferrer">
-                                <Image src="https://r2.warm.lat/discord.svg" alt="Discord" width={30} height={30} style={{ filter: 'brightness(0) saturate(100%) hue-rotate(200deg)' }} />
+                            <Link href="https://discord.gg/apply" target="_blank" rel="noopener noreferrer" className= "text-warm-pink hover:text-warm-blue transition-colors">
+                                <FaDiscord size={30} />
                             </Link>
                         </div>
                     </div>
