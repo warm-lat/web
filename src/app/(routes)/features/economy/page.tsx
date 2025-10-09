@@ -93,13 +93,13 @@ export default function EconomyFeature() {
                                         <h4 className="text-white font-medium mb-2">Quick Start</h4>
                                         <div className="space-y-2 font-mono text-sm">
                                             <div className="text-white/80">
-                                                ;business create My Shop
+                                                ,business create My Shop
                                             </div>
                                             <div className="text-white/80">
-                                                ;business hire @user 1000 Manager
+                                                ,business hire @user 1000 Manager
                                             </div>
                                             <div className="text-white/80">
-                                                ;business deposit 5000
+                                                ,business deposit 5000
                                             </div>
                                         </div>
                                     </div>
@@ -183,18 +183,18 @@ export default function EconomyFeature() {
                                 {[
                                     {
                                         name: "Blackjack",
-                                        cmd: ";gamble blackjack",
+                                        cmd: ",gamble blackjack",
                                         odds: "99.5% RTP"
                                     },
-                                    { name: "Slots", cmd: ";gamble slots", odds: "96% RTP" },
-                                    { name: "Crash", cmd: ";gamble crash", odds: "97% RTP" },
+                                    { name: "Slots", cmd: ",gamble slots", odds: "96% RTP" },
+                                    { name: "Crash", cmd: ",gamble crash", odds: "97% RTP" },
                                     {
                                         name: "Roulette",
-                                        cmd: ";gamble roulette",
+                                        cmd: ",gamble roulette",
                                         odds: "97.3% RTP"
                                     },
-                                    { name: "Mines", cmd: ";gamble mines", odds: "96-98% RTP" },
-                                    { name: "Poker Dice", cmd: ";gamble poker", odds: "97.5% RTP" }
+                                    { name: "Mines", cmd: ",gamble mines", odds: "96-98% RTP" },
+                                    { name: "Poker Dice", cmd: ",gamble poker", odds: "97.5% RTP" }
                                 ].map((game, i) => (
                                     <div key={i} className="bg-black/20 rounded-lg p-4">
                                         <h4 className="text-white font-medium mb-2">{game.name}</h4>
@@ -228,12 +228,12 @@ export default function EconomyFeature() {
                                         </h4>
                                         <div className="space-y-2 font-mono text-sm">
                                             <div className="text-white/80">
-                                                ;pet adopt dog Buddy
+                                                ,pet adopt dog Buddy
                                             </div>
                                             <div className="text-white/80">;pet feed Buddy</div>
                                             <div className="text-white/80">;pet play Buddy</div>
                                             <div className="text-white/80">
-                                                ;pet adventure Buddy
+                                                ,pet adventure Buddy
                                             </div>
                                         </div>
                                     </div>

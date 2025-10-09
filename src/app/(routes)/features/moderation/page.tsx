@@ -71,8 +71,8 @@ export default function ModerationFeature() {
         {
             caseNumber: "293",
             type: "ban",
-            user: { id: "214753146512080997", name: "resent" },
-            moderator: { id: "1332327503062106154", name: "x14c" },
+            user: { id: "724757546811916329", name: "msfw" },
+            moderator: { id: "1137513168965476352", name: "_mism." },
             reason: "No reason provided",
             timestamp: "02/01/2025, 23:31"
         },
@@ -80,16 +80,16 @@ export default function ModerationFeature() {
             caseNumber: "292",
             type: "role add",
             user: { id: "108220605721398864", name: "1o9s_" },
-            moderator: { id: "1332327503062106154", name: "x14c" },
-            reason: "Added by x14c (1332327503062106154)",
+            moderator: { id: "1137513168965476352", name: "_mism." },
+            reason: "Added by _mism. (1137513168965476352)",
             timestamp: "02/01/2025, 23:15"
         },
         {
             caseNumber: "291",
             type: "role add",
             user: { id: "114030134571126510", name: "cv3zy" },
-            moderator: { id: "1332327503062106154", name: "x14c" },
-            reason: "Added by x14c (1332327503062106154)",
+            moderator: { id: "1137513168965476352", name: "_mism." },
+            reason: "Added by _mism. (1137513168965476352)",
             timestamp: "02/01/2025, 15:33"
         }
     ])
@@ -98,7 +98,7 @@ export default function ModerationFeature() {
             caseNumber: "295",
             type: "jail",
             user: { id: "214753146512080997", name: "resent", avatar: "/resent.png" },
-            moderator: { id: "1332327503062106154", name: "x14c" },
+            moderator: { id: "1137513168965476352", name: "_mism." },
             reason: "Spamming in general",
             duration: "24h",
             timestamp: "02/01/2025, 23:31"
@@ -107,7 +107,7 @@ export default function ModerationFeature() {
             caseNumber: "294",
             type: "jail",
             user: { id: "108220605721398864", name: "1o9s_", avatar: "/adam.png" },
-            moderator: { id: "1332327503062106154", name: "x14c" },
+            moderator: { id: "1137513168965476352", name: "_mism." },
             reason: "Inappropriate content",
             duration: "12h",
             timestamp: "02/01/2025, 23:15"

@@ -405,7 +405,7 @@ export default function PurchasePage() {
 										target="_blank"
 										className="flex items-center justify-between w-full bg-white text-black px-4 py-3 rounded-xl hover:bg-white/90"
 									>
-										<span>Instance Setup ($17.5)</span>
+										<span>Instance Setup (17.5€)</span>
 										<span>→</span>
 									</a>
 									<a
@@ -413,7 +413,7 @@ export default function PurchasePage() {
 										target="_blank"
 										className="flex items-center justify-between w-full bg-white text-black px-4 py-3 rounded-xl hover:bg-white/90"
 									>
-										<span>Monthly Hosting ($3)</span>
+										<span>Monthly Hosting (3.5€)</span>
 										<span>→</span>
 									</a>
 								</div>
@@ -438,10 +438,6 @@ export default function PurchasePage() {
 										LPLrDA4KETegyZDbVsaAFdZeZuJeAVwxLZ
 									</p>
 								</div>
-								<p className="mt-4 text-sm text-white/60">
-									Minimum donation: $1. For crypto payments, please open a
-									ticket in our support server with your payment hash.
-								</p>
 							</div>
 
 							<p className="text-sm text-white/60">

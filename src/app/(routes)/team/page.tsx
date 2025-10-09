@@ -113,6 +113,7 @@ interface ApiResponse {
 
 const TEAM_MEMBERS: TeamMember[] = [
 	{ id: "930383131863842816", role: "Developer", name: "_mism." },
+	{ id: "1076218266416054293", role: "Developer", name: "ihateok" },
 ];
 
 const DONATORS: Donator[] = [];

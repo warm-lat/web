@@ -94,22 +94,22 @@ export default function GiveawayFeature() {
                                 {
                                     desc: "Start a basic giveaway",
                                     command:
-                                        ";giveaway start #announcements Nitro --winners 1 --time 24h"
+                                        ",giveaway start #announcements Nitro --winners 1 --time 24h"
                                 },
                                 {
                                     desc: "Giveaway with bonus entries",
                                     command:
-                                        ";giveaway start #giveaways Steam Game --winners 3 --bonus @Booster:2 @Nitro:1.5"
+                                        ",giveaway start #giveaways Steam Game --winners 3 --bonus @Booster:2 @Nitro:1.5"
                                 },
                                 {
                                     desc: "Role-restricted giveaway",
                                     command:
-                                        ";giveaway start #events Special Prize --require @Level10 --time 48h"
+                                        ",giveaway start #events Special Prize --require @Level10 --time 48h"
                                 },
                                 {
                                     desc: "Advanced configuration",
                                     command:
-                                        ";giveaway start #special $100 Discord Nitro --winners 5 --time 72h --bonus @Booster:3 --require @Verified"
+                                        ",giveaway start #special $100 Discord Nitro --winners 5 --time 72h --bonus @Booster:3 --require @Verified"
                                 }
                             ].map((item, index) => (
                                 <div key={index} className="bg-black/20 rounded-lg p-4">
