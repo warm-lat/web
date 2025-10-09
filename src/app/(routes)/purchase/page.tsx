@@ -182,7 +182,7 @@ export default function PurchasePage() {
 										<p className="text-white/60">
 											Your instance runs on dedicated US servers, ensuring
 											optimal performance and reliability. Hosted on
-											NYCDEDICATED in New York, New York.
+											RoyaleHosting in New York City, New York.
 										</p>
 										<ul className="space-y-3">
 											<li className="flex items-center gap-3">
@@ -199,15 +199,15 @@ export default function PurchasePage() {
 											</li>
 											<li className="flex items-center gap-3">
 												<div className="w-2 h-2 rounded-full bg-green-400" />
-												<span>10gbps ddos protection</span>
+												<span>2.5Tbps DDOS Protection</span>
 											</li>
 										</ul>
 									</div>
 								</div>
 								<div className="relative">
 									<Image
-										src="/nycdedicated.webp"
-										alt="NYCDEDICATED Datacenter"
+										src="/royalehosting.webp"
+										alt="RoyaleHosting New York Datacenter"
 										width={500}
 										height={300}
 										className="rounded-2xl w-full h-full object-cover"

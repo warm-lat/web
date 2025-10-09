@@ -106,7 +106,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 							status: response.status,
 							statusText: response.statusText,
 							headers: Object.fromEntries(response.headers),
-							body: errorData, // Log the response body
+							body: errorData,
 						});
 						return false;
 					}
@@ -114,7 +114,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 					account.userToken = data.token;
 					return true;
 				} catch (error) {
-					console.error("Failed to create bot token:", error);
+					console.error("Failed to create user token:", error);
 					return false;
 				}
 			}
