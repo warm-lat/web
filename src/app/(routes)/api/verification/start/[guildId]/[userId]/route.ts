@@ -1,9 +1,9 @@
 import { auth } from "@/auth";
-import sgMail, { MailDataRequired } from "@sendgrid/mail";
+import { Resend } from "resend";
 import crypto from "crypto";
 import { NextRequest, NextResponse } from "next/server";
 
-sgMail.setApiKey(process.env.SENDGRID_API_KEY!);
+const resend = new Resend(process.env.RESEND_API_KEY);
 
 // Track email attempts with a Map of email -> { count, lastAttempt }
 const emailAttempts = new Map<string, { count: number; lastAttempt: number }>();
@@ -152,23 +152,27 @@ export async function POST(
 					}),
 				});
 
-				const msg: MailDataRequired = {
+				const msg = {
 					to: userEmail,
-					from: {
-						email: "verify@warm.lat",
-					},
-					templateId: process.env.SENDGRID_TEMPLATE_ID!,
+					from: "verify@warm.lat",
 					subject: `Verify to gain access to ${guildData.guild_name}`,
-					dynamicTemplateData: {
-						subject: `Verify to gain access to ${guildData.guild_name}`,
-						verification_code: verificationCode,
-						guild_name: guildData.guild_name,
-						user_name: session.user.name,
-						expires_at: new Date(data.expires_at).toLocaleString(),
-					},
+					html: `
+                        <div>
+                            <h1>Verification for ${guildData.guild_name}</h1>
+                            <p>Hello ${session.user.name},</p>
+                            <p>Your verification code is:</p>
+							<div style="background-color: #f2f2f2; border-radius: 5px; padding: 15px; text-align: center; margin: 20px 0;">
+                                <strong style="font-size: 20px; letter-spacing: 2px; font-family: 'Courier New', Courier, monospace;">${verificationCode}</strong>
+                            </div>
+                            <p>This code will expire at ${new Date(
+                                data.expires_at
+                            ).toLocaleString()}.</p>
+                            <p>If you did not request this, you can safely ignore this email.</p>
+                        </div>
+                    `,
 				};
 
-				await sgMail.send(msg);
+				await resend.emails.send(msg);
 
 				emailAttempts.set(userEmail, {
 					count: attempts.count + 1,
