@@ -51,7 +51,7 @@ const UserMenu = () => {
 
     return (
         <>
-            {/* {showBetaPopup && (
+            {showBetaPopup && (
                 <>
                     <div
                         className="fixed inset-0 bg-black bg-opacity-50 z-[50000] backdrop-blur-sm"
@@ -73,17 +73,17 @@ const UserMenu = () => {
                                 </button>
                             </div>
                             <h2 className="text-2xl font-bold text-white mb-2">
-                                Dashboard Open Beta
+                                Dashboard Beta
                             </h2>
                             <p className="text-white/60 mb-4">
-                                Our new dashboard is now available in open beta! Try out the latest
-                                features and help us improve by providing feedback.
+                                We're excited to announce that our dashboard is currently in
+                                beta testing! Apply now to be among the first to experience it.
                             </p>
                             <div className="flex gap-3">
                                 <button
                                     onClick={() => {
                                         dismissPopup()
-                                        router.push("/beta")
+                                        router.push("/apply")
                                     }}
                                     className="flex-1 bg-warm-pink text-white px-4 py-2 rounded-lg font-medium hover:bg-warm-pink/90 transition-colors">
                                     Join Beta
@@ -97,7 +97,7 @@ const UserMenu = () => {
                         </motion.div>
                     </div>
                 </>
-            )} */}
+            )}
 
             {isBurgerMenuOpen && (
                 <>
