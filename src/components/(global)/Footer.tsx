@@ -31,7 +31,25 @@ export const Footer = () => {
                             />
                         </Link>
                         <p className="text-warm-pink text-sm text-center md:text-left">
-                            Copyright © 2025 warm.lat. <br /> All rights reserved.
+                            Copyright {new Date().getFullYear()} {""}
+                            <Link 
+                                href="https://azron.net"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="font-semibold hover:text-warm-secondary transition-colors"
+                            >
+                                Azron LLC
+                            </Link>
+                            . All rights reserved.
+                            Maintained by {" "}
+                            <Link 
+                                href="https://fakecrime.bio/^"
+                                target="_blank" 
+                                rel="noopener noreferrer"
+                                className="font-semibold hover:bg-warm-700 transition-colors"
+                            >
+                                Nxyy
+                            </Link>
                         </p>
                     </div>
 

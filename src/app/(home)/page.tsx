@@ -108,8 +108,8 @@ const HomePage = () => {
                                     <Image
                                         src="https://r2.warm.lat/pfp.jpg"
                                         alt="Warm"
-                                        width={200}
-                                        height={200}
+                                        width={175}
+                                        height={175}
                                         className="mx-auto mb-8 drop-shadow-2xl"
                                         priority
                                     />
