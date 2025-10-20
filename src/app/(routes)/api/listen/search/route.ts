@@ -1,11 +1,10 @@
-import { getServerSession } from "next-auth"
-import { authOptions } from "@/auth"
+import { auth } from "@/auth"
 
 export async function GET(request: Request) {
     const { searchParams } = new URL(request.url)
     const query = searchParams.get('query')
     
-    const session = await getServerSession(authOptions)
+    const session = await auth()
     
     if (!session?.user) {
         return Response.json({ error: "Unauthorized" }, { status: 401 })
