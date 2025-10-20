@@ -100,57 +100,77 @@ const HomePage = () => {
                             <motion.div
                                 initial={{ opacity: 0, y: 20 }}
                                 animate={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.8 }}>
+                                transition={{ duration: 0.8 }}
+                                className="grid grid-cols-1 md:grid-cols-3 gap-6 items-center">
                                 <motion.div
-                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    className="md:col-span-1 flex justify-center md:justify-start"
+                                    initial={{ scale: 0, opacity: -30 }}
                                     animate={{ scale: 1, opacity: 1 }}
-                                    transition={{ duration: 1, ease: "easeOut" }}>
-                                    <Image
-                                        src="https://r2.warm.lat/pfp.jpg"
-                                        alt="Warm"
-                                        width={175}
-                                        height={175}
-                                        className="mx-auto mb-8 drop-shadow-2xl"
-                                        priority
-                                    />
+                                    transition={{ duration: 0.8 }}>
+                                    <motion.div
+                                        whileHover={{ scale: 1.05 }}
+                                        transition={{ type: "spring", stiffness: 300, damping: 20 }}
+                                        className="relative w-44 h-44 md:w-56 md:h-56 rounded-3xl overflow-hidden drop-shadow-2xl ring-1 ring-white/6 bg-gradient-to-br from-white/3 to-transparent">
+                                        <Image
+                                            src="https://r2.warm.lat/pfp.jpg"
+                                            alt="Warm"
+                                            fill
+                                            sizes="176px"
+                                            className="object-cover"
+                                            priority
+                                        />
+                                    </motion.div>
                                 </motion.div>
-                                <h1 className="text-6xl md:text-7xl font-bold leading-tight">
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
-                                        The Ultimate
-                                    </span>
-                                    <br />
-                                    <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-gray-400">
-                                        Discord Experience
-                                    </span>
-                                </h1>
-                                <p className="mt-8 text-xl text-gray-400 max-w-2xl mx-auto">
-                                    Powering{" "}
-                                    <span className="text-white font-semibold">
-                                        {stats.guilds.toLocaleString()}
-                                    </span>{" "}
-                                    servers and serving{" "}
-                                    <span className="text-white font-semibold">
-                                        {stats.users.toLocaleString()}
-                                    </span>{" "}
-                                    users
-                                    <br className="hidden sm:block" /> with advanced moderation,
-                                    music, and utility features.
-                                </p>
-                                <div className="mt-10 flex flex-col sm:flex-row justify-center gap-4">
-                                    <a
-                                        href="/invite"
-                                        className="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-opacity-90 transition-all text-center">
-                                        Add to Discord
-                                    </a>
-                                    <a
-                                        href="/commands"
-                                        className="px-8 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-all text-center">
-                                        View Commands
-                                    </a>
-                                </div>
+
+                                <motion.div
+                                    className="md:col-span-2 text-center md:text-left"
+                                    initial={{ opacity: 0, y: 10 }}
+                                    animate={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8, delay: 0.1 }}>
+                                    <motion.div
+                                        initial={{ scale: 0.98 }}
+                                        animate={{ scale: 1 }}
+                                        transition={{ duration: 0.6 }}>
+                                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
+                                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+                                            The Ultimate
+                                        </span>
+                                        <br />
+                                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-gray-400">
+                                            Discord Experience
+                                        </span>
+                                    </h1>
+                                    <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl">
+                                        Powering{" "}
+                                        <span className="text-white font-semibold">
+                                            {stats.guilds.toLocaleString()}
+                                        </span>{" "}
+                                        servers and serving{" "}
+                                        <span className="text-white font-semibold">
+                                            {stats.users.toLocaleString()}
+                                        </span>{" "}
+                                        users
+                                        <br className="hidden sm:block" /> with advanced moderation,
+                                        music, and utility features.
+                                    </p>
+
+                                    <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                                        <a
+                                            href="/invite"
+                                            className="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-opacity-90 transition-all text-center">
+                                            Add to Discord
+                                        </a>
+                                        <a
+                                            href="/commands"
+                                            className="px-8 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-all text-center">
+                                            View Commands
+                                        </a>
+                                    </div>
+                                </motion.div>
                             </motion.div>
-                        </div>
+                        </motion.div>
                     </div>
+                </div>
 
                     <div className="relative py-24 -mx-[calc((100vw-100%)/2)] bg-[#0A0A0B]">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
