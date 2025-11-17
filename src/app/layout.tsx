@@ -42,11 +42,13 @@ export default function RootLayout({
     const pathname = headersList.get("x-pathname") || ""
     
     if (pathname.startsWith('/dashboard')) {
-        <html lang="en" className="bg-black">
-            <body className={`font-satoshi flex flex-col min-h-screen justify-between bg-gradient-to-b from-zinc-900 to-black`}>
-                        {children}
-            </body>
-        </html>
+        return (
+            <html lang="en" className="bg-black">
+                <body className={`font-satoshi flex flex-col min-h-screen justify-between bg-gradient-to-b from-zinc-900 to-black`}>
+                    {children}
+                </body>
+            </html>
+        )
     }
 
     return (
