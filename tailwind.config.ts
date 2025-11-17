@@ -10,19 +10,19 @@ const config: Config = {
     extend: {
       colors: {
         'warm': {
-          '100': '#141114',
+          '100': '#0A0A0B',
           '200': '#111212',
           '300': '#161717',
-          '400': '#161717',
-          '500': '#1B1C1C',
-          '600': '#111212',
-          '700': '#6b6b6bff',
+          '400': '#1A1A1B',
+          '500': '#1F1F20',
+          '600': '#0F0F10',
+          '700': '#6b6b6b',
           'pink': '#abae94ff',
-          'border': '#0f0f0e',
-          'card-border': '#232424',
+          'border': '#1A1A1B',
+          'card-border': '#1F1F20',
           'secondary': '#919191',
-          'dim': '#1c1c1c',
-          'discord': '#5968de',
+          'dim': '#0D0D0E',
+          'discord': '#5865F2',
         }
       },
       backgroundImage: {

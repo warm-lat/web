@@ -62,22 +62,24 @@ export default function Navbar({ children }: NavbarProps) {
     )
 
     return (
-        <div className="w-full bg-[#0A0A0B]">
-            <div className="2xl:container 2xl:mx-auto px-10 md:px-[8vw] 2xl:px-52 py-4">
+        <div className="w-full bg-[#0A0A0B]/80 backdrop-blur-xl border-b border-white/5 sticky top-0 z-50">
+            <div className="2xl:container 2xl:mx-auto px-10 md:px-[8vw] 2xl:px-52 py-5">
                 <div className="flex items-center justify-between">
-                    <Link href="/" className="flex space-x-3">
-                        <Image
-                            src={"https://r2.warm.lat/pfp.jpg"}
-                            alt="warm"
-                            width={35}
-                            height={35}
-                            className="rounded-lg"
-                        />
-                        <h1 className="text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-b from-[#caca90] via-white to-[#caca90]">
+                    <Link href="/" className="flex items-center space-x-3 group">
+                        <div className="relative">
+                            <Image
+                                src={"https://r2.warm.lat/pfp.jpg"}
+                                alt="warm"
+                                width={32}
+                                height={32}
+                                className="rounded-xl transition-transform group-hover:scale-105"
+                            />
+                        </div>
+                        <h1 className="text-2xl font-semibold text-white transition-colors">
                             warm
                         </h1>
                     </Link>
-                    <nav className="hidden lg:flex items-center space-x-8">
+                    <nav className="hidden lg:flex items-center space-x-1">
                         {routes.map(item => (
                             <NavItem
                                 key={item.label}
@@ -90,7 +92,6 @@ export default function Navbar({ children }: NavbarProps) {
                     <UserMenu />
                 </div>
             </div>
-            <div className="border-b border-zinc-800" />
             {children && (
                 <div
                     className={`2xl:container 2xl:mx-auto px-12 2xl:px-52 ${shouldReducePadding ? "py-2" : "py-4 mt-8"}`}>

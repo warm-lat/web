@@ -50,8 +50,8 @@ export default function RootLayout({
     }
 
     return (
-        <html lang="en" className="bg-black">
-            <body className={`font-satoshi flex flex-col min-h-screen justify-between bg-gradient-to-b from-zinc-900 to-black`}>
+        <html lang="en" className="bg-[#0A0A0B]">
+            <body className={`font-satoshi flex flex-col min-h-screen justify-between antialiased`}>
                 <SessionProvider>
                     <AuthProvider>
                         {children}
