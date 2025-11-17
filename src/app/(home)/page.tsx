@@ -131,16 +131,16 @@ const HomePage = () => {
                                         initial={{ scale: 0.98 }}
                                         animate={{ scale: 1 }}
                                         transition={{ duration: 0.6 }}>
-                                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight">
-                                            <span className="bg-clip-text text-transparent bg-gradient-to-r from-white to-gray-300">
+                                        <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold leading-tight tracking-tight">
+                                            <span className="text-white">
                                             The Ultimate
                                         </span>
                                         <br />
-                                        <span className="bg-clip-text text-transparent bg-gradient-to-r from-gray-200 to-gray-400">
+                                        <span className="text-white/60">
                                             Discord Experience
                                         </span>
                                     </h1>
-                                    <p className="mt-6 text-lg md:text-xl text-gray-400 max-w-2xl">
+                                    <p className="mt-8 text-lg md:text-xl text-white/50 max-w-2xl leading-relaxed">
                                         Powering{" "}
                                         <span className="text-white font-semibold">
                                             {stats.guilds.toLocaleString()}
@@ -154,15 +154,15 @@ const HomePage = () => {
                                         music, and utility features.
                                     </p>
 
-                                    <div className="mt-8 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
+                                    <div className="mt-10 flex flex-col sm:flex-row justify-center md:justify-start gap-4">
                                         <a
                                             href="/invite"
-                                            className="px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-opacity-90 transition-all text-center">
+                                            className="px-8 py-3.5 bg-white text-black rounded-xl font-semibold hover:bg-white/90 transition-all text-center shadow-lg hover:shadow-xl">
                                             Add to Discord
                                         </a>
                                         <a
                                             href="/commands"
-                                            className="px-8 py-3 bg-white/10 text-white rounded-lg font-medium hover:bg-white/20 transition-all text-center">
+                                            className="px-8 py-3.5 bg-white/5 text-white rounded-xl font-semibold hover:bg-white/10 border border-white/10 transition-all text-center">
                                             View Commands
                                         </a>
                                     </div>
@@ -172,27 +172,24 @@ const HomePage = () => {
                     </div>
                 </div>
 
-                    <div className="relative py-24 -mx-[calc((100vw-100%)/2)] bg-[#0A0A0B]">
+                    <div className="relative py-32 -mx-[calc((100vw-100%)/2)]">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="text-center mb-16">
-                                <h2 className="text-4xl font-bold mb-4 relative">
-                                    <span className="bg-gradient-to-r from-white via-white/90 to-white/80 text-transparent bg-clip-text">
-                                        Why Choose Warm?
-                                    </span>
-                                    <div className="absolute -inset-x-4 -inset-y-2 bg-white/5 blur-2xl -z-10 rounded-lg" />
+                            <div className="text-center mb-20">
+                                <h2 className="text-5xl font-bold mb-6 text-white tracking-tight">
+                                    Why Choose Warm?
                                 </h2>
-                                <p className="text-white/60">
+                                <p className="text-xl text-white/50">
                                     Experience the next generation of Discord bots
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="md:col-span-2 min-h-[600px] md:min-h-[320px] group relative bg-white/[0.02] border border-white/5 
-                                             rounded-xl p-8 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="md:col-span-2 min-h-[600px] md:min-h-[320px] group relative bg-white/[0.02] border border-white/10 
+                                             rounded-2xl p-10 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10 h-full flex flex-col">
                                         <div className="flex items-center gap-4 mb-6">
                                             <motion.div
@@ -372,8 +369,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="md:col-span-1 min-h-[500px] md:min-h-[320px] group relative bg-white/[0.02] border border-white/5 
-                                             rounded-xl p-8 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="md:col-span-1 min-h-[500px] md:min-h-[320px] group relative bg-white/[0.02] border border-white/10 
+                                             rounded-2xl p-10 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10 h-full flex flex-col">
                                         <div className="flex items-center gap-4 mb-6">
                                             <motion.div
@@ -520,8 +517,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="min-h-[320px] group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="min-h-[320px] group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-6">
                                             <motion.div
@@ -567,8 +564,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="min-h-[320px] group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="min-h-[320px] group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-6">
                                             <motion.div
@@ -624,8 +621,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="min-h-[320px] group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="min-h-[320px] group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-6">
                                             <motion.div
@@ -667,29 +664,24 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="py-24">
+                    <div className="py-32">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                            <div className="text-center mb-16">
-                                <h2 className="text-3xl md:text-4xl font-bold mb-4 relative">
-                                    <span
-                                        className="bg-gradient-to-r from-white via-white/90 to-white/80 text-transparent bg-clip-text 
-                                           drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
-                                        Advanced Features
-                                    </span>
-                                    <div className="absolute -inset-x-4 -inset-y-2 bg-white/5 blur-2xl -z-10 rounded-lg" />
+                            <div className="text-center mb-20">
+                                <h2 className="text-5xl font-bold tracking-tight mb-6 text-white">
+                                    Advanced Features
                                 </h2>
-                                <p className="text-white/60 text-lg">
+                                <p className="text-white/50 text-xl">
                                     Powerful tools to enhance your Discord experience
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-full">
+                            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-full">
                                 <motion.div
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                     className="md:col-span-3 group relative bg-white/[0.02] border border-white/5 rounded-xl p-8 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-8">
                                             <motion.div
@@ -825,7 +817,7 @@ const HomePage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
                                     className="md:col-span-3 group relative bg-white/[0.02] border border-white/5 rounded-xl p-8 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="text-2xl">⭐</span>
@@ -930,8 +922,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className="w-full md:w-[400px] group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                        className="w-full md:w-[400px] group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="flex items-center gap-4 mb-4">
                                                 <span className="text-2xl">🖼️</span>
@@ -1036,8 +1028,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className="w-full flex-1 group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                        className="w-full flex-1 group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="flex items-center gap-4 mb-4">
                                                 <span className="text-2xl">📱</span>
@@ -1121,13 +1113,12 @@ const HomePage = () => {
                             <div className="text-center mb-16">
                                 <h2 className="text-4xl font-bold mb-4 relative">
                                     <span
-                                        className="bg-gradient-to-r from-white via-white/90 to-white/80 text-transparent bg-clip-text 
-                                           drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+                                        className="text-white 
+                                           ">
                                         Seamless Integrations
                                     </span>
-                                    <div className="absolute -inset-x-4 -inset-y-2 bg-white/5 blur-2xl -z-10 rounded-lg" />
                                 </h2>
-                                <p className="text-white/60 text-lg">
+                                <p className="text-white/50 text-xl">
                                     Connect your favorite services with Warm
                                 </p>
                             </div>
@@ -1137,8 +1128,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-2 mb-3">
                                             <div className="w-6 h-6 rounded-full overflow-hidden">
@@ -1276,8 +1267,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.1 }}
-                                    className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="text-2xl">
@@ -1331,8 +1322,8 @@ const HomePage = () => {
                                     initial={{ opacity: 0, y: 20 }}
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.5, delay: 0.2 }}
-                                    className="lg:col-span-2 group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                             hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                    className="lg:col-span-2 group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                             hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                     <div className="relative z-10">
                                         <div className="flex items-center gap-4 mb-6">
                                             <span className="text-2xl">
@@ -1435,23 +1426,22 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="py-24 border-t border-white/5">
+                    <div className="py-32 border-t border-white/10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="text-center mb-16">
                                 <h2 className="text-4xl font-bold mb-4 relative">
                                     <span
-                                        className="bg-gradient-to-r from-white via-white/90 to-white/80 text-transparent bg-clip-text 
-                                           drop-shadow-[0_0_10px_rgba(255,255,255,0.2)]">
+                                        className="text-white 
+                                           ">
                                         Core Features
                                     </span>
-                                    <div className="absolute -inset-x-4 -inset-y-2 bg-white/5 blur-2xl -z-10 rounded-lg" />
                                 </h2>
-                                <p className="text-white/60 text-lg">
+                                <p className="text-white/50 text-xl">
                                     Everything you need in one bot
                                 </p>
                             </div>
 
-                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-full">
+                            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-full">
                                 {[
                                     {
                                         icon: Shield,
@@ -1508,8 +1498,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: i * 0.1 }}
-                                        className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:bg-white/[0.03] hover:border-white/10 transition-all duration-300">
+                                        className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:bg-white/[0.03] hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300">
                                         <div className="relative z-10">
                                             <div className="mb-4">
                                                 <category.icon className="w-8 h-8 text-white/60 group-hover:text-white transition-colors" />
@@ -1547,7 +1537,7 @@ const HomePage = () => {
                         </div>
                     </div>
 
-                    <div className="py-24 border-t border-white/5">
+                    <div className="py-32 border-t border-white/10">
                         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                                 <div className="grid grid-cols-2 gap-6">
@@ -1555,8 +1545,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5 }}
-                                        className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                        className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="mb-4">
                                                 <div className="flex items-center gap-3 mb-2">
@@ -1580,8 +1570,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.1 }}
-                                        className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                        className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="mb-4">
                                                 <div className="flex items-center gap-3 mb-2">
@@ -1605,8 +1595,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.2 }}
-                                        className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                        className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="mb-4">
                                                 <div className="flex items-center gap-3 mb-2">
@@ -1630,8 +1620,8 @@ const HomePage = () => {
                                         initial={{ opacity: 0, y: 20 }}
                                         whileInView={{ opacity: 1, y: 0 }}
                                         transition={{ duration: 0.5, delay: 0.3 }}
-                                        className="group relative bg-white/[0.02] border border-white/5 rounded-xl p-6 
-                                                 hover:border-white/10 transition-all duration-300 overflow-hidden">
+                                        className="group relative bg-white/[0.02] border border-white/10 rounded-2xl p-8 
+                                                 hover:border-white/15 hover:bg-white/[0.03] transition-all duration-300 overflow-hidden">
                                         <div className="relative z-10">
                                             <div className="mb-4">
                                                 <div className="flex items-center gap-3 mb-2">
@@ -1657,17 +1647,17 @@ const HomePage = () => {
                                     whileInView={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.5, delay: 0.4 }}
                                     className="lg:pl-12">
-                                    <h2 className="text-4xl font-bold text-white mb-6">
+                                    <h2 className="text-5xl font-bold text-white mb-6 tracking-tight">
                                         Ready to enhance your Discord server?
                                     </h2>
-                                    <p className="text-white/60 text-xl mb-10">
+                                    <p className="text-white/50 text-xl mb-10 leading-relaxed">
                                         Join hundreds of servers already using Warm
                                     </p>
                                     <div className="flex flex-col sm:flex-row gap-4">
                                         <motion.a
                                             href="/invite"
-                                            className="group px-8 py-3 bg-white text-black rounded-lg font-medium hover:bg-opacity-90 
-                                                     transition-all flex items-center justify-center gap-2"
+                                            className="group px-8 py-4 bg-white text-black rounded-xl font-semibold hover:bg-white/90 
+                                                     transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}>
                                             <RiRobot2Line className="w-5 h-5" />
@@ -1682,8 +1672,8 @@ const HomePage = () => {
                                         <motion.a
                                             href="https://discord.gg/apply"
                                             target="_blank"
-                                            className="group px-8 py-3 bg-[#5865F2] text-white rounded-lg font-medium 
-                                                     hover:bg-opacity-90 transition-all flex items-center justify-center gap-2"
+                                            className="group px-8 py-4 bg-[#5865F2] text-white rounded-xl font-semibold 
+                                                     hover:bg-[#4752C4] transition-all flex items-center justify-center gap-2 shadow-lg hover:shadow-xl"
                                             whileHover={{ scale: 1.02 }}
                                             whileTap={{ scale: 0.98 }}>
                                             <RiDiscordLine className="w-5 h-5" />

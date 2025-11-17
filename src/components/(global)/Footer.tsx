@@ -17,65 +17,66 @@ export const Footer = () => {
 
     return (
         <div
-            className={`${isCommandsPage || isAvatarsPage || isHomePage || isPurchasePage || isApplyPage || isVerifyPage || isFeaturesPage ? "" : "mt-[30vh]"} border-t border-warm-card-border bg-[#0B0C0C] footer pb-10`}>
-            <div className="flex w-full border-solid border-t border-warm-600 border-opacity-10 py-12">
-                <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center">
-                    <div className="flex flex-col items-center md:items-start mb-6 md:mb-0">
-                        <Link href="/" className="block">
+            className={`${isCommandsPage || isAvatarsPage || isHomePage || isPurchasePage || isApplyPage || isVerifyPage || isFeaturesPage ? "" : "mt-[30vh]"} border-t border-white/10 bg-[#0A0A0B] footer pb-10`}>
+            <div className="flex w-full py-16">
+                <div className="container mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-start gap-12">
+                    <div className="flex flex-col items-center md:items-start">
+                        <Link href="/" className="block mb-6">
                             <Image
                                 src="https://r2.warm.lat/pfp.jpg"
                                 alt="warm"
-                                width={120}
-                                height={120}
-                                className="rounded-2xl mb-4"
+                                width={64}
+                                height={64}
+                                className="rounded-xl"
                             />
                         </Link>
-                        <p className="text-warm-pink text-sm text-center md:text-left">
+                        <p className="text-white/40 text-sm text-center md:text-left max-w-xs leading-relaxed">
                             Copyright {new Date().getFullYear()} {""}
                             <Link 
                                 href="https://azron.net"
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="font-semibold hover:text-warm-secondary transition-colors"
+                                className="text-white/60 hover:text-white transition-colors"
                             >
                                 Azron LLC
                             </Link>
                             . All rights reserved.
+                            <br />
                             Maintained by {" "}
                             <Link 
                                 href="https://fakecrime.bio/^"
                                 target="_blank" 
                                 rel="noopener noreferrer"
-                                className="font-semibold hover:bg-warm-700 transition-colors"
+                                className="text-white/60 hover:text-white transition-colors"
                             >
                                 Nxyy
                             </Link>
                         </p>
                     </div>
 
-                    <div className="flex flex-col md:flex-row gap-8 md:gap-12">
+                    <div className="flex flex-col md:flex-row gap-12 md:gap-20">
                         <div>
-                            <h6 className="font-extrabold text-2xl text-white mb-4">Bot</h6>
-                            <nav className="flex flex-col gap-2">
-                                <Link href="/invite" className="font-semibold text-warm-pink hover:text-warm-blue transition-colors">
+                            <h6 className="font-semibold text-sm text-white mb-4 uppercase tracking-wider">Bot</h6>
+                            <nav className="flex flex-col gap-3">
+                                <Link href="/invite" className="text-white/60 hover:text-white transition-colors text-sm">
                                     Invite
                                 </Link>
-                                <Link href="https://docs.warm.lat/" className="font-semibold text-warm-pink hover:text-warm-blue transition-colors">
+                                <Link href="https://docs.warm.lat/" className="text-white/60 hover:text-white transition-colors text-sm">
                                     Documentation
                                 </Link>
-                                <Link href="https://discord.gg/apply" className="font-semibold text-warm-pink hover:text-warm-blue transition-colors">
+                                <Link href="https://discord.gg/apply" className="text-white/60 hover:text-white transition-colors text-sm">
                                     Support Server
                                 </Link>
                             </nav>
                         </div>
 
                         <div>
-                            <h6 className="font-extrabold text-2xl text-white mb-4">Legal</h6>
-                            <nav className="flex flex-col gap-2">
-                                <Link href="/terms" className="font-semibold text-warm-pink hover:text-warm-blue transition-colors">
+                            <h6 className="font-semibold text-sm text-white mb-4 uppercase tracking-wider">Legal</h6>
+                            <nav className="flex flex-col gap-3">
+                                <Link href="/terms" className="text-white/60 hover:text-white transition-colors text-sm">
                                     Terms
                                 </Link>
-                                <Link href="/privacy" className="font-semibold text-warm-pink hover:text-warm-blue transition-colors">
+                                <Link href="/privacy" className="text-white/60 hover:text-white transition-colors text-sm">
                                     Privacy
                                 </Link>
                             </nav>
@@ -83,10 +84,10 @@ export const Footer = () => {
                     </div>
 
                     <div className="flex flex-col items-center md:items-end">
-                        <h6 className="font-extrabold text-2xl text-white mb-4">Follow Us</h6>
+                        <h6 className="font-semibold text-sm text-white mb-4 uppercase tracking-wider">Follow Us</h6>
                         <div className="flex space-x-4">
-                            <Link href="https://discord.gg/apply" target="_blank" rel="noopener noreferrer" className= "text-warm-pink hover:text-warm-blue transition-colors">
-                                <FaDiscord size={30} />
+                            <Link href="https://discord.gg/apply" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5">
+                                <FaDiscord size={24} />
                             </Link>
                         </div>
                     </div>
