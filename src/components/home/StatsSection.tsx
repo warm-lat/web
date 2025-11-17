@@ -20,9 +20,12 @@ const statsData = [
     { icon: FaUsers, label: "Total Users", value: "users" as const, color: "blue" },
     { icon: IoTerminal, label: "Commands", value: "1,000+", color: "green" },
     { icon: HiOutlineStatusOnline, label: "Uptime", value: "99.9%", color: "red" }
-]
+] as const
 
 export default function StatsSection({ stats }: Props) {
+    const isStatKey = (value: string): value is keyof Props["stats"] => {
+        return value === "users" || value === "guilds"
+    }
     return (
         <Section className="border-t border-white/10">
             <Container>
@@ -36,9 +39,9 @@ export default function StatsSection({ stats }: Props) {
                                 <div className="flex items-center gap-3 mb-2">
                                     <stat.icon className="w-5 h-5 text-white/40" />
                                     <div className="text-3xl font-bold text-white">
-                                        {typeof stat.value === "string"
-                                            ? stat.value
-                                            : stats[stat.value].toLocaleString()}
+                                        {isStatKey(stat.value)
+                                            ? stats[stat.value].toLocaleString()
+                                            : stat.value}
                                     </div>
                                 </div>
                                 <div className="text-sm text-white/40">{stat.label}</div>
