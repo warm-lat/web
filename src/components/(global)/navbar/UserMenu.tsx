@@ -59,23 +59,23 @@ const UserMenu = () => {
                     />
                     <div className="fixed inset-0 z-[50001] flex items-center justify-center">
                         <motion.div
-                            initial={{ opacity: 0, scale: 0.9 }}
+                            initial={{ opacity: 0, scale: 0.95 }}
                             animate={{ opacity: 1, scale: 1 }}
-                            className="bg-warm-200 border border-warm-card-border p-6 rounded-xl shadow-lg max-w-md mx-4">
-                            <div className="flex justify-between items-start mb-4">
-                                <div className="bg-white/10 p-2 rounded-lg">
-                                    <Sparkles className="w-6 h-6 text-warm-pink" />
+                            className="bg-[#0A0A0B]/95 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl max-w-md mx-4">
+                            <div className="flex justify-between items-start mb-6">
+                                <div className="bg-white/10 p-3 rounded-xl">
+                                    <Sparkles className="w-6 h-6 text-white" />
                                 </div>
                                 <button
                                     onClick={dismissPopup}
-                                    className="text-white/60 hover:text-white">
-                                    <CgClose size={24} />
+                                    className="text-white/60 hover:text-white transition-colors p-2 hover:bg-white/5 rounded-lg">
+                                    <CgClose size={20} />
                                 </button>
                             </div>
-                            <h2 className="text-2xl font-bold text-white mb-2">
+                            <h2 className="text-2xl font-bold text-white mb-3">
                                 Dashboard Beta
                             </h2>
-                            <p className="text-white/60 mb-4">
+                            <p className="text-white/60 mb-6 leading-relaxed">
                                 We're excited to announce that our dashboard is currently in
                                 beta testing! Apply now to be among the first to experience it.
                             </p>
@@ -85,12 +85,12 @@ const UserMenu = () => {
                                         dismissPopup()
                                         router.push("/apply")
                                     }}
-                                    className="flex-1 bg-warm-pink text-white px-4 py-2 rounded-lg font-medium hover:bg-warm-pink/90 transition-colors">
+                                    className="flex-1 bg-white text-black px-5 py-3 rounded-xl font-semibold hover:bg-white/90 transition-all shadow-lg">
                                     Join Beta
                                 </button>
                                 <button
                                     onClick={dismissPopup}
-                                    className="px-4 py-2 text-white/60 hover:text-white transition-colors">
+                                    className="px-5 py-3 text-white/60 hover:text-white hover:bg-white/5 transition-all rounded-xl font-medium">
                                     Maybe Later
                                 </button>
                             </div>
@@ -123,10 +123,9 @@ const UserMenu = () => {
                 </Link> */}
                 <button
                     onClick={() => router.push("/purchase")}
-                    className="bg-[#4B5563] px-4 sm:px-8 py-2 flex items-center space-x-2 rounded-full font-medium text-sm sm:text-base transition-all duration-200 hover:bg-[#404754] text-white">
-                    <Sparkles className="w-4 h-4 sm:w-5 sm:h-5" />
-                    <span className="font-normal hidden sm:inline">Purchase</span>
-                    <span className="font-normal sm:hidden">Purchase</span>
+                    className="bg-white/10 hover:bg-white/15 px-4 sm:px-6 py-2.5 flex items-center space-x-2 rounded-xl font-semibold text-sm transition-all duration-200 text-white border border-white/10">
+                    <Sparkles className="w-4 h-4" />
+                    <span>Purchase</span>
                 </button>
             </div>
         </>
@@ -169,35 +168,38 @@ const BurgerMenu = ({ onClose }: { onClose: () => void }) => {
         <>
             <div className="fixed inset-0 z-[9999999999] flex items-center justify-center">
                 <motion.div
-                    initial={{ opacity: 0, y: 40, scale: 0.7 }}
+                    initial={{ opacity: 0, y: 40, scale: 0.9 }}
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 20 }}
                     transition={{
-                        ease: "linear",
+                        ease: "easeOut",
                         duration: 0.2
                     }}
-                    className="bg-warm-200 border -mt-40 border-warm-card-border w-[90%] px-2 rounded-xl shadow-lg">
-                    <div className="flex flex-row justify-between items-center gap-6 pt-10 px-4">
-                        <h1 className="font-bold text-white text-4xl">Menu</h1>
-                        <CgClose
-                            size={24}
-                            className="ml-auto hover:cursor-pointer hover:text-warm-pink"
+                    className="bg-[#0A0A0B]/95 backdrop-blur-xl border border-white/10 -mt-40 w-[90%] px-2 rounded-2xl shadow-2xl">
+                    <div className="flex flex-row justify-between items-center gap-6 pt-8 px-6">
+                        <h1 className="font-bold text-white text-3xl tracking-tight">Menu</h1>
+                        <button
                             onClick={onClose}
-                        />
+                            className="p-2 hover:bg-white/5 rounded-lg transition-colors">
+                            <CgClose
+                                size={24}
+                                className="text-white/60 hover:text-white"
+                            />
+                        </button>
                     </div>
-                    <div className="flex flex-col gap-4 px-4 pt-10 pb-10">
+                    <div className="flex flex-col gap-3 px-6 pt-8 pb-8">
                         {routes.map(route => {
                             return (
                                 <Link
                                     href={route.destination}
                                     key={route.label}
                                     onClick={onClose}
-                                    className={`flex items-center h-14 bg-warm-300 rounded-md ${
+                                    className={`flex items-center h-14 px-5 rounded-xl transition-all ${
                                         route.isActive
-                                            ? "text-warm-pink bg-warm-200"
-                                            : "text-warm-700 hover:bg-warm-dim hover:text-white"
+                                            ? "text-white bg-white/10 border border-white/10"
+                                            : "text-white/60 hover:bg-white/5 hover:text-white border border-transparent"
                                     }`}>
-                                    <span className="text-base font-medium pl-5">
+                                    <span className="text-base font-medium">
                                         {route.label}
                                     </span>
                                 </Link>
