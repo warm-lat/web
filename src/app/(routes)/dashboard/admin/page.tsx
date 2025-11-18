@@ -153,24 +153,24 @@ export default function AdminDashboard() {
 	}
 
 	return (
-		<div>
-			<div className="mb-8">
-				<h1 className="text-2xl font-bold text-white">Admin Dashboard</h1>
-				<p className="text-white/60 mt-2">
-					Manage and monitor your bot&apos;s performance
+		<div className="max-w-[1920px] mx-auto">
+			<div className="mb-8 md:mb-12">
+				<h1 className="text-2xl md:text-3xl font-bold text-white mb-2">Admin Dashboard</h1>
+				<p className="text-sm md:text-base text-white/60">
+					Manage and monitor your bot&apos;s performance and analytics
 				</p>
 			</div>
 
-			<div className="space-y-6">
-				<div className="flex gap-2 p-1 bg-white/5 rounded-lg w-fit">
+			<div className="space-y-6 md:space-y-8">
+				<div className="flex gap-2 p-1 bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-xl w-fit">
 					{TIME_PERIODS.map((period) => (
 						<button
 							key={period.value}
 							onClick={() => setSelectedDays(period.value)}
-							className={`px-4 py-2 rounded-md transition-colors ${
+							className={`px-4 py-2.5 rounded-lg text-sm font-medium transition-all ${
 								selectedDays === period.value
-									? "bg-white/10 text-white"
-									: "text-white/60 hover:text-white"
+									? "bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border border-white/10"
+									: "text-white/60 hover:text-white hover:bg-white/5"
 							}`}
 						>
 							{period.label}
@@ -178,7 +178,7 @@ export default function AdminDashboard() {
 					))}
 				</div>
 
-				<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4">
+				<div className="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-4 md:gap-6">
 					<StatCard
 						title="Total Commands"
 						value={getTotalCommands(selectedDays)}
@@ -207,12 +207,12 @@ export default function AdminDashboard() {
 					/>
 				</div>
 
-				<div className="grid grid-cols-1 xl:grid-cols-2 gap-6">
-					<div className="bg-white/[0.02] border border-white/5 rounded-xl p-6">
-						<h3 className="text-lg font-medium text-white mb-6">
+				<div className="grid grid-cols-1 xl:grid-cols-2 gap-4 md:gap-6">
+					<div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
+						<h3 className="text-base md:text-lg font-semibold text-white mb-6">
 							Command Usage Trends
 						</h3>
-						<div className="h-[300px]">
+						<div className="h-[250px] md:h-[300px]">
 							<ResponsiveContainer width="100%" height="100%">
 								<LineChart data={chartData}>
 									<XAxis
@@ -241,11 +241,11 @@ export default function AdminDashboard() {
 						</div>
 					</div>
 
-					<div className="bg-white/[0.02] border border-white/5 rounded-xl p-6">
-						<h3 className="text-lg font-medium text-white mb-6">
+					<div className="bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 md:p-8">
+						<h3 className="text-base md:text-lg font-semibold text-white mb-6">
 							Category Distribution
 						</h3>
-						<div className="h-[300px]">
+						<div className="h-[250px] md:h-[300px]">
 							<ResponsiveContainer width="100%" height="100%">
 								<AreaChart data={chartData}>
 									<XAxis
@@ -280,14 +280,14 @@ export default function AdminDashboard() {
 					</div>
 				</div>
 
-				<div className="bg-[#0A0A0B] rounded-xl border border-white/5 overflow-hidden">
-					<div className="p-4 border-b border-white/5 flex flex-col sm:flex-row gap-4">
+				<div className="bg-white/[0.03] backdrop-blur-sm rounded-2xl border border-white/10 overflow-hidden">
+					<div className="p-4 md:p-6 border-b border-white/10 flex flex-col sm:flex-row gap-4">
 						<div className="relative flex-1">
 							<Search className="absolute left-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-white/40" />
 							<input
 								type="text"
 								placeholder="Search commands or servers..."
-								className="w-full bg-black/20 text-sm rounded-lg pl-9 pr-4 h-[38px] border border-white/5 focus:outline-none focus:border-white/10 placeholder-white/40 text-white"
+								className="w-full bg-white/[0.02] text-sm rounded-xl pl-9 pr-4 h-[42px] border border-white/10 focus:outline-none focus:border-white/20 placeholder-white/40 text-white transition-colors"
 								value={searchQuery}
 								onChange={(e) => setSearchQuery(e.target.value)}
 							/>
@@ -509,25 +509,30 @@ interface StatCardProps {
 
 function StatCard({ title, value, change, icon }: StatCardProps) {
 	return (
-		<div className="bg-white/[0.02] border border-white/5 rounded-xl p-6">
-			<div className="flex items-center justify-between">
-				<div className="bg-white/5 p-2 rounded-lg">{icon}</div>
-				{change !== 0 && (
-					<div
-						className={`flex items-center gap-1 text-sm ${
-							change > 0 ? "text-green-400" : "text-red-400"
-						}`}
-					>
-						{change > 0 ? "+" : ""}
-						{change.toFixed(1)}%
+		<div className="relative group">
+			<div className="absolute inset-0 bg-gradient-to-br from-blue-500/10 via-purple-500/10 to-transparent rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+			<div className="relative bg-white/[0.03] backdrop-blur-sm border border-white/10 rounded-2xl p-6 hover:border-white/20 transition-all">
+				<div className="flex items-center justify-between mb-4">
+					<div className="bg-gradient-to-br from-blue-500/20 to-purple-500/20 p-3 rounded-xl border border-white/10">
+						{icon}
 					</div>
-				)}
-			</div>
-			<div className="mt-4">
-				<div className="text-2xl font-semibold text-white">
-					{value.toLocaleString()}
+					{change !== 0 && (
+						<div
+							className={`flex items-center gap-1 text-sm font-medium ${
+								change > 0 ? "text-green-400" : "text-red-400"
+							}`}
+						>
+							{change > 0 ? "+" : ""}
+							{change.toFixed(1)}%
+						</div>
+					)}
 				</div>
-				<div className="text-sm text-white/60">{title}</div>
+				<div>
+					<div className="text-2xl md:text-3xl font-bold text-white mb-1">
+						{value.toLocaleString()}
+					</div>
+					<div className="text-sm text-white/60">{title}</div>
+				</div>
 			</div>
 		</div>
 	);
