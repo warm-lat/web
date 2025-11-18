@@ -2,6 +2,7 @@ import { ButtonHTMLAttributes, forwardRef } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/libs/utils"
 
+// Omit conflicting event handlers between HTML and framer-motion
 export interface ButtonProps extends Omit<ButtonHTMLAttributes<HTMLButtonElement>, 
     'onDrag' | 'onDragStart' | 'onDragEnd' | 'onDragEnter' | 'onDragExit' | 'onDragLeave' | 'onDragOver' | 'onDrop' |
     'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'
