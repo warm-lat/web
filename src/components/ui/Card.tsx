@@ -2,7 +2,10 @@ import { HTMLAttributes, forwardRef } from "react"
 import { motion } from "framer-motion"
 import { cn } from "@/libs/utils"
 
-export interface CardProps extends HTMLAttributes<HTMLDivElement> {
+export interface CardProps extends Omit<HTMLAttributes<HTMLDivElement>, 
+    'onDrag' | 'onDragStart' | 'onDragEnd' | 'onDragEnter' | 'onDragExit' | 'onDragLeave' | 'onDragOver' | 'onDrop' |
+    'onAnimationStart' | 'onAnimationEnd' | 'onAnimationIteration'
+> {
     hover?: boolean
     gradient?: boolean
 }
