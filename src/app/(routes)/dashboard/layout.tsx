@@ -1,7 +1,6 @@
 "use client"
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query"
-import Navbar from "@/components/(global)/navbar/Navbar"
 const queryClient = new QueryClient()
 
 export default function DashboardLayout({
@@ -11,7 +10,6 @@ export default function DashboardLayout({
 }) {
     return (
         <QueryClientProvider client={queryClient}>
-            <Navbar />
             {children}
         </QueryClientProvider>
     )
