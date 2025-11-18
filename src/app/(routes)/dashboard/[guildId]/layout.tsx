@@ -165,7 +165,7 @@ function DashboardLayoutContent({
 
     if (isBetaLoading || isGuildsLoading) {
         return (
-            <div className="min-h-screen bg-[#0A0A0B] flex items-center justify-center">
+            <div className="min-h-screen bg-gradient-to-br from-[#0A0A0B] via-[#0F0F10] to-[#0A0A0B] flex items-center justify-center">
                 <div className="text-center">
                     <div className="inline-block animate-spin rounded-full h-8 w-8 border-t-2 border-white border-r-2 border-b-2 border-transparent mb-4"></div>
                     <h2 className="text-xl font-semibold text-white">Loading your dashboard...</h2>
@@ -177,33 +177,154 @@ function DashboardLayoutContent({
 
     if (userGuilds) {
         return (
-            <div className="min-h-screen bg-[#0B0C0C]">
-                <div className="bg-[#0B0C0C] w-full h-[70px] border-b border-white/5 shrink-0">
-                    <div className="h-full px-6 flex items-center justify-between">
-                        <div className="flex items-center gap-4">
+            <div className="min-h-screen bg-gradient-to-br from-[#0A0A0B] via-[#0F0F10] to-[#0A0A0B]">
+                <div className="flex">
+                    {isSidebarOpen && (
+                        <div
+                            className="fixed inset-0 bg-black/50 lg:hidden z-40"
+                            onClick={() => setIsSidebarOpen(false)}
+                        />
+                    )}
+
+                    <aside
+                        className={`
+                        fixed lg:static inset-y-0 left-0 w-72 bg-[#0A0A0B]/80 backdrop-blur-xl border-r border-white/10 transition-transform duration-300 ease-in-out z-50 lg:translate-x-0
+                        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
+                    `}>
+                        <div className="h-full flex flex-col">
+                            <div className="p-6 border-b border-white/10">
+                                <Link href="/" className="flex items-center gap-3 group mb-6">
+                                    <Image
+                                        src="https://r2.warm.lat/pfp.jpg"
+                                        alt="warm"
+                                        width={40}
+                                        height={40}
+                                        className="rounded-xl ring-2 ring-white/10 group-hover:ring-white/20 transition-all"
+                                    />
+                                    <span className="text-xl font-semibold text-white">warm</span>
+                                </Link>
+
+                                <div
+                                    className="relative"
+                                    onMouseLeave={() => setIsGuildSelectorOpen(false)}>
+                                    <button
+                                        onClick={() => setIsGuildSelectorOpen(!isGuildSelectorOpen)}
+                                        className="w-full flex items-center gap-3 p-3 bg-white/[0.03] rounded-xl border border-white/10 hover:bg-white/[0.05] hover:border-white/20 transition-all">
+                                        <Image
+                                            src={
+                                                currentGuild?.icon
+                                                    ? `https://cdn.discordapp.com/icons/${currentGuild.id}/${currentGuild.icon}.png`
+                                                    : "https://cdn.discordapp.com/embed/avatars/1.png"
+                                            }
+                                            alt={currentGuild?.name ?? ""}
+                                            width={40}
+                                            height={40}
+                                            className="rounded-lg"
+                                        />
+                                        <div className="flex-1 truncate text-left">
+                                            <h3 className="text-white font-medium truncate text-sm">
+                                                {currentGuild?.name}
+                                            </h3>
+                                            <p className="text-xs text-white/40">Server Settings</p>
+                                        </div>
+                                        <ChevronDown
+                                            className={`w-4 h-4 text-white/40 transition-transform ${isGuildSelectorOpen ? "rotate-180" : ""}`}
+                                        />
+                                    </button>
+
+                                    {isGuildSelectorOpen && (
+                                        <>
+                                            <div className="absolute left-0 right-0 h-2 -bottom-2" />
+                                            <div
+                                                onMouseEnter={() => setIsGuildSelectorOpen(true)}
+                                                className="absolute top-full left-0 right-0 mt-2 py-2 bg-[#0B0C0C] border border-white/10 rounded-xl shadow-xl z-50 max-h-[300px] overflow-y-auto">
+                                                {filteredGuilds.map(guild => (
+                                                    <Link
+                                                        key={guild.id}
+                                                        href={`/dashboard/${guild.id}`}
+                                                        className={`flex items-center gap-3 px-3 py-2.5 hover:bg-white/5 transition-colors
+                                                            ${guild.id === currentGuild?.id ? "bg-white/10" : ""}`}>
+                                                        <Image
+                                                            src={
+                                                                guild.icon
+                                                                    ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png`
+                                                                    : "https://cdn.discordapp.com/embed/avatars/1.png"
+                                                            }
+                                                            alt={guild.name}
+                                                            width={32}
+                                                            height={32}
+                                                            className="rounded-lg"
+                                                        />
+                                                        <div className="flex-1 truncate">
+                                                            <h4 className="text-sm text-white truncate">
+                                                                {guild.name}
+                                                            </h4>
+                                                        </div>
+                                                    </Link>
+                                                ))}
+                                            </div>
+                                        </>
+                                    )}
+                                </div>
+                            </div>
+
+                            <nav className="flex-1 overflow-y-auto py-6 px-3">
+                                {Object.entries(navigation).map(([category, items]) => (
+                                    <div key={category} className="mb-8">
+                                        <h4 className="px-3 mb-3 text-xs font-semibold text-white/40 uppercase tracking-wider">
+                                            {category}
+                                        </h4>
+                                        <div className="space-y-1">
+                                            {items.map(item => (
+                                                <Link
+                                                    key={item.name}
+                                                    href={
+                                                        item.isComingSoon
+                                                            ? "#"
+                                                            : `/dashboard/${currentGuild?.id}${item.href}`
+                                                    }
+                                                    onClick={e => {
+                                                        if (item.isComingSoon) {
+                                                            e.preventDefault()
+                                                            toast.error("This feature is coming soon!")
+                                                        }
+                                                    }}
+                                                    className={`flex items-center gap-3 px-3 py-2.5 rounded-xl text-sm font-medium transition-all
+                                                        ${
+                                                            pathname ===
+                                                            `/dashboard/${currentGuild?.id}${item.href}`
+                                                                ? "bg-gradient-to-r from-blue-500/20 to-purple-500/20 text-white border border-white/10"
+                                                                : "text-white/60 hover:text-white hover:bg-white/5"
+                                                        }
+                                                        ${item.isComingSoon ? "opacity-50" : ""}`}>
+                                                    <item.icon className="w-4 h-4 flex-shrink-0" />
+                                                    <span className="flex-1">{item.name}</span>
+                                                    {item.isComingSoon && (
+                                                        <span className="text-xs bg-white/10 px-1.5 py-0.5 rounded">
+                                                            Soon
+                                                        </span>
+                                                    )}
+                                                </Link>
+                                            ))}
+                                        </div>
+                                    </div>
+                                ))}
+                            </nav>
+
+                            <div className="p-4 border-t border-white/10">
+                                <UserAvatar />
+                            </div>
+                        </div>
+                    </aside>
+
+                    <main className="flex-1 min-h-screen">
+                        <div className="lg:hidden sticky top-0 z-30 bg-[#0A0A0B]/80 backdrop-blur-xl border-b border-white/10 p-4 flex items-center justify-between">
                             <button
                                 onClick={() => setIsSidebarOpen(!isSidebarOpen)}
-                                className="lg:hidden text-white/60 hover:text-white transition-colors">
-                                {isSidebarOpen ? (
-                                    <X className="w-5 h-5" />
-                                ) : (
-                                    <Menu className="w-5 h-5" />
-                                )}
+                                className="text-white/60 hover:text-white transition-colors"
+                            >
+                                <Menu className="w-6 h-6" />
                             </button>
-
-                            <Link href="/" className="flex items-center gap-3">
-                                <Image
-                                    src="https://r2.warm.lat/pfp.jpg"
-                                    alt="warm"
-                                    width={32}
-                                    height={32}
-                                    className="rounded-lg"
-                                />
-                                <span className="text-xl font-semibold text-white">warm</span>
-                            </Link>
-                        </div>
-
-                        <div className="flex items-center gap-6">
                             <div className="relative">
                                 <button 
                                     onClick={() => setIsOpen(!isOpen)} 
@@ -221,7 +342,7 @@ function DashboardLayoutContent({
                                             className="fixed inset-0 z-40" 
                                             onClick={() => setIsOpen(false)} 
                                         />
-                                        <div className="absolute right-0 mt-2 w-80 bg-[#111111] border border-white/5 rounded-xl shadow-lg z-50">
+                                        <div className="absolute right-0 mt-2 w-80 bg-[#111111] border border-white/10 rounded-xl shadow-lg z-50">
                                             <div className="p-4">
                                                 <h3 className="text-sm font-medium text-white">Notifications</h3>
                                                 <div className="mt-2 space-y-2">
@@ -252,135 +373,8 @@ function DashboardLayoutContent({
                                     </>
                                 )}
                             </div>
-                            <UserAvatar />
                         </div>
-                    </div>
-                </div>
-
-                <div className="flex">
-                    {isSidebarOpen && (
-                        <div
-                            className="fixed inset-0 bg-black/50 lg:hidden z-40"
-                            onClick={() => setIsSidebarOpen(false)}
-                        />
-                    )}
-
-                    <aside
-                        className={`
-                        fixed lg:static inset-y-0 left-0 w-64 bg-[#0A0A0B] border-r border-white/5 transition-transform duration-200 ease-in-out z-50 lg:translate-x-0
-                        ${isSidebarOpen ? "translate-x-0" : "-translate-x-full"}
-                    `}>
-                        <div className="p-4">
-                            <div
-                                className="relative"
-                                onMouseLeave={() => setIsGuildSelectorOpen(false)}>
-                                <button
-                                    onClick={() => setIsGuildSelectorOpen(!isGuildSelectorOpen)}
-                                    className="w-full flex items-center gap-3 p-3 bg-white/[0.02] rounded-lg border border-white/5 hover:bg-white/[0.04] transition-colors">
-                                    <Image
-                                        src={
-                                            currentGuild?.icon
-                                                ? `https://cdn.discordapp.com/icons/${currentGuild.id}/${currentGuild.icon}.png`
-                                                : "https://cdn.discordapp.com/embed/avatars/1.png"
-                                        }
-                                        alt={currentGuild?.name ?? ""}
-                                        width={40}
-                                        height={40}
-                                        className="rounded-lg"
-                                    />
-                                    <div className="flex-1 truncate">
-                                        <h3 className="text-white font-medium truncate">
-                                            {currentGuild?.name}
-                                        </h3>
-                                        <p className="text-sm text-white/40">Server Settings</p>
-                                    </div>
-                                    <ChevronDown
-                                        className={`w-5 h-5 text-white/40 transition-transform ${isGuildSelectorOpen ? "rotate-180" : ""}`}
-                                    />
-                                </button>
-
-                                {isGuildSelectorOpen && (
-                                    <>
-                                        <div className="absolute left-0 right-0 h-2 -bottom-2" />
-                                        <div
-                                            onMouseEnter={() => setIsGuildSelectorOpen(true)}
-                                            className="absolute top-full left-0 right-0 mt-2 py-2 bg-[#0B0C0C] border border-white/5 rounded-lg shadow-xl z-50 max-h-[300px] overflow-y-auto">
-                                            {filteredGuilds.map(guild => (
-                                                <Link
-                                                    key={guild.id}
-                                                    href={`/dashboard/${guild.id}`}
-                                                    className={`flex items-center gap-3 px-3 py-2 hover:bg-white/5 transition-colors
-                                                        ${guild.id === currentGuild?.id ? "bg-white/10" : ""}`}>
-                                                    <Image
-                                                        src={
-                                                            guild.icon
-                                                                ? `https://cdn.discordapp.com/icons/${guild.id}/${guild.icon}.png`
-                                                                : "https://cdn.discordapp.com/embed/avatars/1.png"
-                                                        }
-                                                        alt={guild.name}
-                                                        width={32}
-                                                        height={32}
-                                                        className="rounded-lg"
-                                                    />
-                                                    <div className="flex-1 truncate">
-                                                        <h4 className="text-sm text-white truncate">
-                                                            {guild.name}
-                                                        </h4>
-                                                    </div>
-                                                </Link>
-                                            ))}
-                                        </div>
-                                    </>
-                                )}
-                            </div>
-                        </div>
-
-                        <nav className="mt-4 px-3">
-                            {Object.entries(navigation).map(([category, items]) => (
-                                <div key={category} className="mb-6">
-                                    <h4 className="px-3 mb-2 text-xs font-medium text-white/40 uppercase tracking-wider">
-                                        {category}
-                                    </h4>
-                                    <div className="space-y-1">
-                                        {items.map(item => (
-                                            <Link
-                                                key={item.name}
-                                                href={
-                                                    item.isComingSoon
-                                                        ? "#"
-                                                        : `/dashboard/${currentGuild?.id}${item.href}`
-                                                }
-                                                onClick={e => {
-                                                    if (item.isComingSoon) {
-                                                        e.preventDefault()
-                                                        toast.error("This feature is coming soon!")
-                                                    }
-                                                }}
-                                                className={`flex items-center gap-3 px-3 py-2 rounded-lg text-sm transition-colors
-                                                    ${
-                                                        pathname ===
-                                                        `/dashboard/${currentGuild?.id}${item.href}`
-                                                            ? "bg-white/10 text-white"
-                                                            : "text-white/60 hover:text-white hover:bg-white/5"
-                                                    }
-                                                    ${item.isComingSoon ? "opacity-50" : ""}`}>
-                                                <item.icon className="w-4 h-4" />
-                                                <span>{item.name}</span>
-                                                {item.isComingSoon && (
-                                                    <span className="ml-auto text-xs bg-white/10 px-2 py-0.5 rounded">
-                                                        Soon
-                                                    </span>
-                                                )}
-                                            </Link>
-                                        ))}
-                                    </div>
-                                </div>
-                            ))}
-                        </nav>
-                    </aside>
-
-                    <main className="flex-1 min-h-[calc(100vh-70px)]">
-                        <div className="p-4 md:p-6">
+                        <div className="p-4 md:p-6 lg:p-12">
                             {isComingSoonPage ? (
                                 <ComingSoon />
                             ) : (
