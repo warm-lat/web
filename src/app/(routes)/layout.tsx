@@ -6,7 +6,7 @@ import { Footer } from "@/components/(global)/Footer"
 import Navbar from "@/components/(global)/navbar/Navbar"
 import { Suspense } from "react"
 import Loading from "./loading"
-import { LayoutWrapper } from "@/app/(routes)/layourWrapper"
+import { LayoutWrapper } from "@/app/(routes)/layoutWrapper"
 import { headers } from 'next/headers'
 
 const manrope = Manrope({ subsets: ["latin"] })

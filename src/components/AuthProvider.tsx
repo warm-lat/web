@@ -9,7 +9,6 @@ export function AuthProvider({ children }: { children: React.ReactNode }) {
     useEffect(() => {
         if (session?.user) {
             localStorage.setItem('userToken', session.user.userToken || '')
-            // @ts-ignore
             localStorage.setItem('userImage', session.user.image || '')
         } else {
             localStorage.removeItem('userToken')

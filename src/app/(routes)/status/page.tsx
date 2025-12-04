@@ -12,8 +12,6 @@ import { MdOutlineTimeline } from "react-icons/md";
 import { PiWifiSlashBold } from "react-icons/pi";
 import { TbCloudDataConnection } from "react-icons/tb";
 
-const apiKey = "";
-
 const fetchShard = async (shardId: number) => {
 	const response = await fetch(`https://api.warm.lat/status`, {
 		headers: {

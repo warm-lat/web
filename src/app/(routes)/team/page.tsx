@@ -112,8 +112,7 @@ interface ApiResponse {
 }
 
 const TEAM_MEMBERS: TeamMember[] = [
-	{ id: "930383131863842816", role: "Developer", name: "_mism." },
-	{ id: "1076218266416054293", role: "Developer", name: "ihateok" },
+	{ id: "1137513168965476352", role: "Developer", name: "_mism." }
 ];
 
 const DONATORS: Donator[] = [];
@@ -124,10 +123,10 @@ const BADGE_MAPPING: Record<string, string> = {
 	House_Balance: "HypeSquad_Balance",
 	House_Bravery: "HypeSquad_Bravery",
 	House_Brilliance: "HypeSquad_Brilliance",
-	Nitro_Boost1m: "Evolving_badge_Nitro_1_months",
-	Nitro_Boost3m: "Evolving_badge_Nitro_3_months",
-	Nitro_Boost6m: "Evolving_badge_Nitro_6_months",
-	Nitro_Boost12m: "Evolving_badge_Nitro_12_months",
+	Nitro_Boost1m: "Boost1m",
+	Nitro_Boost3m: "Boost3m",
+	Nitro_Boost6m: "Boost6m",
+	Nitro_Boost12m: "Boost12m",
 	Quest: "Questbadge",
 };
 

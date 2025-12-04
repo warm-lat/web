@@ -282,7 +282,7 @@
   .section4_icon {
     width: 60px;
     height: 60px;
-    background-color: #c5b3c0;
+    background-color: #c5c5aa;
     border-radius: 10px;
   }
   
@@ -316,7 +316,7 @@
   .section5_label {
     font-size: 30px;
     font-weight: bold;
-    color: #c5b3c0;
+    color: #c5c5aa;
     transition: 0.5s;
   }
   
@@ -339,7 +339,7 @@
   
   /* custom tags */
   highlight {
-    color: #c5b3c0;
+    color: #c5c5aa;
   }
   
   section {

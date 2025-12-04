@@ -34,15 +34,15 @@ export const Footer = () => {
                         <p className="text-white/40 text-sm max-w-xs leading-relaxed">
                             Copyright {new Date().getFullYear()}{" "}
                             <Link
-                                href="https://azron.net"
+                                href="https://aelix.ltd"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/60 hover:text-white transition-colors">
-                                Azron LLC
+                                Aelix LLC
                             </Link>
                             . All rights reserved.
                             <br />
-                            Maintained by{" "}
+                            Created by{" "}
                             <Link
                                 href="https://fakecrime.bio/^"
                                 target="_blank"
@@ -82,7 +82,7 @@ export const Footer = () => {
                         <div className="mt-8">
                             <h6 className="font-semibold text-sm text-white mb-4">Follow Us</h6>
                             <Link
-                                href="https://discord.gg/apply"
+                                href="https://warm.lat/discord"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="inline-flex text-white/60 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5">

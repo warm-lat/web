@@ -1,6 +1,6 @@
 "use client"
 
-import { cn } from "@/libs/util"
+import { cn } from "@/libs/utils"
 
 interface HeadingProps {
     size?: "xl" | "lg"
