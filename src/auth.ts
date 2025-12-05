@@ -194,7 +194,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 				token.spotifyToken = account.access_token;
 			}
 			// Store user image in token
-			if (user?.image) {
+			if (user) {
 				token.picture = user.image;
 			}
 			return token;
@@ -203,7 +203,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			if (session.user) {
 				session.user.id = token.discordId as string;
 				session.user.userToken = token.userToken;
-				session.user.image = token.picture as string;
+				session.user.image = token.picture ?? null;
 				session.user.warning =
 					"DO NOT SHARE THIS TOKEN WITH ANYONE, WE ARE NOT RESPONSIBLE FOR ANYTHING YOU DO WITH IT";
 			}
