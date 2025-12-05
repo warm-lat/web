@@ -192,7 +192,7 @@ const UserMenu = () => {
 					/>
 				</div>
 				<button
-					onClick={() => router.push("/dashboard")}
+					onClick={() => router.push("/apply")}
 					className="bg-white/10 hover:bg-white/15 px-4 sm:px-6 py-2.5 flex items-center space-x-2 rounded-xl font-semibold text-sm transition-all duration-200 text-white border border-white/10"
 				>
 					<Sparkles className="w-4 h-4" />
