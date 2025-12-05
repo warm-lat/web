@@ -189,13 +189,13 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			if (account?.provider === "discord" && profile?.id) {
 				token.discordId = profile.id;
 				token.userToken = account.userToken;
+				// Store user image in token during initial sign-in
+				if (user?.image) {
+					token.picture = user.image;
+				}
 			}
 			if (account?.provider === "spotify") {
 				token.spotifyToken = account.access_token;
-			}
-			// Store user image in token
-			if (user) {
-				token.picture = user.image;
 			}
 			return token;
 		},
