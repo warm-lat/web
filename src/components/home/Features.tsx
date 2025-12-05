@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import {
 	HiOutlineShieldCheck,
 	HiOutlineMusicNote,
-	IoTerminal,
+	HiTerminal,
 } from "react-icons/hi";
 
 const Features = () => {
@@ -101,7 +101,7 @@ const Features = () => {
 										damping: 10,
 									}}
 								>
-									<IoTerminal className="w-10 h-10" />
+									<HiTerminal className="w-10 h-10" />
 								</motion.div>
 								<h3 className="text-2xl font-semibold text-white">
 									Smart Commands

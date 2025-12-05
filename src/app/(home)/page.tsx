@@ -1,37 +1,7 @@
 "use client";
 
 import { MeshGradient } from "@/components/(global)/GradientMesh";
-import { motion } from "framer-motion";
-import {
-	ChevronDown,
-	Gamepad2,
-	HeartHandshake,
-	MessageSquare,
-	Music,
-	Settings,
-	Shield,
-	Sparkles,
-} from "lucide-react";
-import Image from "next/image";
 import { useEffect, useState } from "react";
-import {
-	FaGlobe,
-	FaLastfm,
-	FaServer,
-	FaSoundcloud,
-	FaSpotify,
-	FaUsers,
-	FaYoutube,
-} from "react-icons/fa";
-import {
-	HiGift,
-	HiOutlineCog,
-	HiOutlineMusicNote,
-	HiOutlineShieldCheck,
-	HiOutlineStatusOnline,
-} from "react-icons/hi";
-import { IoTerminal } from "react-icons/io5";
-import { RiDiscordLine, RiRobot2Line } from "react-icons/ri";
 import Hero from "@/components/home/Hero";
 import Features from "@/components/home/Features";
 import Integrations from "@/components/home/Integrations";
@@ -87,6 +57,7 @@ const HomePage = () => {
 
 	return (
 		<div className="relative w-full overflow-x-hidden">
+			<MeshGradient />
 			<Hero stats={stats} />
 			<Features />
 			<Integrations />
