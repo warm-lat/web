@@ -1,13 +1,13 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Crown, Sparkles } from "lucide-react";
+import { Crown } from "lucide-react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { useEffect, useMemo, useState } from "react";
 import { CgClose } from "react-icons/cg";
 import { MdMenu } from "react-icons/md";
-
+ 
 const UserMenu = () => {
 	const router = useRouter();
 	const pathname = usePathname();
@@ -124,8 +124,8 @@ const UserMenu = () => {
 					onClick={() => router.push("/dashboard")}
 					className="bg-white/10 hover:bg-white/15 px-4 sm:px-6 py-2.5 flex items-center space-x-2 rounded-xl font-semibold text-sm transition-all duration-200 text-white border border-white/10"
 				>
-					<Sparkles className="w-4 h-4" />
-					<span>Dashboard (beta only)</span>
+					<Crown className="w-4 h-4" />
+					<span>Beta Dashboard</span>
 				</button>
 			</div>
 		</>

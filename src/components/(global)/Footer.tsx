@@ -8,7 +8,7 @@ const footerLinks = {
     bot: [
         { label: "Invite", href: "/invite" },
         { label: "Documentation", href: "https://docs.warm.lat/" },
-        { label: "Support Server", href: "https://discord.gg/apply" }
+        { label: "Support Server", href: "/discord" }
     ],
     legal: [
         { label: "Terms", href: "/terms" },
@@ -38,7 +38,7 @@ export const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/60 hover:text-white transition-colors">
-                                Azron LLC (unfortunately)
+                                Azron LLC
                             </Link>
                                 All rights reserved.
                             <br />
@@ -80,16 +80,6 @@ export const Footer = () => {
                                 </Link>
                             ))}
                         </nav>
-                        <div className="mt-8">
-                            <h6 className="font-semibold text-sm text-white mb-4">Follow Us</h6>
-                            <Link
-                                href="https://warm.lat/discord"
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-flex text-white/60 hover:text-white transition-colors p-2 rounded-lg hover:bg-white/5">
-                                <FaDiscord size={24} />
-                            </Link>
-                        </div>
                     </div>
                 </div>
             </div>
