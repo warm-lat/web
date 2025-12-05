@@ -123,13 +123,14 @@ const UserMenu = () => {
 			{showBetaPopup && (
 				<>
 					<div
-						className="fixed inset-0 bg-black bg-opacity-50 z-[50000] backdrop-blur-sm"
+						className="fixed inset-0 bg-black bg-opacity-50 backdrop-blur-md z-[50000]"
 						onClick={dismissPopup}
 					/>
 					<div className="fixed inset-0 z-[50001] flex items-center justify-center">
 						<motion.div
 							initial={{ opacity: 0, scale: 0.95 }}
 							animate={{ opacity: 1, scale: 1 }}
+							exit={{ opacity: 0, scale: 0.95 }}
 							className="bg-[#0A0A0B]/95 backdrop-blur-xl border border-white/10 p-8 rounded-2xl shadow-2xl max-w-md mx-4"
 						>
 							<div className="flex justify-between items-start mb-6">
@@ -148,7 +149,8 @@ const UserMenu = () => {
 							</h2>
 							<p className="text-white/60 mb-6 leading-relaxed">
 								We're excited to announce that our dashboard is currently in
-								beta testing! Apply now to be among the first to experience it.
+								beta beta testing! Apply now to be among the first to experience
+								it.
 							</p>
 							<div className="flex gap-3">
 								<button
