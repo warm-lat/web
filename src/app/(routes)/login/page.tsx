@@ -10,15 +10,14 @@ export default function Login() {
     const { data: session } = useSession() as { data: Session | null }
     const searchParams = useSearchParams()
     const redirect = searchParams.get("redirect")
-    const forSpotify = searchParams.get("forSpotify") === "true"
     const forLastfm = searchParams.get("forLastfm") === "true"
     const forBeta = searchParams.get("forBeta") === "true"
-    const redirectTo = forBeta ? "/beta" : (forSpotify || forLastfm ? "/login" : (redirect || "/"))
+    const redirectTo = forBeta ? "/beta" : (forLastfm ? "/login" : (redirect || "/"))
 
-    const handleSignIn = async (provider: "discord" | "spotify" | "lastfm") => {
+    const handleSignIn = async (provider: "discord" | "lastfm") => {
         if (provider === "discord") {
             const callbackUrl = redirect || (forBeta ? "/beta" : 
-                (forSpotify || forLastfm ? "/login?" + searchParams.toString() : "/"))
+                (forLastfm ? "/login?" + searchParams.toString() : "/"))
             console.log("Callback URL:", callbackUrl)
             await signIn(provider, { callbackUrl })
         } else {
@@ -55,14 +54,14 @@ export default function Login() {
                                     <div className="flex-grow border-t border-zinc-700"></div>
                                 </div>
 
-                                <button
+                                {/*<button
                                     disabled={!session}
                                     onClick={() => handleSignIn("spotify")}
                                     className="flex w-full items-center justify-center gap-2 rounded-lg bg-zinc-800 px-4 py-3 text-sm font-semibold text-zinc-400 transition-all">
                                     <FaSpotify className="h-5 w-5" />
                                     <IoLockClosed className="h-4 w-4" />
                                     Connect Spotify
-                                </button>
+                                </button>*/}
 
                                 <button
                                     disabled={!session}

@@ -1,45 +1,42 @@
-"use client";
+import React from "react";
 import { motion } from "framer-motion";
-import Image from "next/image";
-import { usePathname } from "next/navigation";
 
 export default function Loading() {
-	const pathname = usePathname();
-
 	return (
-		<div className="fixed inset-0 flex min-h-screen justify-center flex-col items-center bg-[#776dd4] z-[99]">
-			<motion.div
-				initial={{ y: 200, opacity: 0 }}
-				animate={{ y: -50, opacity: 1 }}
-				transition={{
-					type: "spring",
-					stiffness: 100,
-					damping: 20,
-					duration: 1,
-				}}
-				className="rounded-2xl"
-			>
-				<Image
-					src={"https://r2.warm.lat/pfp.jpg"}
-					alt="warm"
-					width={300}
-					height={300}
-					className="rounded-2xl"
-				/>
-			</motion.div>
-			<motion.p
-				initial={{ opacity: 0, y: 50 }}
-				animate={{ opacity: 1, y: 0 }}
-				transition={{
-					delay: 0.5, // Delays the text animation until the profile finishes moving
-					duration: 0.8,
-					ease: "easeInOut",
-				}}
-				className="mt-6 text-white text-lg font-medium"
-			>
-				Loading <span className="font-bold">{pathname}</span>...
-			</motion.p>
-		</div>
+		<motion.div
+			key="splash"
+			initial={{ opacity: 1 }}
+			animate={{ opacity: 1 }}
+			exit={{ opacity: 0 }}
+			transition={{ duration: 0.5 }}
+			className="fixed inset-0 flex items-center justify-center bg-[#0A0A0A] z-[100]"
+		>
+			<div className="flex flex-col items-center">
+				<motion.h1
+					initial={{ scale: 0.9, opacity: 0 }}
+					animate={{ scale: 1, opacity: 1 }}
+					transition={{
+						duration: 0.8,
+						ease: "easeInOut",
+					}}
+					className="text-5xl font-black tracking-tighter bg-gradient-to-r from-yellow-300 via-yellow-400 to-yellow-600 bg-clip-text text-transparent"
+				>
+					warm
+				</motion.h1>
+				<motion.p
+					initial={{ opacity: 0, y: 20 }}
+					animate={{ opacity: 1, y: 0 }}
+					transition={{
+						duration: 0.6,
+						delay: 0.3,
+						ease: "easeInOut",
+					}}
+					className="mt-4 text-lg text-yellow-400"
+				>
+					Loading...
+				</motion.p>
+			</div>
+		</motion.div>
 	);
 }
 

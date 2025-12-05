@@ -2,7 +2,7 @@
 
 import { usePathname } from "next/navigation"
 import { Footer } from "@/components/(global)/Footer"
-import Navbar from "@/components/(global)/navbar/Navbar"
+import Navbar from "@/components/(global)/Header/Navbar"
 import { Suspense } from "react"
 import Loading from "@/app/(routes)/loading"
 
