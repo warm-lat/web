@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import "../../styles/globals.css"
 import Navbar from "@/components/(global)/Header/Navbar"
 import { Footer } from "@/components/(global)/Footer"
+import { MeshGradient } from "@/components/(global)/GradientMesh";
 
 export const viewport: Viewport = {
     themeColor: "776dd4"
@@ -39,6 +40,7 @@ export default function warmMain({
     return (
         <html lang="en">
             <body className={`bg-warm-100 font-satoshi`}>
+                <MeshGradient />
                 <Navbar />
                 {children}
                 <Footer />

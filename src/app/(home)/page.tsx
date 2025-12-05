@@ -1,6 +1,5 @@
 "use client";
 
-import { MeshGradient } from "@/components/(global)/GradientMesh";
 import { useEffect, useState } from "react";
 import Hero from "@/components/home/Hero";
 import Features from "@/components/home/Features";
@@ -57,7 +56,6 @@ const HomePage = () => {
 
 	return (
 		<div className="relative w-full overflow-x-hidden">
-			<MeshGradient />
 			<Hero stats={stats} />
 			<Features />
 			<Integrations />
