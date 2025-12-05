@@ -34,13 +34,13 @@ export const Footer = () => {
                         <p className="text-white/40 text-sm max-w-xs leading-relaxed">
                             Copyright {new Date().getFullYear()}{" "}
                             <Link
-                                href="https://aelix.ltd"
+                                href="https://azron.net"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/60 hover:text-white transition-colors">
-                                Aelix LLC
+                                Azron LLC (unfortunately)
                             </Link>
-                            . All rights reserved.
+                                All rights reserved.
                             <br />
                             Created by{" "}
                             <Link
@@ -50,6 +50,7 @@ export const Footer = () => {
                                 className="text-white/60 hover:text-white transition-colors">
                                 Nxyy
                             </Link>
+
                         </p>
                     </div>
 
