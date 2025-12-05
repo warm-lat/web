@@ -8,12 +8,14 @@ declare module "next-auth" {
 		accessToken?: string;
 		provider?: string;
 		userToken?: string;
+		image?: string | null;
 	}
 	interface Session {
 		user: {
 			id?: string;
 			email?: string;
 			name?: string;
+			image?: string | null;
 			spotify?: boolean;
 			lastfm?: boolean;
 			userToken?: string;
@@ -177,10 +179,12 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			token,
 			account,
 			profile,
+			user,
 		}: {
 			token: any;
 			account: any;
 			profile?: any;
+			user?: any;
 		}) {
 			if (account?.provider === "discord" && profile?.id) {
 				token.discordId = profile.id;
@@ -189,12 +193,17 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			if (account?.provider === "spotify") {
 				token.spotifyToken = account.access_token;
 			}
+			// Store user image in token
+			if (user?.image) {
+				token.picture = user.image;
+			}
 			return token;
 		},
 		async session({ session, token }: { session: Session; token: any }) {
 			if (session.user) {
 				session.user.id = token.discordId as string;
 				session.user.userToken = token.userToken;
+				session.user.image = token.picture as string;
 				session.user.warning =
 					"DO NOT SHARE THIS TOKEN WITH ANYONE, WE ARE NOT RESPONSIBLE FOR ANYTHING YOU DO WITH IT";
 			}
