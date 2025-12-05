@@ -80,32 +80,30 @@ export default function Login() {
                             By continuing, you agree to our Terms of Service and Privacy Policy
                         </p>
                     </>
-                ) : forSpotify || forLastfm ? (
+                ) : forLastfm ? (
                     <>
                         <div className="text-center">
                             <h2 className="text-3xl font-bold tracking-tight text-zinc-100">
-                                {forSpotify ? "Connect Spotify" : "Connect Last.fm"}
+                                {"Connect Last.fm"}
                             </h2>
                             <p className="mt-2 text-sm text-zinc-400">
-                                You&apos;re signed in with Discord. Connect your {forSpotify ? "Spotify" : "Last.fm"} account to continue.
+                                You&apos;re signed in with Discord. Connect your {"Last.fm"} account to continue.
                             </p>
                         </div>
 
                         <div className="mt-8">
                             <button
-                                onClick={() => handleSignIn(forSpotify ? "spotify" : "lastfm")}
+                                onClick={() => handleSignIn("lastfm")}
                                 className={`flex w-full items-center justify-center gap-3 rounded-lg px-4 py-3 text-sm font-semibold text-white transition-all ${
-                                    forSpotify 
-                                        ? "bg-[#1DB954] hover:bg-[#1aa34a] focus:ring-2 focus:ring-[#1DB954] focus:ring-offset-2 focus:ring-offset-zinc-900"
-                                        : "bg-[#d51007] hover:bg-[#b30d06] focus:ring-2 focus:ring-[#d51007] focus:ring-offset-2 focus:ring-offset-zinc-900"
+                                        "bg-[#d51007] hover:bg-[#b30d06] focus:ring-2 focus:ring-[#d51007] focus:ring-offset-2 focus:ring-offset-zinc-900"
                                 }`}>
-                                {forSpotify ? <FaSpotify className="h-5 w-5" /> : <FaLastfm className="h-5 w-5" />}
-                                Connect {forSpotify ? "Spotify" : "Last.fm"}
+                                <FaLastfm className="h-5 w-5" />
+                                Connect {"Last.fm"}
                             </button>
                         </div>
 
                         <p className="mt-6 text-center text-sm text-zinc-500">
-                            This will allow us to access your {forSpotify ? "Spotify" : "Last.fm"} data
+                            This will allow us to access your {"Last.fm"} data
                         </p>
                     </>
                 ) : (
@@ -126,14 +124,6 @@ export default function Login() {
                                 <FaDiscord className="h-5 w-5" />
                                 Connected with Discord
                                 <IoCheckmarkCircle className="h-5 w-5 ml-1" />
-                            </button>
-
-                            <button
-                                onClick={() => handleSignIn("spotify")}
-                                className="flex w-full items-center justify-center gap-2 rounded-lg bg-[#1DB954] px-4 py-3 text-sm font-semibold text-white transition-all hover:bg-[#1aa34a] focus:ring-2 focus:ring-[#1DB954] focus:ring-offset-2 focus:ring-offset-zinc-900">
-                                <FaSpotify className="h-5 w-5" />
-                                {session.spotify ? "Connect Spotify" : "Connect Spotify"}
-                                {session.spotify ? <IoCheckmarkCircle className="h-5 w-5 ml-1" /> : <IoLockClosed className="h-4 w-4 ml-1" />}
                             </button>
 
                             <button
