@@ -44,7 +44,7 @@ export const Footer = () => {
                             <br />
                             Created by{" "}
                             <Link
-                                href="https://fakecrime.bio/^"
+                                href="https://aelix.ltd"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/60 hover:text-white transition-colors">
