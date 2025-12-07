@@ -5,7 +5,7 @@ import { Footer } from "@/components/(global)/Footer"
 import { MeshGradient } from "@/components/(global)/GradientMesh";
 
 export const viewport: Viewport = {
-    themeColor: "776dd4"
+    themeColor: "#cfcd4a"
 }
 
 export const metadata: Metadata = {

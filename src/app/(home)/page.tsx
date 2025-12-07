@@ -56,6 +56,7 @@ const HomePage = () => {
 
 	return (
 		<div className="relative w-full overflow-x-hidden">
+			
 			<Hero stats={stats} />
 			<Features />
 			<Integrations />
