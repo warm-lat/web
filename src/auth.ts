@@ -84,7 +84,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 		async signIn({ account, user, profile }) {
 			if (account?.provider === "discord") {
 				try {
-					const response = await fetch(`https://api.warm.lat/login`, {
+					const response = await fetch(`https://api.warm.lat/dash/login`, {
 						method: "POST",
 						headers: {
 							"Content-Type": "application/json",
