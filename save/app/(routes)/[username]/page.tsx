@@ -418,11 +418,43 @@ export default function ProfilePage({
 	const [isBioLoading, setIsBioLoading] = useState(true);
 
 	useEffect(() => {
-		const cleanUsername = params.username.startsWith("@")
-			? params.username
-			: `@${params.username}`;
-		if (params.username !== cleanUsername) {
-			router.replace(`/${cleanUsername}`);
+		const reservedRoutes = [
+			"api",
+			"login",
+			"logout",
+			"dashboard",
+			"commands",
+			"status",
+			"apply",
+			"embed",
+			"features",
+			"team",
+			"purchase",
+			"leaderboard",
+			"avatars",
+			"tickets",
+			"verify",
+			"error",
+			"authorized",
+			"connected",
+		];
+		const username = params.username;
+		const isReserved = reservedRoutes.includes(
+			username.replace(/^@/, "").toLowerCase()
+		);
+		const isValid =
+			username &&
+			!username.startsWith("/") &&
+			!isReserved &&
+			/^[a-zA-Z0-9_@.]+$/.test(username);
+
+		if (isValid) {
+			const cleanUsername = username.startsWith("@")
+				? username
+				: `@${username}`;
+			if (username !== cleanUsername) {
+				router.replace(`/${cleanUsername}`);
+			}
 		}
 	}, [params.username, router]);
 
