@@ -26,7 +26,7 @@ const HomePage = () => {
 					return;
 				}
 
-				const response = await fetch(`https://api.warm.lat/status`, {
+				const response = await fetch(`https://api.warm.lat/bot/status`, {
 					headers: {
 						"User-Agent": "warm-web/1.0.0",
 					},
@@ -35,15 +35,8 @@ const HomePage = () => {
 
 				const data = await response.json();
 				cachedStats = {
-					users: data.shards.reduce(
-						(acc: number, shard: any) =>
-							acc + parseInt(shard.users.replace(/,/g, "")),
-						0
-					),
-					guilds: data.shards.reduce(
-						(acc: number, shard: any) => acc + parseInt(shard.guilds),
-						0
-					),
+					users: data.total_users,
+					guilds: data.total_guilds,
 				};
 				lastFetchTime = Date.now();
 				setStats(cachedStats);
