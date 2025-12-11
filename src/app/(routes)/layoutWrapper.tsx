@@ -8,17 +8,13 @@ import Loading from "@/app/(routes)/loading"
 
 export function LayoutWrapper({ children }: { children: React.ReactNode }) {
     const pathname = usePathname()
-    const isDashboardPage = pathname?.startsWith("/dashboard")
     const isApplyPage = pathname?.startsWith("/apply")
-    const isSlugPage = pathname?.startsWith("/@")
-
-    if (isDashboardPage) {
-        return children
-    }
+    const isCommandsPage = pathname?.startsWith("/commands")
+    const isStatusPage = pathname?.startsWith("/status")
 
     return (
         <div>
-            {isApplyPage || isSlugPage ? (
+            {isApplyPage || isCommandsPage || isStatusPage ? (
                 children
             ) : (
                 <>
