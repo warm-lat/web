@@ -13,7 +13,7 @@ import { PiWifiSlashBold } from "react-icons/pi";
 import { TbCloudDataConnection } from "react-icons/tb";
 
 const fetchShard = async (shardId: number) => {
-	const response = await fetch(`https://api.warm.lat/status`, {
+	const response = await fetch(`https://api.warm.lat/bot/status`, {
 		headers: {
 			"User-Agent": "warm-web/1.0.0",
 		},
@@ -28,10 +28,10 @@ const fetchShard = async (shardId: number) => {
 	let shard: IShard;
 	shard = {
 		id: shardData.id,
-		guilds: parseInt(shardData.guilds),
-		users: parseInt(shardData.users.replace(/,/g, "")),
-		ping: parseFloat(shardData.ping),
-		uptime: shardData.uptime,
+		guilds: shardData.guilds,
+		users: shardData.users,
+		ping: shardData.ping,
+		status: shardData.status,
 	};
 	return shard;
 };
@@ -39,7 +39,7 @@ const fetchShard = async (shardId: number) => {
 export default function Status() {
 	const [{ data, loading, error }, refetch] = useAxios({
 		baseURL: `https://api.warm.lat`,
-		url: "/status",
+		url: "/bot/status",
 		headers: {
 			"User-Agent": "warm-web/1.0.0",
 		},
@@ -56,24 +56,22 @@ export default function Status() {
 	if (!error && data) {
 		shards = data.shards.map((shard: any) => ({
 			id: shard.id,
-			guilds: parseInt(shard.guilds),
-			users: parseInt(shard.users.replace(/,/g, "")),
-			ping: parseFloat(shard.ping),
-			uptime: shard.uptime,
+			guilds: shard.guilds,
+			users: shard.users,
+			ping: shard.ping,
+			status: shard.status,
 		}));
 
-		const earliestUptime = Math.min(...shards.map((shard) => shard.uptime));
-		const uptimeMs = Date.now() - earliestUptime * 1000;
-		const hours = Math.floor(uptimeMs / (1000 * 60 * 60));
-		const minutes = Math.floor((uptimeMs % (1000 * 60 * 60)) / (1000 * 60));
-
+		// Use API-provided overview fields
 		overview = {
-			avgLatency: Math.round(
-				shards.reduce((acc, shard) => acc + shard.ping, 0) / shards.length
-			),
-			totalServers: shards.reduce((acc, shard) => acc + shard.guilds, 0),
-			totalUsers: shards.reduce((acc, shard) => acc + shard.users, 0),
-			uptime: `${hours}h ${minutes}m`,
+			avgLatency: data.avg_ping,
+			totalServers: data.total_guilds,
+			totalUsers: data.total_users,
+			uptime: data.uptime
+				? `${Math.floor(data.uptime / 3600)}h ${Math.floor(
+						(data.uptime % 3600) / 60
+				  )}m`
+				: "0h 0m",
 		};
 	}
 
@@ -215,10 +213,9 @@ const Shard = ({
 	) => AxiosPromise<any>;
 }) => {
 	const [counter, setCounter] = useState(0);
-	const uptime = new Date(shard.uptime * 1000);
 
 	const handleRefreshClick = async () => {
-		const refreshed = await fetchShard(parseInt(shard.id));
+		const refreshed = await fetchShard(shard.id);
 		if (!refreshed) return;
 		shard = refreshed;
 		setCounter(0);
@@ -252,8 +249,8 @@ const Shard = ({
 							<div
 								className={`w-4 h-4 bg-green-500 rounded-full animate-pulse`}
 							></div>
-							<p className="text-lg font-normal inline-flex items-center text-green-500">
-								Operational
+							<p className="text-lg font-normal inline-flex items-center text-green-500 capitalize">
+								{shard.status}
 							</p>
 						</div>
 					</div>
@@ -271,14 +268,10 @@ const Shard = ({
 				<hr className="border-t border-warm-300 w-full my-4" />
 				<div className="grid grid-cols-2 gap-4 px-6">
 					<div className="flex flex-col gap-2">
-						<p className="text-md text-warm-700">Uptime</p>
+						<p className="text-md text-warm-700">Status</p>
 						<div className="flex flex-row gap-2 items-center">
-							<MdOutlineTimeline className="text-warm-700" />
-							<p className="text-md font-semibold">
-								{shard.uptime == 0
-									? "N/A"
-									: moment.duration(uptime.getTime() - Date.now()).humanize()}
-							</p>
+							<TbCloudDataConnection className="text-warm-700" />
+							<p className="text-md font-semibold capitalize">{shard.status}</p>
 						</div>
 					</div>
 					<div className="flex flex-col gap-2">
@@ -313,9 +306,10 @@ const Shard = ({
 };
 
 interface IShard {
-	id: string;
+	id: number;
 	guilds: number;
 	users: number;
 	ping: number;
-	uptime: number;
+	status: string;
 }
+

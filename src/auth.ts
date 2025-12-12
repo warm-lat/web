@@ -118,61 +118,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 					return false;
 				}
 			}
-			if (account?.provider === "spotify") {
-				const discordSession = await auth();
-
-				try {
-					if (!discordSession?.user?.id) {
-						console.error("No Discord user ID found in session");
-						return false;
-					}
-
-					const numericId = discordSession.user.id;
-
-					const response = await fetch(`https://api.warm.lat/spotify/auth`, {
-						method: "POST",
-						headers: {
-							Authorization: process.env.NOTHIDDEN_API_KEY ?? "",
-							"Content-Type": "application/json",
-							Origin: "https://warm.lat",
-							"User-Agent": "warm-web/1.0.0",
-						},
-						body: JSON.stringify({
-							user_id: discordSession.user.id,
-							spotify_access_token: account.access_token,
-							spotify_refresh_token: account.refresh_token,
-							expires_in: account.expires_in,
-							spotify_id: user.id,
-						}),
-					});
-
-					if (!response.ok) {
-						const errorData = await response.text();
-						console.error("API Error Details:", {
-							status: response.status,
-							statusText: response.statusText,
-							headers: Object.fromEntries(response.headers),
-							body: errorData,
-						});
-						return false;
-					}
-
-					return "https://warm.lat/connected";
-				} catch (error) {
-					console.error("Failed to send Spotify credentials:", {
-						error,
-						account: {
-							provider: account.provider,
-							type: account.type,
-							expiresIn: account.expires_in,
-						},
-						user: {
-							id: user.id,
-						},
-					});
-					return false;
-				}
-			}
 			return true;
 		},
 		async jwt({
