@@ -46,8 +46,9 @@ export default function RootLayout({
 }>) {
     const headersList = headers()
     const pathname = headersList.get("x-pathname") || ""
+    const paths = ["/dashboard", "/status", "/commands"];
     
-    if (pathname.startsWith('/dashboard')) {
+    if (paths.some((path) => pathname.startsWith(path))) {
         return (
             <html lang="en" className="bg-black">
                 <body className={`font-satoshi flex flex-col min-h-screen justify-between bg-black`}>
