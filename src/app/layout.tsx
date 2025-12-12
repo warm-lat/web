@@ -1,66 +1,68 @@
-import "@/styles/globals.css"
-import type { Metadata, Viewport } from "next"
-import { Manrope } from "next/font/google"
-import { SessionProvider } from "next-auth/react"
-import { AuthProvider } from '@/components/AuthProvider'
-import { headers } from 'next/headers'
+import "@/styles/globals.css";
+import type { Metadata, Viewport } from "next";
+import { Manrope } from "next/font/google";
+import { SessionProvider } from "next-auth/react";
+import { AuthProvider } from "@/components/AuthProvider";
+import { headers } from "next/headers";
 
 export const viewport: Viewport = {
-    themeColor: "transparent"
-}
+	themeColor: "transparent",
+};
 
 export const metadata: Metadata = {
-    title: "warm",
-    description: "The only aesthetic multi-functional Discord bot you need.",
-    twitter: {
-        site: "https://warm.lat",
-        card: "player"
-    },
-    openGraph: {
-        url: "https://warm.lat",
-        type: "website",
-        title: "warm",
-        siteName: "warm.lat",
-        description: "The only aesthetic multi-functional Discord bot you need.",
-        images: [
-            {
-                url: "https://r2.warm.lat/pfp.jpg",
-                width: 500,
-                height: 500,
-                alt: "warm"
-            }
-        ]
-    }
-}
+	title: "warm",
+	description: "The only aesthetic multi-functional Discord bot you need.",
+	twitter: {
+		site: "https://warm.lat",
+		card: "player",
+	},
+	openGraph: {
+		url: "https://warm.lat",
+		type: "website",
+		title: "warm",
+		siteName: "warm.lat",
+		description: "The only aesthetic multi-functional Discord bot you need.",
+		images: [
+			{
+				url: "https://r2.warm.lat/pfp.jpg",
+				width: 500,
+				height: 500,
+				alt: "warm",
+			},
+		],
+	},
+};
 
 export default function RootLayout({
-    children
+	children,
 }: Readonly<{
-    children: React.ReactNode
+	children: React.ReactNode;
 }>) {
-    const headersList = headers()
-    const pathname = headersList.get("x-pathname") || ""
-    const paths = ['/dashboard', '/status', '/commands']
-    
-    if (pathname.startsWith(paths)) {
-        return (
-            <html lang="en" className="bg-black">
-                <body className={`font-satoshi flex flex-col min-h-screen justify-between bg-gradient-to-b from-zinc-900 to-black`}>
-                    {children}
-                </body>
-            </html>
-        )
-    }
+	const headersList = headers();
+	const pathname = headersList.get("x-pathname") || "";
+	const paths = ["/dashboard", "/status", "/commands"];
 
-    return (
-        <html lang="en" className="bg-[#0A0A0B]">
-            <body className={`font-satoshi flex flex-col min-h-screen justify-between antialiased`}>
-                <SessionProvider>
-                    <AuthProvider>
-                        {children}
-                    </AuthProvider>
-                </SessionProvider>
-            </body>
-        </html>
-    )
+	if (paths.some((path) => pathname.startsWith(path))) {
+		return (
+			<html lang="en" className="bg-black">
+				<body
+					className={`font-satoshi flex flex-col min-h-screen justify-between bg-gradient-to-b from-zinc-900 to-black`}
+				>
+					{children}
+				</body>
+			</html>
+		);
+	}
+
+	return (
+		<html lang="en" className="bg-[#0A0A0B]">
+			<body
+				className={`font-satoshi flex flex-col min-h-screen justify-between antialiased`}
+			>
+				<SessionProvider>
+					<AuthProvider>{children}</AuthProvider>
+				</SessionProvider>
+			</body>
+		</html>
+	);
 }
