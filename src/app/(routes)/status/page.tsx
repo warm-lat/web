@@ -14,6 +14,8 @@ import { ImConnection } from "react-icons/im";
 import { MdOutlineTimeline } from "react-icons/md";
 import { PiWifiSlashBold } from "react-icons/pi";
 import { TbCloudDataConnection } from "react-icons/tb";
+import useAxios, { RefetchOptions } from "axios-hooks";
+import { AxiosPromise, AxiosRequestConfig } from "axios";
 
 const fetchShard = async (shardId: number) => {
 	const response = await fetch(`https://api.warm.lat/bot/status`, {
@@ -40,7 +42,7 @@ const fetchShard = async (shardId: number) => {
 };
 
 export default function Status() {
-	const [{ data, loading, error }, refetch] = fetch(
+	const [{ data, loading, error }, refetch] = useAxios(
 		`https://api.warm.lat/bot/status`,
 		{
 			headers: {
