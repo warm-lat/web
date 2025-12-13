@@ -38,13 +38,13 @@ export const Footer = () => {
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/60 hover:text-white transition-colors">
-                                Azron LLC
+                                Azron LLC 
                             </Link>
                                 All rights reserved.
                             <br />
                             Created by{" "}
                             <Link
-                                href="https://aelix.ltd"
+                                href="https://nxyy.space"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-white/60 hover:text-white transition-colors">
