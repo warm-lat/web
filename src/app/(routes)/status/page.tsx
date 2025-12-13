@@ -40,12 +40,14 @@ const fetchShard = async (shardId: number) => {
 };
 
 export default function Status() {
-	const [{ data, loading, error }, refetch] = fetch({
-		url: `https://api.warm.lat/bot/status`,
-		headers: {
-			"User-Agent": "warm-web/1.0.0",
-		},
-	});
+	const [{ data, loading, error }, refetch] = fetch(
+		`https://api.warm.lat/bot/status`,
+		{
+			headers: {
+				"User-Agent": "warm-web/1.0.0",
+			},
+		}
+	);
 
 	let shards: IShard[] = [];
 	let overview = {
