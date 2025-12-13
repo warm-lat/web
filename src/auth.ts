@@ -1,6 +1,5 @@
 import NextAuth, { type Session } from "next-auth";
 import Discord from "next-auth/providers/discord";
-//import Spotify from "next-auth/providers/spotify";
 
 declare module "next-auth" {
 	interface User {
@@ -34,12 +33,6 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 			authorization:
 				"https://discord.com/api/oauth2/authorize?scope=identify+guilds+email",
 		}),
-		//Spotify({
-		//	clientId: process.env.AUTH_SPOTIFY_ID,
-		//	clientSecret: process.env.AUTH_SPOTIFY_SECRET,
-		//	authorization:
-		//		"https://accounts.spotify.com/authorize?scope=user-read-email+user-read-private+user-read-playback-state+user-modify-playback-state+user-read-currently-playing+playlist-read-private+playlist-read-collaborative+user-library-modify",
-		//}),
 		{
 			id: "lastfm",
 			name: "Last.fm",
