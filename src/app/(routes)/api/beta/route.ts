@@ -18,7 +18,7 @@ export async function POST(request: Request) {
         }
 
         try {
-            const response = await fetch("https://api.warm.lat/roles/apply", {  
+            const response = await fetch("https://api.warm.lat/dash/beta/apply", {  
                 method: "POST",
                 headers: {
                     "Authorization": `Bearer ${session.user.userToken}`,

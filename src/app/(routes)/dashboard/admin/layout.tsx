@@ -54,7 +54,7 @@ function DashboardLayoutContent({ children }: { children: React.ReactNode }) {
                         <div className="p-6 border-b border-white/10">
                             <Link href="/" className="flex items-center gap-3 group">
                                 <Image
-                                    src="https://r2.warm.lat/pfp.jpg"
+                                    src="https://r2.warm.lat/bot.jpg"
                                     alt="warm"
                                     width={40}
                                     height={40}

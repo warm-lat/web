@@ -152,24 +152,27 @@ const replaceVariables = (text: string) => {
 
     const replacements = {
         "{guild.name}": "My Discord Server",
-        "{guild.icon}": "https://r2.warm.lat/pfp.jpg",
+        "{guild.icon}": "https://r2.warm.lat/bot.jpg",
         "{guild.created_at}": "2023-08-01",
         "{guild.count}": "1,604",
         "{guild.boost_count}": "34",
         "{guild.booster_count}": "10",
-        "{guild.vanity}": "warm",
+        "{guild.vanity}": "/apply",
         "{guild.boost_tier}": "Level 2",
         "{guild.count.format}": "1,500th",
         "{guild.boost_count.format}": "25th",
         "{guild.booster_count.format}": "10th",
-        "{user}": "_mism.#0",
+        "{user}": "_mism.",
         "{user.name}": "_mism.",
-        "{user.discriminator}": "#0",
+        "{user.discriminator}": "0",
         "{user.id}": "123456789012345678",
         "{user.mention}": "@_mism.",
         "{user.avatar}": "https://example.com/avatar.png",
         "{user.created_at}": "2020-05-01",
-        "{user.joined_at}": "2021-06-15"
+        "{user.joined_at}": "2021-06-15",
+        "{invisible}": "#2b2d31",
+        "{botcolor}": "#e9d8b6",
+        "{botavatar}": "https://r2.warm.lat/bot.jpg"
     }
 
     let replacedText = text
@@ -256,7 +259,7 @@ export default function EmbedPage() {
         ...DiscordDefaultOptions,
         profiles: {
             warm: {
-                avatar: "https://r2.warm.lat/pfp.jpg"
+                avatar: "https://r2.warm.lat/bot.jpg"
             }
         }
     }

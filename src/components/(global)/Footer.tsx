@@ -24,7 +24,7 @@ export const Footer = () => {
                     <div className="md:col-span-2">
                         <Link href="/" className="block mb-6 w-fit">
                             <Image
-                                src="https://r2.warm.lat/pfp.jpg"
+                                src="https://r2.warm.lat/bot.jpg"
                                 alt="warm"
                                 width={56}
                                 height={56}

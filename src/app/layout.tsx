@@ -24,7 +24,7 @@ export const metadata: Metadata = {
 		description: "The only aesthetic multi-functional Discord bot you need.",
 		images: [
 			{
-				url: "https://r2.warm.lat/pfp.jpg",
+				url: "https://r2.warm.lat/bot.jpg",
 				width: 500,
 				height: 500,
 				alt: "warm",
@@ -40,7 +40,7 @@ export default function RootLayout({
 }>) {
 	const headersList = headers();
 	const pathname = headersList.get("x-pathname") || "";
-	const paths = ["/dashboard", "/status", "/commands"];
+	const paths = ["/dashboard", "/status", "/commands", "/embed"];
 
 	if (paths.some((path) => pathname.startsWith(path))) {
 		return (

@@ -18,7 +18,6 @@ export default function Navbar({ children }: NavbarProps) {
     const isDashboardPage = pathname === "/dashboard"
     const isBillingPage = pathname === "/dashboard/billing"
     const isApplyPage = pathname === "/apply"
-    const isProfilePage = pathname.startsWith("/@")
     const isVerifyPage = pathname.startsWith("/verify/")
     const isFeaturesPage = pathname.startsWith("/features/")
     const isEmbedPage = pathname === "/embed"
@@ -30,7 +29,6 @@ export default function Navbar({ children }: NavbarProps) {
         isDashboardPage ||
         isBillingPage ||
         isApplyPage ||
-        isProfilePage ||
         isVerifyPage ||
         isFeaturesPage ||
         isEmbedPage
@@ -67,7 +65,7 @@ export default function Navbar({ children }: NavbarProps) {
                 <div className="flex items-center justify-between">
                     <Link href="/" className="flex space-x-3">
                         <Image
-                            src={"https://r2.warm.lat/pfp.jpg"}
+                            src={"https://r2.warm.lat/bot.jpg"}
                             alt="warm"
                             width={35}
                             height={35}

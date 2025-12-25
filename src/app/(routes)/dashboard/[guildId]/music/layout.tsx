@@ -796,7 +796,7 @@ function DashboardLayoutContent({
 
                             <Link href="/" className="flex items-center gap-3">
                                 <Image
-                                    src="https://r2.warm.lat/pfp.jpg"
+                                    src="https://r2.warm.lat/bot.jpg"
                                     alt="warm"
                                     width={32}
                                     height={32}

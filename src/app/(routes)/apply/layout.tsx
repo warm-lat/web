@@ -12,7 +12,7 @@ export const metadata: Metadata = {
 			"Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.",
 		images: [
 			{
-				url: "https://r2.warm.lat/og.png",
+				url: "https://r2.warm.lat/bot.jpg",
 				width: 1200,
 				height: 630,
 				alt: "Join Warm Team",
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
 		title: "Join the Warm Team",
 		description:
 			"Turn your passion for community building into impact. Join our team of innovators and help create the next generation of Discord moderation tools.",
-		images: ["https://r2.warm.lat/og.png"],
+		images: ["https://r2.warm.lat/bot.jpg"],
 	},
 };
 
